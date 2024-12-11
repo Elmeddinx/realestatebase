@@ -1,1 +1,91 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  width: 1600px;
+  box-sizing: border-box;
+}
+
+.custom-homepage {
+  height: 100vh;
+  padding-right: 120px;
+  padding-left: 120px;
+  padding-top: 10px;
+}
+.custom-homepage header .logo {
+  background-color: #e7e7e7;
+  padding: 20px 80px;
+  font-family: "Inter";
+}
+.custom-homepage header .btn-group {
+  gap: 10px;
+}
+.custom-homepage header .btn-group .btn {
+  padding: 10px 30px;
+}
+.custom-homepage header .input-group {
+  margin-left: 30px;
+  background-color: #f5f5f5;
+}
+.custom-homepage nav {
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  margin-top: 59px;
+  background-color: #f0f0f0;
+}
+.custom-homepage nav .btn {
+  font-size: 21px;
+  padding: 10px 145px;
+  border-radius: 12px;
+}
+.custom-homepage .select-group {
+  margin-top: 60px;
+  gap: 25px;
+}
+.custom-homepage .select-group select {
+  padding: 15px 12px 15px 14px;
+  font-size: 21px;
+  font-weight: 500;
+  color: #5f5f5f;
+}
+.custom-homepage .select-group .filter-left {
+  width: 65%;
+}
+.custom-homepage .select-group .filter-right {
+  width: 35%;
+}
+.custom-homepage .select-group .filter-right label {
+  font-size: 21px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.custom-homepage .select-group .filter-right input {
+  width: 100%;
+  padding: 15px 12px 15px 14px;
+  font-size: 21px;
+  outline: none;
+  border: 0.4px solid #000;
+  margin-bottom: 15px;
+  color: #5f5f5f;
+  text-align: center;
+}
+
+.tooltip-inner {
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
+}
+
+.tooltip-arrow {
+  fill: #FFF;
+  filter: drop-shadow(-1px 3px 4px rgba(0, 0, 0, 0.12));
+  color: transparent;
+}/*# sourceMappingURL=style.css.map */
