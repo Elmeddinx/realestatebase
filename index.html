@@ -13,7 +13,7 @@
 
 <body>
 
-  <div class="custom-homepage">
+  <div class="container">
 
     <!-- header -->
 
@@ -36,14 +36,25 @@
 
     <!-- navbar -->
 
-    <nav class="d-flex justify-content-center align-items-center">
+
+
+    <nav class="row justify-content-around align-items-center">
+      <button class="btn col-3 btn-primary">Axtarış</button>
+      <button class="btn col-5 bg-white">+ Yeni elan yerləşdirin</button>
+      <button class="btn col-3 bg-white" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
+        data-bs-placement="top" title=" Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
+        Həvalə et
+      </button>
+    </nav>
+
+    <!-- <nav class="d-flex justify-content-center align-items-center">
       <button class="btn btn-primary">Axtarış</button>
       <button class="btn bg-white">+ Yeni elan yerləşdirin</button>
       <button class="btn bg-white" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
         data-bs-placement="top" title=" Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
         Həvalə et
       </button>
-    </nav>
+    </nav> -->
 
     <!-- filter -->
 
@@ -52,7 +63,7 @@
       <div class="filter-left">
 
         <div class="row">
-          <div class="col-6 align-items-center">
+          <div class="col-12 col-md-6 align-items-center">
             <select class="form-select form-select-lg mb-3" aria-label="Large select example">
               <option selected>Satıcının tipi</option>
               <option value="1">One</option>
@@ -251,7 +262,20 @@
 
     </div>
 
-    
+    <!-- vip adverts-->
+
+    <div class="">
+      <div class="d-flex justify-content-between bg-danger">
+        <span>Vip elanlar</span>
+
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Open this select menu</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+    </div>
 
   </div>
 

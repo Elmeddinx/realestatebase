@@ -7,65 +7,60 @@
 }
 
 body {
-  width: 1600px;
   box-sizing: border-box;
 }
 
-.custom-homepage {
+.container {
   height: 100vh;
-  padding-right: 120px;
-  padding-left: 120px;
   padding-top: 10px;
 }
-.custom-homepage header .logo {
+.container header .logo {
   background-color: #e7e7e7;
   padding: 20px 80px;
   font-family: "Inter";
 }
-.custom-homepage header .btn-group {
+.container header .btn-group {
   gap: 10px;
 }
-.custom-homepage header .btn-group .btn {
+.container header .btn-group .btn {
   padding: 10px 30px;
 }
-.custom-homepage header .input-group {
+.container header .input-group {
   margin-left: 30px;
   background-color: #f5f5f5;
 }
-.custom-homepage nav {
-  gap: 10px;
+.container nav {
   padding: 10px;
   border-radius: 12px;
   margin-top: 59px;
   background-color: #f0f0f0;
 }
-.custom-homepage nav .btn {
-  font-size: 21px;
-  padding: 10px 145px;
+.container nav .btn {
   border-radius: 12px;
+  font-size: 21px;
 }
-.custom-homepage .select-group {
+.container .select-group {
   margin-top: 60px;
   gap: 25px;
 }
-.custom-homepage .select-group select {
+.container .select-group select {
   padding: 15px 12px 15px 14px;
   font-size: 21px;
   font-weight: 500;
   color: #5f5f5f;
 }
-.custom-homepage .select-group .filter-left {
+.container .select-group .filter-left {
   width: 65%;
 }
-.custom-homepage .select-group .filter-right {
+.container .select-group .filter-right {
   width: 35%;
 }
-.custom-homepage .select-group .filter-right label {
+.container .select-group .filter-right label {
   font-size: 21px;
   font-weight: 500;
   margin-bottom: 8px;
 }
-.custom-homepage .select-group .filter-right input {
+.container .select-group .filter-right input {
   width: 100%;
   padding: 15px 12px 15px 14px;
   font-size: 21px;
