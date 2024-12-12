@@ -1,80 +1,192 @@
 .container {
-    height: 100vh;
+    margin-top: 60px;
+}
+
+.header-container {
     padding-top: 10px;
 
-    header {
-        .logo {
-            background-color: #e7e7e7;
-            padding: 20px 80px;
-            font-family: $logo;
+    .logo {
+        background-color: #e7e7e7;
+        padding: 20px 80px;
+        font-family: $logo;
+
+        @include mq(phone-sm){
+            display: none;
+        }
+        @include mq(phone-only){
+            display: none;
         }
 
-        .btn-group {
-            gap: 10px;
-
-            .btn {
-                padding: 10px 30px;
-            }
-        }
-
-        .input-group {
-            margin-left: 30px;
-            background-color: #f5f5f5;
+        @include mq(tablet-portrait-up){
+            display: none;
         }
 
 
     }
-    
-    nav {
-        padding: 10px;
+
+    .btn-group {
+        gap: 10px;
+
+        a {
+            padding: 10px 30px;
+            font-size: 16px;
+        }
+    }
+
+    .input-group {
+        margin-left: 30px;
+        background-color: #f5f5f5;
+
+        input {
+            box-shadow: none;
+        }
+    }
+
+}
+
+.links-container {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+
+    a {
+        font-size: 21px;
+
+        @include mq(phone-sm){
+            font-size: 10px;
+        }
+
+        @include mq(phone-only){
+            font-size: 12px;
+        }
+
+        @include mq(tablet-portrait-up){
+            font-size: 16px;
+        }
+    }
+}
+
+.form-container {
+
+    select {
+        color: #5F5F5F;
+        padding: 15px 12px 15px 14px;
+        font-size: 21px;
+    }
+
+    label {
+        font-size: 21px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    input {
+        border: 1px solid lightgray;
+        margin-bottom: 27px;
+        outline: none;
+        font-size: 21px;
+        padding: 15px 12px 15px 14px;
+        color: #5f5f5f;
+    }
+}
+
+.card {
+    padding: 20px 10px;
+    background-color: #f2f2f2;
+    height: auto;
+    border-radius: 12px;
+
+    .card-logo {
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: 500;
+        top: 36px;
+        left: 27px;
+    }
+
+    .card-vip-icon {
+        top: 36px;
+        right: 27px;
+        padding: 5px;
+        background-color: #E5A51B;
+        border-radius: 50%;
+    }
+
+    img {
         border-radius: 12px;
-        margin-top: 59px;
-        background-color: #f0f0f0;
+    }
 
-        .btn {
-            border-radius: 12px;
-            font-size: 21px;
+    .card-body-price {
+        font-size: 28px;
+        font-weight: 600;
+        margin-top: 8px;
+        padding: 0;
+
+        img {
+            background: #F76E13;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
         }
     }
 
-    .select-group{
-        margin-top: 60px;
-        gap: 25px;
+    .card-body-title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-top: 12px;
+    }
 
-        select{
-            padding: 15px 12px 15px 14px;
-            font-size: 21px;
+    .card-body-location {
+        font-size: 21px;
+        font-weight: 500;
+        margin-top: 20px;
+
+        .date {
+            font-size: 14px;
+            gap: 12px;
+        }
+
+    }
+}
+
+.vip-adverts-container {
+
+    .vip-adverts-header {
+        span {
+            font-size: 28px;
             font-weight: 500;
-            color: #5f5f5f;
-        }
-
-        .filter-left{
-            width: 65%;
-        }
-
-        .filter-right{
-            width: 35%;
-
-
-            label{
-                font-size: 21px;
-                font-weight: 500;
-                margin-bottom: 8px;
-            }
-
-            input{
-                width: 100%;
-                padding: 15px 12px 15px 14px;
-                font-size: 21px;
-                outline: none;
-                border: 0.4px solid #000;
-                margin-bottom: 15px;
-                color: #5f5f5f;
-                text-align: center;
-            }
         }
     }
-      
+
+    select {
+        width: fit-content;
+        padding: 10px 15px;
+    }
+}
+
+.latest-adverts-container {
+    margin-top: 60px;
+
+    .latest-adverts-header {
+        span {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
+
+
+
+    select {
+        width: fit-content;
+        padding: 10px 15px;
+    }
+
+    .latest-adverts-body {
+        margin-top: 40px;
+        gap: 18px;
+    }
+
 }
 
 .tooltip-inner {
@@ -92,3 +204,4 @@
 
     // arrow color will turn to white
 }
+
