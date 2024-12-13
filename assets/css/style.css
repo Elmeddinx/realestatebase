@@ -124,7 +124,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .links-container a {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
