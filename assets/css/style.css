@@ -10,12 +10,12 @@ body {
   box-sizing: border-box;
 }
 
-.mySwiper {
-  margin-top: 40px;
+.swiper {
+  padding: 0 20px;
 }
 
-.swiper-wrapper {
-  gap: 8px;
+.mySwiper {
+  margin-top: 40px;
 }
 
 .swiper-button-next,
@@ -43,6 +43,14 @@ body {
   font-weight: bolder;
 }
 
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
 .swiper-pagination {
   position: relative;
   margin-top: 20px !important;
@@ -51,7 +59,7 @@ body {
 .mySwiper .swiper-pagination-bullet {
   width: 16px;
   height: 16px;
-  background-color: #007bff;
+  background-color: #e2dfdf;
   opacity: 0.7;
 }
 
@@ -150,25 +158,41 @@ body {
 .card {
   padding: 20px 10px;
   background-color: #f2f2f2;
-  height: auto;
   border-radius: 12px;
 }
+.card .card-img-top {
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 .card .card-logo {
+  width: 72px;
+  height: 27px;
   padding: 5px 10px;
   font-size: 14px;
   font-weight: 500;
   top: 36px;
   left: 27px;
+  color: #5f5f5f;
 }
 .card .card-vip-icon {
+  width: 40px;
+  height: 40px;
   top: 36px;
   right: 27px;
-  padding: 5px;
   background-color: #E5A51B;
   border-radius: 50%;
 }
 .card img {
   border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .card .card-body-price {
   font-size: 28px;
@@ -193,36 +217,76 @@ body {
   font-weight: 500;
   margin-top: 20px;
 }
+@media only screen and (max-width: 380px) {
+  .card .card-body-location {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card .card-body-location {
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card .card-body-location {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .card .card-body-location {
+    font-size: 21px;
+  }
+}
 .card .card-body-location .date {
   font-size: 14px;
   gap: 12px;
 }
 
+.vip-adverts-container .vip-adverts-header {
+  padding: 0 20px;
+}
 .vip-adverts-container .vip-adverts-header span {
   font-size: 28px;
   font-weight: 500;
 }
-.vip-adverts-container select {
-  width: -moz-fit-content;
-  width: fit-content;
+.vip-adverts-container .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  background-color: #323232;
   padding: 10px 15px;
+  background-image: url("../icons/filter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 24px 24px;
 }
 
 .latest-adverts-container {
-  margin-top: 60px;
+  margin-top: 36px;
+}
+.latest-adverts-container .latest-adverts-header {
+  padding: 0 20px;
 }
 .latest-adverts-container .latest-adverts-header span {
   font-size: 28px;
   font-weight: 500;
 }
-.latest-adverts-container select {
-  width: -moz-fit-content;
-  width: fit-content;
+.latest-adverts-container .latest-adverts-header .custom-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  background-color: #323232;
   padding: 10px 15px;
+  background-image: url("../icons/filter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 24px 24px;
 }
 .latest-adverts-container .latest-adverts-body {
   margin-top: 40px;
-  gap: 18px;
+  padding: 0 20px;
 }
 
 .tooltip-inner {
@@ -237,4 +301,11 @@ body {
   fill: #FFF;
   filter: drop-shadow(-1px 3px 4px rgba(0, 0, 0, 0.12));
   color: transparent;
+}
+
+.footer-container {
+  padding-top: 25px;
+  margin-bottom: 48px;
+  margin-top: 195px;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
