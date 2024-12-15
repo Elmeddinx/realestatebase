@@ -10,19 +10,9 @@
         padding: 20px 80px;
         font-family: $logo;
 
-        @include mq(phone-sm) {
-            display: none;
-        }
-
-        @include mq(phone-only) {
-            display: none;
-        }
-
         @include mq(tablet-portrait-up) {
             display: none;
         }
-
-
     }
 
     .btn-group {
@@ -37,9 +27,22 @@
     .input-group {
         margin-left: 30px;
         background-color: #f5f5f5;
+        width: 25%;
+        border-radius: 12px;
+
+        @include mq(tablet-portrait-up){
+            width: fit-content;
+            padding: 5px;
+            border-radius: 50%;
+            margin-left: auto;
+        }
 
         input {
             box-shadow: none;
+
+            @include mq(tablet-portrait-up){
+                display: none;
+            }
         }
     }
 
@@ -50,29 +53,44 @@
     background-color: #f0f0f0;
     border-radius: 12px;
 
+    .text-1{
+        @include mq(tablet-portrait-up){
+            display: none;
+        }
+    }
+
+    .text-2{
+        display: none;
+        @include mq(tablet-portrait-up){
+            display: inline-block;
+        }
+    }
+
     a {
         font-size: 21px;
 
-        @include mq(phone-sm) {
-            font-size: 10px;
-        }
-
-        @include mq(phone-only) {
-            font-size: 12px;
-        }
-
-        @include mq(tablet-portrait-up) {
-            font-size: 12px;
+        @include mq(phone-only){
+            font-size: 1px;
         }
     }
 }
 
 .form-container {
 
-    select {
+    .custom-select {
         color: #5F5F5F;
         padding: 15px 12px 15px 14px;
         font-size: 21px;
+
+
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        background-image: url('../icons/arrow-outlined.svg');
+        background-repeat: no-repeat;
+        background-size: 12px 24px;
+
     }
 
     label {
@@ -95,41 +113,60 @@
     padding: 20px 10px;
     background-color: #f2f2f2;
     border-radius: 12px;
+    box-sizing: border-box;
 
-    .card-img-top{
+    .logo {
+        padding: 5px 10px;
+        top: 36px;
+        left: 27px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .badgets {
+        top: 36px;
+        right: 27px;
+        gap: 12px;
+
+        .badget {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .document {
+            background-color: #00AA08;
+        }
+
+        .percent {
+            background-color: #F76E13;
+        }
+
+        .vip {
+            background-color: #E5A51B;
+        }
+    }
+
+    .card-img-top {
         height: 280px;
         object-fit: cover;
         object-position: center;
-    }
-
-    .card-logo {
-        width: 72px;
-        height: 27px;
-        padding: 5px 10px;
-        font-size: 14px;
-        font-weight: 500;
-        top: 36px;
-        left: 27px;
-        color: #5f5f5f;
-    }
-
-    .card-vip-icon {
-        width: 40px;
-        height: 40px;
-        top: 36px;
-        right: 27px;
-        background-color: #E5A51B;
-        border-radius: 50%;
-    }
-
-    img {
         border-radius: 12px;
-        object-fit: cover;
-        object-position: center;
     }
 
     .card-body-price {
-        font-size: 28px;
+        font-size: 21px;
         font-weight: 600;
         margin-top: 8px;
         padding: 0;
@@ -144,31 +181,16 @@
     }
 
     .card-body-title {
-        font-size: 24px;
+        font-size: 21px;
         font-weight: 500;
         margin-top: 12px;
     }
 
     .card-body-location {
-        font-size: 21px;
+        font-size: 17px;
         font-weight: 500;
         margin-top: 20px;
 
-        @include mq(phone-sm){
-            font-size: 14px ;
-        }
-
-        @include mq(phone-only){
-            font-size: 16px ;
-        }
-
-        @include mq(tablet-landscape-up){
-            font-size: 16px;
-        }
-
-        @include mq(desktop-up){
-            font-size: 21px;
-        }
 
         .date {
             font-size: 14px;
@@ -176,12 +198,14 @@
         }
 
     }
+
 }
 
-.vip-adverts-container {
+.vip-announcement-container {
 
-    .vip-adverts-header {
+    .vip-announcementadverts-header {
         padding: 0 20px;
+
         span {
             font-size: 28px;
             font-weight: 500;
@@ -196,7 +220,7 @@
         outline: none;
 
         background-color: #323232;
-        padding: 10px 15px;
+        padding: 10px 40px 10px 15px;
 
         background-image: url('../icons/filter-icon.svg');
         background-repeat: no-repeat;
@@ -205,10 +229,10 @@
     }
 }
 
-.latest-adverts-container {
+.latest-announcement-container {
     margin-top: 36px;
 
-    .latest-adverts-header {
+    .latest-announcement-header {
         padding: 0 20px;
 
         span {
@@ -224,7 +248,7 @@
             outline: none;
 
             background-color: #323232;
-            padding: 10px 15px;
+            padding: 10px 40px 10px 15px;
 
             background-image: url('../icons/filter-icon.svg');
             background-repeat: no-repeat;
@@ -233,7 +257,7 @@
         }
     }
 
-    .latest-adverts-body {
+    .latest-announcement-body {
         margin-top: 40px;
         padding: 0 20px;
     }
@@ -256,9 +280,14 @@
     // arrow color will turn to white
 }
 
-.footer-container{
+.footer-container {
     padding-top: 25px;
     margin-bottom: 48px;
     margin-top: 195px;
     font-size: 14px;
+    border-top: 1px solid black;
+
+    .footer-social {
+        gap: 22px;
+    }
 }
