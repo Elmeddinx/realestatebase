@@ -1,0 +1,45 @@
+.header-container {
+    padding-top: 10px;
+
+    .logo {
+        background-color: #e7e7e7;
+        padding: 20px 80px;
+        font-family: $logo;
+
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
+    }
+
+    .btn-group {
+        gap: 10px;
+
+        a {
+            padding: 10px 30px;
+            font-size: 16px;
+        }
+    }
+
+    .input-group {
+        margin-left: 30px;
+        background-color: #f5f5f5;
+        width: 25%;
+        border-radius: 12px;
+
+        @include mq(tablet-portrait-up){
+            width: fit-content;
+            padding: 5px;
+            border-radius: 50%;
+            margin-left: auto;  
+        }
+
+        input {
+            box-shadow: none;
+
+            @include mq(tablet-portrait-up){
+                display: none;
+            }
+        }
+    }
+
+}

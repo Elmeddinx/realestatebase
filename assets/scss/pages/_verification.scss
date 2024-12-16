@@ -1,6 +1,6 @@
-.registration-container {
+.verification-container {
     min-height: 100vh;
-    gap: 50px;
+    gap: 40px;
 
     .background {
         background-image:
@@ -21,13 +21,14 @@
     }
 
 
-    .registration-card {
-        gap: 42px;
+    .verification-card{
+        gap: 32px;
         padding: 50px 40px;
 
-        .card-title {
+        .card-title{
+            gap: 18px;
 
-            span {
+            :first-child{
                 font-size: 32px;
                 font-weight: 600;
 
@@ -36,64 +37,75 @@
                 }
             }
 
+            :last-child{
+                font-size: 18px;
+
+                @include mq(phone-only) {
+                    font-size: 16px;
+                }
+
+
+            }
+
+
+            @include mq(phone-only){
+                font-size: 24px;
+            }
         }
 
-        .signup-form {
+        .verification-form{
 
-            label {
+            label{
                 font-size: 18px;
                 margin-bottom: 6px;
 
                 @include mq(phone-only) {
                     font-size: 14px;
                 }
-            }
 
-            .input-group {
+            }
+    
+            .input-group{
                 padding: 15px 12px 15px 14px;
                 border: 1px solid black;
                 border-radius: 12px;
-                gap: 10px;
 
-                .input-group-text {
-                    font-size: 21px;
-                    border: none;
-                    border-right: 1px solid black;
 
-                    @include mq(tablet-portrait-up) {
-                        font-size: 18px;
-                    }
-                }
-
-                .input-group-text {
-                    font-size: 21px;
-                    border: none;
-                    border-right: 1px solid black;
-
-                    @include mq(tablet-portrait-up) {
-                        font-size: 18px;
-                    }
-                }
-
-                .form-control {
+                .form-control{
                     box-shadow: none;
                     font-size: 21px;
+                    border-left: 1px solid black !important;
+                    border-radius: 0;
 
-                    @include mq(phone-only) {
+                    @include mq(phone-only){
                         font-size: 18px;
                     }
                 }
 
 
             }
+
+            button{
+                font-size: 18px;
+                color: #1D74D8;
+                background-color: white;
+                border: none;
+                font-weight: 500;
+
+                @include mq(phone-only){
+                    font-size: 16px;
+                }
+            }
+
+
         }
 
-        .btn {
+        .btn{
             font-size: 21px;
             border-radius: 12px;
             padding: 15px 12px 15px 14px;
 
-            @include mq(phone-only) {
+            @include mq(phone-only){
                 font-size: 18px;
             }
         }

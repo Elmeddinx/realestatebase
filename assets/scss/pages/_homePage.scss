@@ -1,243 +1,52 @@
-.container {
-    margin-top: 60px;
-}
+.homepage-container {
+    padding-bottom: 48px;
 
-.header-container {
-    padding-top: 10px;
 
-    .logo {
-        background-color: #e7e7e7;
-        padding: 20px 80px;
-        font-family: $logo;
+    .form-container {
+        margin-top: 60px;
 
-        @include mq(tablet-portrait-up) {
-            display: none;
+        .custom-select {
+            color: #5F5F5F;
+            padding: 15px 12px 15px 14px;
+            font-size: 21px;
+
+
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            background-image: url('../icons/arrow-outlined.svg');
+            background-repeat: no-repeat;
+            background-size: 12px 24px;
+
         }
-    }
 
-    .btn-group {
-        gap: 10px;
-
-        a {
-            padding: 10px 30px;
-            font-size: 16px;
-        }
-    }
-
-    .input-group {
-        margin-left: 30px;
-        background-color: #f5f5f5;
-        width: 25%;
-        border-radius: 12px;
-
-        @include mq(tablet-portrait-up){
-            width: fit-content;
-            padding: 5px;
-            border-radius: 50%;
-            margin-left: auto;
+        label {
+            font-size: 21px;
+            font-weight: 500;
+            margin-bottom: 5px;
         }
 
         input {
-            box-shadow: none;
-
-            @include mq(tablet-portrait-up){
-                display: none;
-            }
+            border: 1px solid lightgray;
+            margin-bottom: 27px;
+            outline: none;
+            font-size: 21px;
+            padding: 15px 12px 15px 14px;
+            color: #5f5f5f;
         }
     }
 
-}
+    .vip-announcement-container {
+        margin-top: 60px;
 
-.links-container {
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 12px;
-
-    .text-1{
-        @include mq(tablet-portrait-up){
-            display: none;
-        }
-    }
-
-    .text-2{
-        display: none;
-        @include mq(tablet-portrait-up){
-            display: inline-block;
-        }
-    }
-
-    a {
-        font-size: 21px;
-
-        @include mq(phone-only){
-            font-size: 1px;
-        }
-    }
-}
-
-.form-container {
-
-    .custom-select {
-        color: #5F5F5F;
-        padding: 15px 12px 15px 14px;
-        font-size: 21px;
-
-
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-
-        background-image: url('../icons/arrow-outlined.svg');
-        background-repeat: no-repeat;
-        background-size: 12px 24px;
-
-    }
-
-    label {
-        font-size: 21px;
-        font-weight: 500;
-        margin-bottom: 5px;
-    }
-
-    input {
-        border: 1px solid lightgray;
-        margin-bottom: 27px;
-        outline: none;
-        font-size: 21px;
-        padding: 15px 12px 15px 14px;
-        color: #5f5f5f;
-    }
-}
-
-.card {
-    padding: 20px 10px;
-    background-color: #f2f2f2;
-    border-radius: 12px;
-    box-sizing: border-box;
-
-    .logo {
-        padding: 5px 10px;
-        top: 36px;
-        left: 27px;
-
-        span {
-            font-size: 14px;
-        }
-    }
-
-    .badgets {
-        top: 36px;
-        right: 27px;
-        gap: 12px;
-
-        .badget {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 5px;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            color: white;
+        .vip-announcement-header {
+            padding: 0 20px;
 
             span {
-                font-size: 16px;
+                font-size: 28px;
+                font-weight: 500;
             }
-        }
-
-        .document {
-            background-color: #00AA08;
-        }
-
-        .percent {
-            background-color: #F76E13;
-        }
-
-        .vip {
-            background-color: #E5A51B;
-        }
-    }
-
-    .card-img-top {
-        height: 280px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 12px;
-    }
-
-    .card-body-price {
-        font-size: 21px;
-        font-weight: 600;
-        margin-top: 8px;
-        padding: 0;
-
-        img {
-            background: #F76E13;
-            padding: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-    }
-
-    .card-body-title {
-        font-size: 21px;
-        font-weight: 500;
-        margin-top: 12px;
-    }
-
-    .card-body-location {
-        font-size: 17px;
-        font-weight: 500;
-        margin-top: 20px;
-
-
-        .date {
-            font-size: 14px;
-            gap: 12px;
-        }
-
-    }
-
-}
-
-.vip-announcement-container {
-
-    .vip-announcementadverts-header {
-        padding: 0 20px;
-
-        span {
-            font-size: 28px;
-            font-weight: 500;
-        }
-    }
-
-    .custom-select {
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-
-        outline: none;
-
-        background-color: #323232;
-        padding: 10px 40px 10px 15px;
-
-        background-image: url('../icons/filter-icon.svg');
-        background-repeat: no-repeat;
-        background-position: right 10px center;
-        background-size: 24px 24px;
-    }
-}
-
-.latest-announcement-container {
-    margin-top: 36px;
-
-    .latest-announcement-header {
-        padding: 0 20px;
-
-        span {
-            font-size: 28px;
-            font-weight: 500;
         }
 
         .custom-select {
@@ -257,37 +66,39 @@
         }
     }
 
-    .latest-announcement-body {
-        margin-top: 40px;
-        padding: 0 20px;
-    }
+    .latest-announcement-container {
+        margin-top: 60px;
+        margin-bottom: 195px;
 
-}
+        .latest-announcement-header {
+            padding: 0 20px;
 
-.tooltip-inner {
-    background-color: transparent;
-    color: black;
-    font-size: 18px;
-    font-weight: 400;
-    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.12);
-}
+            span {
+                font-size: 28px;
+                font-weight: 500;
+            }
 
-.tooltip-arrow {
-    fill: #FFF;
-    filter: drop-shadow(-1px 3px 4px rgba(0, 0, 0, 0.12));
-    color: transparent;
+            .custom-select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
 
-    // arrow color will turn to white
-}
+                outline: none;
 
-.footer-container {
-    padding-top: 25px;
-    margin-bottom: 48px;
-    margin-top: 195px;
-    font-size: 14px;
-    border-top: 1px solid black;
+                background-color: #323232;
+                padding: 10px 40px 10px 15px;
 
-    .footer-social {
-        gap: 22px;
+                background-image: url('../icons/filter-icon.svg');
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 24px 24px;
+            }
+        }
+
+        .latest-announcement-body {
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
     }
 }

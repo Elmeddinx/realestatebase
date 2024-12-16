@@ -1,0 +1,26 @@
+.footer-container-white {
+    padding-top: 25px;
+    font-size: 14px;
+    border-top: 1px solid white;
+    color: white;
+
+    .footer-social {
+        gap: 22px;
+        color: white;
+
+        .social-icon{
+            filter: invert(100%) brightness(100%);
+        }
+
+    }
+}
+
+.footer-container-black {
+    padding-top: 25px;
+    font-size: 14px;
+    border-top: 1px solid black;
+
+    .footer-social {
+        gap: 22px;
+    }
+}

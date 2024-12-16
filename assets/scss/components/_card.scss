@@ -1,0 +1,99 @@
+.card {
+    padding: 20px 10px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    .logo {
+        padding: 5px 10px;
+        top: 36px;
+        left: 27px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .badgets {
+        top: 36px;
+        right: 27px;
+        gap: 12px;
+
+        .badget {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .document {
+            background-color: #00AA08;
+        }
+
+        .percent {
+            background-color: #F76E13;
+        }
+
+        .vip {
+            background-color: #E5A51B;
+        }
+    }
+
+    .card-img-top {
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 12px;
+    }
+
+    .card-body-price {
+        font-size: 28px;
+        font-weight: 600;
+        margin-top: 8px;
+        padding: 0;
+
+        img {
+            background: #F76E13;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+
+    .card-body-title {
+        font-size: 21px;
+        font-weight: 500;
+        margin-top: 12px;
+    }
+
+    .card-body-location {
+        font-size: 21px;
+        font-weight: 500;
+        margin-top: 20px;
+
+        @include mq(tablet-landscape-up){
+            font-size: 16px;
+        }
+
+
+        .date {
+            font-size: 14px;
+            gap: 12px;
+
+            @include mq(tablet-portrait-up){
+                gap: 5px;
+            }
+        }
+
+    }
+
+}

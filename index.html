@@ -18,8 +18,8 @@
 
     <!-- header -->
 
-    <div class="container header-container mt-0">
-      <header class="d-flex align-items-center">
+    <Header class="container header-container mt-0">
+      <div class="d-flex align-items-center">
 
         <div class="logo">Logo</div>
 
@@ -33,22 +33,28 @@
           <a class="btn btn-light rounded-pill">Qeydiyyat</a>
         </div>
 
-      </header>
-    </div>
+      </div>
+    </Header>
 
     <!-- navbar -->
 
     <div class="container links-container">
       <div class="row justify-content-around align-items-center">
-        <a class="btn col-3 btn-primary">Axtarış</a>
+        <a class="btn col-3 active">Axtarış</a>
         <a class="btn col-5 bg-white">
           <span class="text-1">+ Yeni elan yerləşdirin</span>
-          <span class="text-2">Yeni elan</span>
+          <span class="text-2">+ Yeni elan</span>
         </a>
-        <a class="btn col-3 bg-white" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
-          data-bs-placement="top" title=" Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
-          Həvalə et
-        </a>
+
+        <a class="btn col-3 bg-white" 
+        data-bs-toggle="tooltip" 
+        data-bs-custom-class="custom-tooltip" 
+        data-bs-placement="top" 
+        title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
+        Həvalə et
+     </a>
+     
+        
       </div>
     </div>
 
@@ -1240,23 +1246,26 @@
 
     <!-- footer -->
 
-    <div class="container footer-container mb-5 d-flex justify-content-between">
-      <div>
-        &#169; 2024 | Powered by ....
-      </div>
+    <Footer>
+      <div class="container footer-container-black mb-4 d-flex justify-content-between">
+        <div>
+          &#169; 2024 | Powered by ....
+        </div>
 
-      <div class="footer-social d-flex justify-content-center align-items-center">
-        <a href="">
-          <img src="./assets/icons/facebook.svg" alt="">
-        </a>
-        <a href="">
-          <img src="./assets/icons/whatsapp.svg" alt="">
-        </a>
-        <a href="">
-          <img src="./assets/icons/instagram.svg" alt="">
-        </a>
+        <div class="footer-social d-flex justify-content-center align-items-center">
+          <a href="">
+            <img src="./assets/icons/facebook.svg" alt="" class="social-icon">
+          </a>
+          <a href="">
+            <img src="./assets/icons/whatsapp.svg" alt="" class="social-icon">
+          </a>
+          <a href="">
+            <img src="./assets/icons/instagram.svg" alt="" class="social-icon">
+          </a>
+        </div>
       </div>
-    </div>
+    </Footer>
+
 
   </div>
 

@@ -1,0 +1,42 @@
+.links-container {
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+
+    .text-1 {
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
+    }
+
+    .text-2 {
+        display: none;
+
+        @include mq(tablet-portrait-up) {
+            display: inline-block;
+        }
+    }
+
+    a {
+        font-size: 21px;
+
+        @include mq(tablet-portrait-up) {
+            font-size: 16px;
+        }
+    }
+
+    .btn{
+        @include mq(phone-only){
+            width: 109px;
+            font-size: 15px;
+        }
+    }
+
+    .active{
+        background-color: #1D74D8;
+        border: none;
+        color: white;
+
+    }
+}

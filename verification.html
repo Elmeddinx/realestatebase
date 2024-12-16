@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="container-fluid registration-container d-flex flex-column justify-content-between align-items-center">
+    <div class="container-fluid verification-container d-flex flex-column justify-content-between align-items-center">
 
         <div class="background">
         </div>
@@ -39,25 +39,33 @@
             </header>
         </div>
 
-        <!-- signup-card -->
+        <!-- verification-card -->
+
 
         <div class="container row d-flex justify-content-center">
-            <div class="registration-card rounded-4 bg-white d-flex flex-column col-sm-12 col-lg-6">
-                <div class="card-title text-center">
-                    <span>Qeydiyyatdan keç</span>
+            <div class="verification-card rounded-4 bg-white d-flex flex-column col-sm-12 col-lg-6">
+
+                <div class="card-title d-flex flex-column text-center">
+                    <span>Nömrənin təsdiqlənməsi</span>
+                    <span>(051) 123 34 45 nömrəsinə SMS-kod göndərildi</span>
                 </div>
 
-                <form class="signup-form">
-                    <label for="phone">Telefon nömrəsi</label>
+                <form class="verification-form">
+                    <label for="phone">SMS kod</label>
+
                     <div class="input-group mb-3">
-                        <span class="input-group-text bg-transparent" id="basic-addon1">( 0</span>
                         <input type="text" id="phone" maxlength="15" class="form-control border-0" aria-label="phone"
                             aria-describedby="basic-addon1">
                     </div>
+
+                    <div class="resend d-flex justify-content-center">
+                        <button>SMS kod təkrar göndərilsin</button>
+                    </div>
+
                 </form>
 
-                <div class="a">
-                    <button class="btn btn-primary w-100">SMS-kod göndərilsin</button>
+                <div>
+                    <button class="btn btn-primary w-100">Təsdiqlə</button>
                 </div>
             </div>
         </div>
@@ -86,12 +94,10 @@
     </div>
 
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
-    <script src="./assets/js/signUp.js"></script>
+    <script src="./assets/js/verification.js"></script>
 </body>
 
 </html>
