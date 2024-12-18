@@ -18,6 +18,10 @@
         a {
             padding: 10px 30px;
             font-size: 16px;
+
+            @include mq(phone-only){
+                font-size: 14px;
+            }
         }
     }
 

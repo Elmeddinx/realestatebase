@@ -46,6 +46,10 @@
             span {
                 font-size: 28px;
                 font-weight: 500;
+
+                @include mq(phone-only){
+                    font-size: 15px !important;
+                }
             }
         }
 
@@ -63,6 +67,10 @@
             background-repeat: no-repeat;
             background-position: right 10px center;
             background-size: 24px 24px;
+
+            @include mq(phone-only){
+                font-size: 12px !important;
+            }
         }
     }
 
@@ -76,6 +84,10 @@
             span {
                 font-size: 28px;
                 font-weight: 500;
+
+                @include mq(phone-only){
+                    font-size: 15px !important;
+                }
             }
 
             .custom-select {
@@ -92,6 +104,10 @@
                 background-repeat: no-repeat;
                 background-position: right 10px center;
                 background-size: 24px 24px;
+
+                @include mq(phone-only){
+                    font-size: 12px !important;
+                }
             }
         }
 

@@ -116,6 +116,11 @@ body {
   font-size: 28px;
   font-weight: 500;
 }
+@media only screen and (max-width: 480px) {
+  .homepage-container .vip-announcement-container .vip-announcement-header span {
+    font-size: 15px !important;
+  }
+}
 .homepage-container .vip-announcement-container .custom-select {
   appearance: none;
   -webkit-appearance: none;
@@ -128,6 +133,11 @@ body {
   background-position: right 10px center;
   background-size: 24px 24px;
 }
+@media only screen and (max-width: 480px) {
+  .homepage-container .vip-announcement-container .custom-select {
+    font-size: 12px !important;
+  }
+}
 .homepage-container .latest-announcement-container {
   margin-top: 60px;
   margin-bottom: 195px;
@@ -138,6 +148,11 @@ body {
 .homepage-container .latest-announcement-container .latest-announcement-header span {
   font-size: 28px;
   font-weight: 500;
+}
+@media only screen and (max-width: 480px) {
+  .homepage-container .latest-announcement-container .latest-announcement-header span {
+    font-size: 15px !important;
+  }
 }
 .homepage-container .latest-announcement-container .latest-announcement-header .custom-select {
   appearance: none;
@@ -150,6 +165,11 @@ body {
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 24px 24px;
+}
+@media only screen and (max-width: 480px) {
+  .homepage-container .latest-announcement-container .latest-announcement-header .custom-select {
+    font-size: 12px !important;
+  }
 }
 .homepage-container .latest-announcement-container .latest-announcement-body {
   margin-top: 40px;
@@ -200,7 +220,7 @@ body {
   padding: 15px 12px 15px 14px;
   border: 1px solid black;
   border-radius: 12px;
-  gap: 10px;
+  gap: 6px;
 }
 .registration-container .registration-card .signup-form .input-group .input-group-text {
   font-size: 21px;
@@ -429,17 +449,6 @@ body {
     font-size: 15px;
   }
 }
-.links-container .btn .custom-tooltip {
-  font-size: 14px;
-  color: #333;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 8px;
-}
-.links-container .btn .custom-tooltip img {
-  vertical-align: middle;
-}
 .links-container .active {
   background-color: #1D74D8;
   border: none;
@@ -466,6 +475,11 @@ body {
 .header-container .btn-group a {
   padding: 10px 30px;
   font-size: 16px;
+}
+@media only screen and (max-width: 480px) {
+  .header-container .btn-group a {
+    font-size: 14px;
+  }
 }
 .header-container .input-group {
   margin-left: 30px;
