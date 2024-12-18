@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@ body {
 }
 
 .swiper {
-  padding: 0 35px;
+  padding: 0 28px;
 }
 
 .mySwiper {
@@ -256,10 +256,20 @@ body {
 .card .logo span {
   font-size: 14px;
 }
+@media only screen and (max-width: 380px) {
+  .card .logo span {
+    font-size: 10px;
+  }
+}
 .card .badgets {
   top: 36px;
   right: 27px;
   gap: 12px;
+}
+@media only screen and (max-width: 380px) {
+  .card .badgets {
+    gap: 5px;
+  }
 }
 .card .badgets .badget {
   display: flex;
@@ -270,6 +280,12 @@ body {
   width: 40px;
   height: 40px;
   color: white;
+}
+@media only screen and (max-width: 380px) {
+  .card .badgets .badget {
+    width: 30px;
+    height: 30px;
+  }
 }
 .card .badgets .badget span {
   font-size: 16px;
@@ -297,6 +313,11 @@ body {
   margin-top: 8px;
   padding: 0;
 }
+@media only screen and (max-width: 380px) {
+  .card .card-body-price {
+    font-size: 20px;
+  }
+}
 .card .card-body-price img {
   background: #F76E13;
   padding: 10px;
@@ -304,28 +325,68 @@ body {
   height: 40px;
   border-radius: 50%;
 }
+@media only screen and (max-width: 380px) {
+  .card .card-body-price img {
+    width: 30px;
+    height: 30px;
+  }
+}
 .card .card-body-title {
   font-size: 21px;
   font-weight: 500;
   margin-top: 12px;
 }
-.card .card-body-location {
-  font-size: 21px;
-  font-weight: 500;
-  margin-top: 20px;
-}
-@media only screen and (max-width: 1024px) {
-  .card .card-body-location {
-    font-size: 16px;
+@media only screen and (max-width: 380px) {
+  .card .card-body-title {
+    font-size: 15px;
   }
 }
-.card .card-body-location .date {
+.card .card-body-location {
+  margin-top: 20px;
+}
+.card .card-body-location span {
+  font-weight: 500;
+  font-size: 21px;
+}
+@media only screen and (max-width: 380px) {
+  .card .card-body-location span {
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card .card-body-location span {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .card .card-body-location img {
+    width: 15px;
+    height: 15px;
+  }
+}
+.card .date {
   font-size: 14px;
   gap: 12px;
 }
-@media only screen and (max-width: 768px) {
-  .card .card-body-location .date {
+@media only screen and (max-width: 380px) {
+  .card .date {
     gap: 5px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .card .date span {
+    font-size: 12px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card .date span {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .card .date img {
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -356,11 +417,28 @@ body {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 380px) {
+  .links-container .btn {
+    width: 100px;
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 480px) {
   .links-container .btn {
     width: 109px;
     font-size: 15px;
   }
+}
+.links-container .btn .custom-tooltip {
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+}
+.links-container .btn .custom-tooltip img {
+  vertical-align: middle;
 }
 .links-container .active {
   background-color: #1D74D8;
@@ -370,6 +448,7 @@ body {
 
 .header-container {
   padding-top: 10px;
+  width: 100%;
 }
 .header-container .logo {
   background-color: #e7e7e7;
@@ -411,32 +490,57 @@ body {
     display: none;
   }
 }
+.header-container .input-group .search-icon {
+  cursor: pointer;
+}
 
-.footer-container-white {
+@media only screen and (max-width: 768px) {
+  .active {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .active .btn-group {
+    order: -1;
+  }
+  .active .input-group {
+    width: 100%;
+    border-radius: 20px;
+    padding: 0;
+  }
+  .active .input-group input {
+    display: inline-block;
+    border-radius: 12px;
+    background-color: transparent;
+  }
+}
+
+Footer {
+  width: 100%;
+}
+Footer .footer-container-white {
   padding-top: 25px;
   font-size: 14px;
   border-top: 1px solid white;
   color: white;
 }
-.footer-container-white .footer-social {
+Footer .footer-container-white .footer-social {
   gap: 22px;
   color: white;
 }
-.footer-container-white .footer-social .social-icon {
+Footer .footer-container-white .footer-social .social-icon {
   filter: invert(100%) brightness(100%);
 }
-
-.footer-container-black {
+Footer .footer-container-black {
   padding-top: 25px;
   font-size: 14px;
   border-top: 1px solid black;
 }
-.footer-container-black .footer-social {
+Footer .footer-container-black .footer-social {
   gap: 22px;
 }
 
 .verification-container {
-  min-height: 100vh;
+  min-height: 100%;
   gap: 40px;
 }
 .verification-container .background {
@@ -528,4 +632,137 @@ body {
   .verification-container .verification-card .btn {
     font-size: 18px;
   }
+}
+
+.newAnnouncement-container .title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-top: 45px;
+}
+.newAnnouncement-container .image-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-add {
+  border: 2px dashed #5f5f5f;
+  background-color: #f0f0f0;
+  padding: 30px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  color: #555;
+  transition: all 0.3s ease;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-add.large {
+  width: 305px;
+  height: 90px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-add.small {
+  width: 120px;
+  height: 120px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-add label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 7px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-add label span {
+  display: block;
+  font-size: 18px;
+  color: #555;
+  font-weight: 400;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-preview img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-preview .image-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-preview .image-actions button {
+  border: none;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-preview .image-actions button img {
+  width: 24px;
+  height: 24px;
+}
+.newAnnouncement-container .image-upload-container .image-preview-container .image-preview .image-actions button .svg-turn {
+  width: 16px;
+  height: 16px;
+}
+.newAnnouncement-container .upload-hint {
+  font-size: 12px;
+  font-family: "Poppins";
+  color: #5f5f5f;
+}
+.newAnnouncement-container .file-input {
+  display: none;
+}
+.newAnnouncement-container .form-container {
+  margin-top: 40px;
+}
+.newAnnouncement-container .form-container span {
+  background-color: transparent;
+  font-size: 21px;
+  border: none;
+}
+.newAnnouncement-container .form-container .custom-select {
+  font-size: 21px;
+  box-shadow: none;
+  padding: 15px 12px 15px 14px;
+}
+.newAnnouncement-container .form-container label {
+  font-size: 21px;
+  font-weight: 600;
+}
+.newAnnouncement-container .form-container .input-group {
+  border-radius: 12px;
+  border: 1px solid lightgray;
+}
+.newAnnouncement-container .form-container .input-group .form-control {
+  border-radius: 12px;
+  font-size: 21px;
+  box-shadow: none;
+  border: none;
+  padding: 15px 12px 15px 14px;
+}
+.newAnnouncement-container .form-container textarea {
+  padding: 15px 24px 170px 14px;
+  border-radius: 12px;
+  outline: none;
+  font-size: 21px;
+}
+.newAnnouncement-container .form-container .checkbox {
+  gap: 53px;
+}
+.newAnnouncement-container .form-container .checkbox div {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.newAnnouncement-container .form-container .checkbox input[type=checkbox] {
+  width: 24px;
+  height: 24px;
 }/*# sourceMappingURL=style.css.map */

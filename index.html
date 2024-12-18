@@ -18,15 +18,21 @@
 
     <!-- header -->
 
-    <Header class="container header-container mt-0">
-      <div class="d-flex align-items-center">
+    <Header class="header-container">
+      <div class="container d-flex align-items-center active" id="searchContainer">
 
         <div class="logo">Logo</div>
 
         <div class="input-group mt-auto">
-          <span class="input-group-text border-0 bg-transparent"><i class="bi bi-search"></i></span>
-          <input class="form-control rounded-pill border-0 bg-transparent" type="text" placeholder="Axtarış">
+          <span class="input-group-text border-0 bg-transparent search-icon">
+            <i class="bi bi-search" id="searchToggle"></i>
+          </span>
+          <input class="form-control rounded-pill border-0 bg-transparent search-input" 
+                 type="text" placeholder="Axtarış">
         </div>
+        
+        
+        
 
         <div class="btn-group ms-auto d-flex">
           <a class="btn btn-primary rounded-pill" href="#">Giriş</a>
@@ -36,6 +42,9 @@
       </div>
     </Header>
 
+
+
+    
     <!-- navbar -->
 
     <div class="container links-container">
@@ -45,18 +54,18 @@
           <span class="text-1">+ Yeni elan yerləşdirin</span>
           <span class="text-2">+ Yeni elan</span>
         </a>
-
+    
         <a class="btn col-3 bg-white" 
-        data-bs-toggle="tooltip" 
-        data-bs-custom-class="custom-tooltip" 
-        data-bs-placement="top" 
-        title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
-        Həvalə et
-     </a>
-     
-        
+           data-bs-toggle="tooltip" 
+           data-bs-html="true" 
+           data-bs-custom-class="custom-tooltip" 
+           data-bs-placement="top" 
+           title='<img src="./assets/icons/exclamation-icon" alt="Info" style="width: 16px; height: 16px; margin-right: 5px;"> Həvalə etmək üçün məlumat'>
+          Həvalə et
+        </a>
       </div>
     </div>
+    
 
 
     <!-- select -->

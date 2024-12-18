@@ -12,3 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+  document.getElementById("searchToggle").addEventListener("click", function () {
+    const searchContainer = document.getElementById("searchContainer");
+  
+    if (window.innerWidth < 768) {
+      searchContainer.classList.toggle("active");
+    }
+  });

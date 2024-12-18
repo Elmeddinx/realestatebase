@@ -1,5 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
-    spaceBetween: 35,
+    spaceBetween: 28,
     loop: true,
       breakpoints: {
         320: {

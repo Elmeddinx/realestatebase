@@ -1,5 +1,6 @@
 .header-container {
     padding-top: 10px;
+    width: 100%;
 
     .logo {
         background-color: #e7e7e7;
@@ -30,14 +31,43 @@
             width: fit-content;
             padding: 5px;
             border-radius: 50%;
-            margin-left: auto;  
+            margin-left: auto;
         }
 
         input {
             box-shadow: none;
 
             @include mq(tablet-portrait-up){
-                display: none;
+                display: none; 
+            }
+        }
+
+        .search-icon{
+            cursor: pointer;
+        }
+    }
+
+}
+
+.active{
+
+    @include mq(tablet-portrait-up){
+        flex-direction: column;
+        gap: 20px;
+    
+        .btn-group{
+            order: -1;
+        }
+    
+        .input-group{
+            width: 100%;
+            border-radius: 20px;
+            padding: 0;
+    
+            input{
+                display: inline-block;
+                border-radius: 12px;
+                background-color: transparent;
             }
         }
     }
