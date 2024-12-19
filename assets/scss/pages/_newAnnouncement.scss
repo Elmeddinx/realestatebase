@@ -185,9 +185,19 @@
     .confirmation{
         gap: 12px;
         margin-bottom: 15px;
+        background-color: green;
+
+        @include mq(phone-only){
+            flex-direction: column;
+        }
+
         .btn{
             padding: 10px 30px;
             font-size: 18px;
+
+            @include mq(phone-only){
+                width: 100%;
+            }
         }
 
         .cancel{

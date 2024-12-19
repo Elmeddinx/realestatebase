@@ -122,7 +122,6 @@
                     font-size: 21px;
 
                     @include mq(phone-only ){
-                        color: red;
                         font-size: 16px;
                     }
                 }

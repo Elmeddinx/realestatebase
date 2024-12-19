@@ -65,9 +65,148 @@
     height: 24px;
 }
 
-.custom-tooltip .tooltip-arrow::before {
+.links-container {
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+
+    .text-1 {
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
+    }
+
+    .text-2 {
+        display: none;
+
+        @include mq(tablet-portrait-up) {
+            display: inline-block;
+        }
+    }
+
+    a {
+        font-size: 21px;
+
+        @include mq(tablet-portrait-up) {
+            font-size: 16px;
+        }
+
+        @include mq(phone-only) {
+            width: 109px;
+            font-size: 12px;
+        }
+
+        @include mq(phone-sm) {
+            width: 90px;
+            font-size: 10px;
+        }
+
+    }
+
+
+    
+
+    .active {
+        background-color: #1D74D8;
+        border: none;
+        color: white;
+
+    }
+}
+
+.tooltip-inner {
     background-color: white !important;
+    color: #000 !important;
+    padding: 20px 10px !important;
+    display: flex;
+}
+
+.tooltip-inner span {
+    text-align: left;
+}
+
+.tooltip-inner img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
 }
 
 
 
+.links-container {
+    margin-top: 60px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+
+    .text-1 {
+        @include mq(tablet-portrait-up) {
+            display: none;
+        }
+    }
+
+    .text-2 {
+        display: none;
+
+        @include mq(tablet-portrait-up) {
+            display: inline-block;
+        }
+    }
+
+    a {
+        font-size: 21px;
+
+        @include mq(tablet-portrait-up) {
+            font-size: 16px;
+        }
+
+        @include mq(phone-only) {
+            width: 109px;
+            font-size: 12px;
+        }
+
+        @include mq(phone-sm) {
+            width: 90px;
+            font-size: 10px;
+        }
+
+    }
+
+
+    
+
+    .active {
+        background-color: #1D74D8;
+        border: none;
+        color: white;
+
+    }
+}
+
+.tooltip-inner {
+    background-color: white !important;
+    color: #000 !important;
+    padding: 20px 10px !important;
+    display: flex;
+    width: 1000px !important;
+}
+
+.tooltip-inner span {
+    text-align: left;
+}
+
+.tooltip-inner img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.tooltip-inner::before {
+    background-color: white !important;
+  }
+  
+.tooltip-arrow::after {
+    background-color: white !important;
+  }
+  
