@@ -1,6 +1,6 @@
 .registration-container {
     min-height: 100vh;
-    gap: 50px;
+    gap: 30px;
 
     .background {
         background-image:
@@ -20,81 +20,91 @@
         z-index: -1;
     }
 
-
     .registration-card {
-        gap: 42px;
         padding: 50px 40px;
+        gap: 42px;
 
-        .card-title {
+        .registration-title {
 
             span {
                 font-size: 32px;
                 font-weight: 600;
 
-                @include mq(phone-only) {
+                @include mq(tablet-portrait-up){
                     font-size: 24px;
                 }
-            }
 
+                @include mq(phone-only){
+                    font-size: 20px;
+                }
+            }
         }
 
-        .signup-form {
+        .registration-form {
 
             label {
                 font-size: 18px;
                 margin-bottom: 6px;
 
-                @include mq(phone-only) {
+                @include mq(tablet-portrait-up){
                     font-size: 14px;
+                }
+
+                @include mq(phone-only){
+                    font-size: 10px;
                 }
             }
 
             .input-group {
                 padding: 15px 12px 15px 14px;
-                border: 1px solid black;
+                border: 1px solid lightgray;
                 border-radius: 12px;
-                gap: 6px;
 
-                .input-group-text {
-                    font-size: 21px;
-                    border: none;
-                    border-right: 1px solid black;
-
-                    @include mq(tablet-portrait-up) {
-                        font-size: 18px;
-                    }
-                }
-
-                .input-group-text {
-                    font-size: 21px;
-                    border: none;
-                    border-right: 1px solid black;
-
-                    @include mq(tablet-portrait-up) {
-                        font-size: 18px;
-                    }
-                }
-
-                .form-control {
+                input {
                     box-shadow: none;
                     font-size: 21px;
+                    padding: 0;
+                    border-left: 1px solid gray !important;
+                    padding-left: 10px;
 
-                    @include mq(phone-only) {
+                    @include mq(tablet-portrait-up){
                         font-size: 18px;
                     }
+
+                    @include mq(phone-only){
+                        font-size: 15px;
+                    }
+
                 }
 
+                span {
+                    padding: 0;
+                    padding-right: 10px;
+                    font-size: 21px;
+                    border: none;
+
+                    @include mq(tablet-portrait-up){
+                        font-size: 18px;
+                    }
+
+                    @include mq(phone-only){
+                        font-size: 15px;
+                    }
+                }
 
             }
         }
 
-        .btn {
+        .btn{
             font-size: 21px;
             border-radius: 12px;
-            padding: 15px 12px 15px 14px;
 
-            @include mq(phone-only) {
+            @include mq(tablet-portrait-up){
                 font-size: 18px;
+            }
+
+            @include mq(phone-only){
+                font-size: 15px;
             }
         }
     }

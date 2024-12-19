@@ -1,5 +1,9 @@
 .swiper{
     padding: 0 28px;
+
+    @include mq(tablet-portrait-up){
+        padding: 0;
+    }
 }
 .mySwiper {
     margin-top: 40px;
@@ -28,7 +32,7 @@
 }
 
 .swiper-button-prev{
-    left: 2px;
+    left: 0;
 
     @include mq(tablet-portrait-up){
         display: none;
@@ -36,7 +40,7 @@
 }
 
 .swiper-button-next{
-    right: 2px;
+    right: 0;
 
     @include mq(tablet-portrait-up){
         display: none;

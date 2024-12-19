@@ -3,10 +3,10 @@ var swiper = new Swiper(".mySwiper", {
     loop: true,
       breakpoints: {
         320: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
         },
         480: {
-          slidesPerView: 1,
+          slidesPerView: 1.2,
         },
         768: {
           slidesPerView: 2,

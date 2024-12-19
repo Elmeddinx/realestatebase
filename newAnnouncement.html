@@ -39,8 +39,8 @@
 
         <div class="container links-container">
             <div class="row justify-content-around align-items-center">
-                <a class="btn col-3 active">Axtarış</a>
-                <a class="btn col-5 bg-white">
+                <a class="btn col-3">Axtarış</a>
+                <a class="btn col-5 active">
                     <span class="text-1">+ Yeni elan yerləşdirin</span>
                     <span class="text-2">+ Yeni elan</span>
                 </a>
@@ -106,8 +106,8 @@
 
                 <div class="col-md-4 col-sm-12 mb-5">
                     <div class="input-group">
-                        <span class="input-group-text number" id="basic-addon1">0 )</span>
-                        <input type="text" class="form-control tel" aria-describedby="basic-addon1">
+                        <span class="input-group-text" id="basic-addon1">0 )</span>
+                        <input type="text" class="form-control telephone" id="phone" aria-describedby="basic-addon1">
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
                 <div class="col-md-4 col-sm-12 mb-5">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">Sahə</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control numeric-input" aria-describedby="basic-addon1">
                     </div>
                 </div>
 
@@ -188,7 +188,7 @@
                 <div class="col-md-4 col-sm-12 mb-5 mt-4 ">
                     <div class="input-group">
                         <span class="input-group-text" id="basic-addon1">Qiymət</span>
-                        <input type="text" class="form-control" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control numeric-input" aria-describedby="basic-addon1">
                     </div>
                 </div>
             </div>
@@ -197,7 +197,7 @@
 
                 <div class="col-md-4 col-sm-12">
 
-                    
+
                     <div class="row">
 
                         <label for="">Torpaq sahəsi</label>
@@ -205,11 +205,15 @@
                         <div class="row d-flex justify-content-between">
 
                             <div class="col-6 min">
-                                <input type="text" class="form-control text-center shadow-none" placeholder="min" aria-describedby="basic-addon1">
+                                <div class="input-group">
+                                    <input type="text" class="form-control text-center numeric-input" placeholder="min" aria-describedby="basic-addon1">
+                                </div>
                             </div>
 
                             <div class="col-6 max">
-                                <input type="text" class="form-control text-center shadow-none" placeholder="max" aria-describedby="basic-addon1">
+                                <div class="input-group">
+                                    <input type="text" class="form-control text-center numeric-input" placeholder="max" aria-describedby="basic-addon1">
+                                </div>
                             </div>
                         </div>
 
@@ -222,18 +226,31 @@
                 </div>
 
                 <div class="col-md-3 col-sm-12 d-flex checkbox">
-                        <div class="d-flex align-items-center">
-                            <input class="me-2" type="checkbox" name="" id="">
-                            <label for="">Təmirli</label>
-                        </div>
+                    <div class="d-flex align-items-center">
+                        <input class="me-2" type="checkbox" name="" id="">
+                        <label class="fw-normal" for="">Təmirli</label>
+                    </div>
 
-                        <div class="d-flex align-items-center">
-                            <input class="me-2" type="checkbox" name="" id="">
-                            <label for="">Təmirsiz</label>
-                        </div>
+                    <div class="d-flex align-items-center">
+                        <input class="me-2" type="checkbox" name="" id="">
+                        <label class="fw-normal" for="">Təmirsiz</label>
+                    </div>
+                </div>
+
+                <div class="col-8 mt-5">
+                    <div class="d-flex align-items-center">
+                        <input class="me-2" type="checkbox" name="" id="">
+                        <label class="fw-normal" for="">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</label>
+                    </div>
                 </div>
 
             </div>
+
+        </div>
+
+        <div class="container confirmation d-flex justify-content-end align-items-center mt-5">
+            <button class="btn rounded-pill cancel">Ləğv et</button>
+            <button class="btn btn-primary rounded-pill">Elanı yerləşdir</button>
         </div>
 
 

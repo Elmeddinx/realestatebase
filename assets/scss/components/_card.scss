@@ -4,6 +4,7 @@
     border-radius: 12px;
     box-sizing: border-box;
 
+
     .logo {
         padding: 5px 10px;
         top: 36px;
@@ -67,86 +68,80 @@
         border-radius: 12px;
     }
 
-    .card-body-price {
-        font-size: 28px;
-        font-weight: 600;
-        margin-top: 8px;
-        padding: 0;
-
-        @include mq(phone-sm) {
-            font-size: 20px;
-        }
-
-        img {
-            background: #F76E13;
-            padding: 10px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-
-            @include mq(phone-sm) {
-                width: 30px;
-                height: 30px;
-            }
-        }
-    }
-
-    .card-body-title {
-        font-size: 21px;
-        font-weight: 500;
-        margin-top: 12px;
-
-        @include mq(phone-sm) {
-            font-size: 15px;
-        }
-    }
-
-    .card-body-location {
-        margin-top: 20px;
-
-        span {
-            font-weight: 500;
-            font-size: 21px;
-
-            @include mq(phone-sm) {
-                font-size: 12px !important;
+    .card-body {
+        &-price {
+            margin-top: 8px;
+            span {
+                font-size: 28px;
+                font-weight: 600;
             }
 
-            @include mq(phone-only) {
-                font-size: 15px;
+            img {
+                background: #F76E13;
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
             }
         }
 
-        img {
-            @include mq(phone-sm) {
-                width: 15px;
-                height: 15px;
-            }
-        }
-    }
+        &-title {
+            margin-top: 12px;
+            span {
+                font-size: 24px;
+                font-weight: 500;
+                margin-top: 12px;
 
-    .date {
-        font-size: 14px;
-        gap: 12px;
-
-        @include mq(phone-sm) {
-            gap: 5px;
-        }
-
-        span {
-            @include mq(phone-sm) {
-                font-size: 12px !important;
-            }
-
-            @include mq(phone-only) {
-                font-size: 15px;
+                @include mq(tablet-portrait-up){
+                    font-size: 21px;
+                }
             }
         }
 
-        img {
-            @include mq(phone-sm) {
-                width: 15px;
-                height: 15px;
+        &-location {
+            margin-top: 20px;
+
+            .right {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 7px;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+
+                    @include mq(phone-only){
+                        width: 21px;
+                        height: 21px;
+                    }
+                }
+
+                .city {
+                    font-weight: 500;
+                    font-size: 21px;
+
+                    @include mq(phone-only ){
+                        color: red;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .left {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .date {
+                    font-size: 14px;
+                }
             }
         }
     }

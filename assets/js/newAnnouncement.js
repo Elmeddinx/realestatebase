@@ -76,3 +76,24 @@ function checkImageLimit() {
     imageAddBox.classList.add("large");
   }
 }
+
+
+document.querySelectorAll('.numeric-input').forEach(input => {
+  input.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const phoneInput = document.getElementById("phone");
+
+  phoneInput.addEventListener("input", function (e) {
+    const input = e.target;
+    const value = input.value.replace(/\D/g, "");
+    const formattedValue = value
+      .replace(/(\d{3})(\d{3})?(\d{3})?(\d{3})?/, function (_, g1, g2, g3, g4) {
+        return [g1, g2, g3, g4].filter(Boolean).join(" - ");
+      });
+    input.value = formattedValue;
+  });
+});

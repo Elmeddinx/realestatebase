@@ -24,27 +24,50 @@
         @include mq(tablet-portrait-up) {
             font-size: 16px;
         }
-    }
 
-    .btn{
-
-        @include mq(phone-sm){
-            width: 100px;
+        @include mq(phone-only) {
+            width: 109px;
             font-size: 12px;
         }
 
-        @include mq(phone-only){
-            width: 109px;
-            font-size: 15px;
+        @include mq(phone-sm) {
+            width: 90px;
+            font-size: 10px;
         }
-
 
     }
 
-    .active{
+
+    
+
+    .active {
         background-color: #1D74D8;
         border: none;
         color: white;
 
     }
 }
+
+.tooltip-inner {
+    background-color: white !important;
+    color: #000 !important;
+    padding: 20px 10px !important;
+    display: flex;
+}
+
+.tooltip-inner span {
+    text-align: left;
+}
+
+.tooltip-inner img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.custom-tooltip .tooltip-arrow::before {
+    background-color: white !important;
+}
+
+
+
