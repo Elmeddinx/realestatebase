@@ -21,14 +21,14 @@
     }
 
 
-    .verification-card{
+    .verification-card {
         gap: 32px;
         padding: 50px 40px;
 
-        .card-title{
+        .card-title {
             gap: 18px;
 
-            :first-child{
+            :first-child {
                 font-size: 32px;
                 font-weight: 600;
 
@@ -39,27 +39,79 @@
                 @include mq(tablet-landscape-up) {
                     font-size: 20px;
                 }
+
+                @include mq(phone-sm) {
+                    font-size: 16px;
+                }
             }
 
-            :last-child{
+            :last-child {
                 font-size: 18px;
 
                 @include mq(tablet-portrait-up) {
                     font-size: 16px;
                 }
 
-
-            }
-
-
-            @include mq(phone-only){
-                font-size: 24px;
+                @include mq(phone-sm) {
+                    font-size: 12px;
+                }
             }
         }
 
-        .verification-form{
+        // .verification-form{
 
-            label{
+        //     label{
+        //         font-size: 18px;
+        //         margin-bottom: 6px;
+
+        //         @include mq(tablet-portrait-up) {
+        //             font-size: 14px;
+        //         }
+
+        //         @include mq(phone-sm) {
+        //             font-size: 10px;
+        //         }
+
+        //     }
+
+        //     .input-group{
+        //         padding: 15px 12px 15px 14px;
+        //         border: 1px solid black;
+        //         border-radius: 12px;
+
+
+        //         .form-control{
+        //             box-shadow: none;
+        //             font-size: 18px;
+        //             border-left: 1px solid black !important;
+        //             border-radius: 0;
+
+        //             @include mq(tablet-portrait-up){
+        //                 font-size: 14px;
+        //             }
+        //         }
+
+
+        //     }
+
+        //     .resent-btn{
+        //         font-size: 18px;
+        //         color: #1D74D8;
+        //         background-color: white;
+        //         border: none;
+        //         font-weight: 500;
+
+        //         @include mq(tablet-portrait-up){
+        //             font-size: 16px;
+        //         }
+        //     }
+
+
+        // }
+
+        .verification-form {
+
+            label {
                 font-size: 18px;
                 margin-bottom: 6px;
 
@@ -67,50 +119,72 @@
                     font-size: 14px;
                 }
 
+                @include mq(phone-only) {
+                    font-size: 10px;
+                }
             }
-    
-            .input-group{
+
+            .input-group {
                 padding: 15px 12px 15px 14px;
-                border: 1px solid black;
+                border: 1px solid lightgray;
                 border-radius: 12px;
 
-
-                .form-control{
+                input {
                     box-shadow: none;
-                    font-size: 18px;
-                    border-left: 1px solid black !important;
+                    font-size: 21px;
+                    padding: 0;
+                    border-left: 1px solid gray !important;
+                    padding-left: 10px;
                     border-radius: 0;
 
-                    @include mq(tablet-portrait-up){
-                        font-size: 14px;
+                    @include mq(tablet-portrait-up) {
+                        font-size: 18px;
                     }
-                }
 
+                    @include mq(phone-only) {
+                        font-size: 15px;
+                    }
+
+                    @include mq(phone-sm) {
+                        font-size: 12px;
+                    }
+
+                }
 
             }
 
-            .resent-btn{
+            .resent-btn {
                 font-size: 18px;
                 color: #1D74D8;
                 background-color: white;
                 border: none;
                 font-weight: 500;
 
-                @include mq(tablet-portrait-up){
+                @include mq(tablet-portrait-up) {
                     font-size: 16px;
                 }
+
+                @include mq(phone-sm) {
+                    font-size: 12px;
+                }
             }
-
-
         }
 
-        .btn{
+        .btn {
             font-size: 21px;
             border-radius: 12px;
             padding: 15px 12px 15px 14px;
 
             @include mq(tablet-portrait-up){
                 font-size: 18px;
+            }
+
+            @include mq(phone-only){
+                font-size: 15px;
+            }
+
+            @include mq(phone-only){
+                font-size: 12px;
             }
         }
     }

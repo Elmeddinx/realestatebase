@@ -1,4 +1,20 @@
-.newAnnouncement-container {
+.entrust-container {
+
+    .user-role {
+        margin-top: 85px;
+        a{
+            font-size: 21px;
+            color: #5F5F5F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .active{
+            border-bottom: 3px solid #1D74D8;
+            color: #1D74D8;
+            padding-bottom: 11px;
+        }
+    }
 
     .title {
         font-size: 42px;

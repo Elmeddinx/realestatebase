@@ -3,6 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-title" content="SelfhostedMouse" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport"
   content="user-scalable=no, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <title>Əmlak bazası</title>
@@ -20,26 +24,25 @@
     <!-- header -->
 
     <Header class="header-container">
-      <div class="container d-flex align-items-center active" id="searchContainer">
-
+      <div class="container d-flex align-items-center" id="searchContainer">
         <div class="logo">Logo</div>
-
-        <div class="input-group mt-auto" id="searchToggle">
-          <span class="input-group-text border-0 bg-transparent search-icon">
+      
+        <div class="input-group mt-auto">
+          <span id="searchToggle" class="input-group-text border-0 bg-transparent search-icon">
             <i class="bi bi-search"></i>
           </span>
-          <input class="form-control shadow-none border-0 bg-transparent search-input" type="text"
-            placeholder="Axtarış">
+          <input
+            id="searchInput"
+            class="form-control rounded-pill shadow-none border-0 bg-transparent search-input"
+            type="text"
+            placeholder="Axtarış"
+          />
         </div>
-
-
-
-
+      
         <div class="btn-group ms-auto d-flex">
           <a class="btn btn-primary rounded-pill" href="#">Giriş</a>
           <a class="btn btn-light rounded-pill">Qeydiyyat</a>
         </div>
-
       </div>
     </Header>
 
@@ -51,12 +54,12 @@
 
         <a class="btn col-3 active">Axtarış</a>
 
-        <a href="" class="btn col-5 bg-white">
+        <a href="newAnnouncement.html " class="btn col-5">
           <span class="text-1">+ Yeni elan yerləşdirin</span>
           <span class="text-2">+ Yeni elan</span>
         </a>
 
-        <a class="btn col-3 bg-white" data-bs-toggle="tooltip" data-bs-html="true" data-bs-custom-class="custom-tooltip"
+        <a class="btn col-3" data-bs-toggle="tooltip" data-bs-html="true" data-bs-custom-class="custom-tooltip"
           data-bs-placement="top"
           title='<img src="./assets/icons/exclamation-icon.svg" alt="Info"> <span>Həvalə etmək üçün məlumat. lorem ipsum dolor sit amet</span>'>
           Həvalə et
@@ -72,49 +75,49 @@
 
       <div class="row">
         <div class="col-md-4 col-sm-12">
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Satıcının tipi</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Obyektin növü</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Elanın növü</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Şəhər</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Rayon</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Qəsəbə</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Metro</option>
             <option value="1">One</option>
@@ -122,44 +125,44 @@
             <option value="3">Three</option>
           </select>
         </div>
-
+    
         <div class="col-md-4 col-sm-12">
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Nişangah</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Sənəd</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Binanın növü</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Kredit şərti</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Otaq sayı</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
-
+    
           <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
             <option selected>Düzəlmə</option>
             <option value="1">One</option>
@@ -167,13 +170,13 @@
             <option value="3">Three</option>
           </select>
         </div>
-
+    
         <div class="col-md-4 col-sm-12">
           <div class="row">
-
-            <label for="">Mərtəbə</label>
+    
+            <label for="floor">Mərtəbə</label>
             <div class="col-6">
-              <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
+              <select class="custom-select form-select form-select-lg mb-3" id="floor" aria-label="Large select example">
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -242,10 +245,10 @@
                 <option value="3" selected>31</option>
               </select>
             </div>
-
-            <label for="">Binanın mərtəbə sayı</label>
+    
+            <label for="building-floor-count">Binanın mərtəbə sayı</label>
             <div class="col-6">
-              <select class="custom-select form-select form-select-lg mb-3" aria-label="Large select example">
+              <select class="custom-select form-select form-select-lg mb-3" id="building-floor-count" aria-label="Large select example">
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -314,27 +317,28 @@
                 <option value="3" selected>31</option>
               </select>
             </div>
-
-            <label for="">Qiymət</label>
+    
+            <label for="price">Qiymət</label>
             <div class="col-6">
-              <input class="numeric-input w-100 text-center rounded-3" type="text" placeholder="min">
+              <input class="numeric-input w-100 text-center rounded-3" id="price" type="text" placeholder="min">
             </div>
             <div class="col-6 ">
               <input class="numeric-input w-100 text-center p-3 rounded-3" type="text" placeholder="max">
             </div>
-
-            <label for="">Sahəsi</label>
+    
+            <label for="area">Sahəsi</label>
             <div class="col-6">
-              <input class="numeric-input w-100 text-center p-3 rounded-3" type="text" placeholder="min">
+              <input class="numeric-input w-100 text-center p-3 rounded-3" id="area" type="text" placeholder="min">
             </div>
             <div class="col-6">
-              <input class="numeric-input w-100 text-center p-3 rounded-3" type="text" placeholder="max">
+              <input class="numeric-input w-100 text-center p-3 rounded-3" id="area" type="text" placeholder="max">
             </div>
-
+    
           </div>
         </div>
       </div>
     </div>
+    
 
     <!-- vip-announcements -->
 

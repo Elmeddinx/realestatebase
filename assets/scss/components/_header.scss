@@ -21,6 +21,28 @@
 
             @include mq(phone-only){
                 font-size: 14px;
+                padding: 10px 22px; 
+            }
+
+            @include mq(phone-sm){
+                font-size: 12px;
+                padding: 10px 16xpx;
+            }
+        }
+
+        .profile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+
+            img{
+                width: 18px;
+                height: 18px;
             }
         }
     }

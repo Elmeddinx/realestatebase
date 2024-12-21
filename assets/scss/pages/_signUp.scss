@@ -37,6 +37,10 @@
                 @include mq(phone-only){
                     font-size: 20px;
                 }
+
+                @include mq(phone-sm){
+                    font-size: 16px;
+                }
             }
         }
 
@@ -75,6 +79,10 @@
                         font-size: 15px;
                     }
 
+                    @include mq(phone-sm){
+                        font-size: 12px;
+                    }
+
                 }
 
                 span {
@@ -89,6 +97,10 @@
 
                     @include mq(phone-only){
                         font-size: 15px;
+                    }
+
+                    @include mq(phone-sm){
+                        font-size: 12px;
                     }
                 }
 
@@ -105,6 +117,10 @@
 
             @include mq(phone-only){
                 font-size: 15px;
+            }
+
+            @include mq(phone-only){
+                font-size: 12px;
             }
         }
     }
