@@ -19,18 +19,19 @@
             padding: 10px 30px;
             font-size: 16px;
 
-            @include mq(phone-only){
+            @include mq(phone-only) {
                 font-size: 14px;
-                padding: 10px 22px; 
+                padding: 10px 22px;
             }
 
-            @include mq(phone-sm){
+            @include mq(phone-sm) {
                 font-size: 12px;
                 padding: 10px 16xpx;
+
             }
         }
 
-        .profile{
+        .profile {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +41,7 @@
             width: 54px;
             height: 54px;
 
-            img{
+            img {
                 width: 18px;
                 height: 18px;
             }
@@ -50,46 +51,47 @@
     .input-group {
         margin-left: 30px;
         background-color: #f5f5f5;
-        width: 25%;
+        width: auto;
         border-radius: 12px;
         padding-left: 30px;
+        margin-left: 30px;
 
-        @include mq(tablet-portrait-up){
+        @include mq(tablet-portrait-up) {
             width: fit-content;
             padding: 5px;
             border-radius: 50%;
+            margin-right: 10px;
             margin-left: auto;
         }
 
         input {
-            @include mq(tablet-portrait-up){
-                display: none; 
+            @include mq(tablet-portrait-up) {
+                display: none;
             }
         }
 
-        .search-icon{
+        .search-icon {
             cursor: pointer;
         }
     }
-
 }
 
-.active{
+.active {
 
-    @include mq(tablet-portrait-up){
+    @include mq(tablet-portrait-up) {
         flex-direction: column;
         gap: 20px;
-    
-        .btn-group{
+
+        .btn-group {
             order: -1;
         }
-    
-        .input-group{
+
+        .input-group {
             width: 100%;
             border-radius: 20px;
             padding: 0;
-    
-            input{
+
+            input {
                 display: inline-block;
                 border-radius: 12px;
                 background-color: transparent;
@@ -98,3 +100,5 @@
     }
 
 }
+
+

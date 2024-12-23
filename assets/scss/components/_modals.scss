@@ -1,0 +1,95 @@
+    // img modal
+
+    .image-modal{
+        .close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+        // anoouncement modal
+
+        .announcement-modal {
+
+            .modal-content {
+                border-radius: 30px;
+                padding: 30px 0;
+    
+                .modal-header {
+                    text-align: center;
+                    font-size: 21px;
+                    border-bottom: none;
+                    text-transform: capitalize;
+                    gap: 12px;
+                    font-weight: 500;
+                    padding: 0 10px;
+    
+                    .announcement-code {
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+    
+                .modal-body {
+                    padding: 0;
+                    padding: 30px 64px;
+    
+                    .announcement-types {
+                        gap: 14px;
+    
+                        label {
+                            background-color: #F2F2F2;
+                            padding: 20px 20px;
+                            border-radius: 12px;
+    
+                            input {
+                                width: 24px;
+                                height: 24px;
+                            }
+    
+                            .badges {
+                                margin-left: 10px;
+    
+                                .type {
+                                    color: blue;
+                                }
+    
+                                .price {
+                                    color: black;
+                                }
+    
+                                span {
+                                    text-align: left;
+                                    font-size: 18px;
+                                }
+    
+                                .type-vip {
+                                    color: #E51B1B;
+                                }
+    
+                                .type-premium {
+                                    color: #F76E13;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .modal-footer {
+                    padding: 0 64px;
+    
+                    button {
+                        font-size: 18px;
+                        padding: 10px 30px;
+                    }
+                }
+            }
+    
+        }

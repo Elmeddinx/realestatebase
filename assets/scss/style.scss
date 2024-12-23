@@ -3,6 +3,8 @@
 @import "./abstracts/mixins";
 @import "./base/reset";
 @import './swiper/swiper';
+@import './components/images.scss';
+@import './components/modals';
 @import './pages/homePage.scss';
 @import './pages/signUp';
 @import './components/card';
