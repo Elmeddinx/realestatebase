@@ -35,12 +35,8 @@
             <img src="./assets/icons/search-icon.svg" alt="">
           </span>
 
-          <input
-            id="searchInput"
-            class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
-            type="text"
-            placeholder="Axtarış"
-          />
+          <input id="searchInput" class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
+            type="text" placeholder="Axtarış" />
 
         </div>
 
@@ -51,89 +47,300 @@
         <a href="newAnnouncement.html" class="btn btn-primary rounded-pill new">+ Yeni elan</a>
         <a href="entrust.html" class="btn btn-primary rounded-pill entrust">Həvalə et</a>
         <a class="btn-profile" href="">
-            <img src="./assets/icons/profile-picture.svg" alt="">
+          <img src="./assets/icons/profile-picture.svg" alt="">
         </a>
       </div>
 
     </Header>
 
-    <div class="container profile-page-title">
-        Şəxsi Kabinet
+    <div class="container profile-page-title p-0">
+      Şəxsi Kabinet
     </div>
 
     <div class="container profile d-flex align-items-center">
-        
-        <div class="left d-flex align-items-center">
 
-            <div class="img rounded-circle">
-                <img class="rounded-circle" src="./assets/icons/background.jpg" alt="">
-            </div>
+      <div class="left d-flex align-items-center">
 
-            <div class="name d-flex">
-                <span>Nicat Quliyev</span>
-                <a class="btn correction">
-                    <img src="./assets/icons/correction-icon.svg" alt="">
-                    <span>Profilə düzəliş et</span>
-                </a>
-            </div>
-
+        <div class="img rounded-circle">
+          <img class="rounded-circle" src="./assets/icons/background.jpg" alt="">
         </div>
 
-        <div class="right d-flex align-items-center">
-            <a class="btn subscribe" href="">
-                <img src="./assets/icons/round-plus-icon.svg" alt="">
-                <span>Abonəlik Əldə Et</span>
-            </a>
-            <div class="balance d-flex">
-
-                <div class="d-flex">
-                    <img src="./assets/icons/wallet-icon.svg" alt="">
-                    <span>Pul Kisəsi:</span>
-                    <span>0 AZN</span>
-                </div>
-
-                <a class="btn success">Balansı artır</a>
-
-            </div>
+        <div class="name d-flex">
+          <span>Nicat Quliyev</span>
+          <a class="btn correction">
+            <img src="./assets/icons/correction-icon.svg" alt="">
+            <span>Profilə düzəliş et</span>
+          </a>
         </div>
 
+      </div>
 
-    </div>
+      <div class="right d-flex align-items-center">
+        <a class="btn subscribe" href="">
+          <img src="./assets/icons/round-plus-icon.svg" alt="">
+          <span>Abonəlik Əldə Et</span>
+        </a>
+        <div class="balance d-flex">
 
-    <div class="container my-announcements d-flex align-items-center justify-content-between">
+          <div class="d-flex">
+            <img src="./assets/icons/wallet-icon.svg" alt="">
+            <span>Pul Kisəsi:</span>
+            <span>0 AZN</span>
+          </div>
 
-            <span>Bütün elanlarım</span>
-    
-            <select class="dynamic-select custom-select text-white fs-5 rounded-pill shadow-none">
-              <option selected>Öncə yenilər</option>
-              <option value="1">Əvvəl köhnələr</option>
-              <option value="2">Ən çox baxılan</option>
-            </select>
-    
-    </div>
+          <a class="btn success">Balansı artır</a>
 
-
-    <!-- footer -->
-
-    <Footer>
-      <div class="container footer-container-black mb-4 d-flex justify-content-between">
-        <div>
-          &#169; 2024 | Powered by ....
-        </div>
-
-        <div class="footer-social d-flex justify-content-center align-items-center">
-          <a href="">
-            <img src="./assets/icons/facebook.svg" alt="" class="social-icon">
-          </a>
-          <a href="">
-            <img src="./assets/icons/whatsapp.svg" alt="" class="social-icon">
-          </a>
-          <a href="">
-            <img src="./assets/icons/instagram.svg" alt="" class="social-icon">
-          </a>
         </div>
       </div>
-    </Footer>
+
+
+    </div>
+
+    <div class="container my-announcements d-flex flex-column p-0">
+
+      <div class="my-announcement-header card-header d-flex justify-content-between">
+        <span>Bütün elanlarım</span>
+
+        <select class="dynamic-select custom-select text-white fs-5 rounded-pill shadow-none">
+          <option selected>Öncə yenilər</option>
+          <option value="1">Əvvəl köhnələr</option>
+          <option value="2">Ən çox baxılan</option>
+        </select>
+      </div>
+
+      <div class="my-announcements-navbar">
+
+        <ul class="nav nav-pills d-flex">
+          <li class="nav-item">
+            <button class="nav-link active rounded-pill" id="buyerTab" data-bs-toggle="tab"
+              data-bs-target="#activeAnnouncements" type="button">
+              <img class="check" src="./assets/icons/check-icon.svg" alt="">
+              <span>Aktiv elanlar</span>
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link rounded-pill" id="sellerTab" data-bs-toggle="tab" data-bs-target="#expiredAnnouncement"
+              type="button">
+              <img src="./assets/icons/trash-icon.svg" alt="">
+              <span>Bitmiş elanlar</span>
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link rounded-pill" id="sellerTab" data-bs-toggle="tab" data-bs-target="#unPublished"
+              type="button">
+              <img src="./assets/icons/cancel-icon.svg" alt="">
+              <span>Dərc olunmamış</span>
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link rounded-pill" id="sellerTab" data-bs-toggle="tab" data-bs-target="#pendingAnnouncements"
+              type="button">
+              <img src="./assets/icons/clock-icon.svg" alt="">
+              <span>Gözləyən elanlar</span>
+            </button>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="my-announcements-cards">
+
+        <div class="tab-content">
+
+          <div class="tab-pane fade show active bg-danger" id="activeAnnouncements">
+
+            <div class="row bg-warning">
+
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 gy-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+      
+                  <div class="card border-0 position-relative">
+      
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+      
+                    <div class="card-body d-flex flex-column justify-content-between p-2">
+      
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+      
+                        <span>150.000 AZN</span>
+      
+                        <img src="./assets/icons/Vector.svg" alt="">
+      
+                      </div>
+      
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+      
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+      
+                        <div class="right">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+      
+                        <div class="left d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+      
+                      </div>
+      
+                    </div>
+      
+                    <div
+                      class="logo bg-white position-absolute rounded-pill d-flex justify-content-center align-content-center">
+                      <span>Bina.az</span>
+                    </div>
+      
+                    <div class="badgets position-absolute d-flex justify-content-between align-items-center">
+      
+                      <div class="badget document">
+                        <img src="./assets/icons/document.svg" alt="">
+                      </div>
+      
+                      <div class="badget percent">
+                        <span>%</span>
+                      </div>
+      
+                      <div class="badget vip">
+                        <span>VIP</span>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+                </a>
+              </div>
+      
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 gy-4 ">
+                <a class="text-decoration-none text-black position-relative" href="#">
+      
+                  <div class="card border-0 position-relative">
+      
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+      
+                    <div class="card-body d-flex flex-column justify-content-between p-2">
+      
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+      
+                        <span>150.000 AZN</span>
+      
+                        <img src="./assets/icons/Vector.svg" alt="">
+      
+                      </div>
+      
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+      
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+      
+                        <div class="right">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+      
+                        <div class="left d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+      
+                      </div>
+      
+                    </div>
+      
+                    <div
+                      class="logo bg-white position-absolute rounded-pill d-flex justify-content-center align-content-center">
+                      <span>Bina.az</span>
+                    </div>
+      
+                    <div class="badgets position-absolute d-flex justify-content-between align-items-center">
+      
+                      <div class="badget document">
+                        <img src="./assets/icons/document.svg" alt="">
+                      </div>
+      
+                      <div class="badget percent">
+                        <span>%</span>
+                      </div>
+      
+                      <div class="badget vip">
+                        <span>VIP</span>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 gy-4 ">
+                <input class="w-100 h-100" type="text">
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="tab-pane fade" id="expiredAnnouncement">
+
+            expired
+
+
+          </div>
+
+          <div class="tab-pane fade" id="unPublished">
+
+            unpublished
+
+
+          </div>
+
+          <div class="tab-pane fade" id="pendingAnnouncements">
+
+            gözləyən elanlar
+
+
+          </div>
+
+      </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- footer -->
+
+  <Footer>
+    <div class="container footer-container-black mb-4 d-flex justify-content-between">
+      <div>
+        &#169; 2024 | Powered by ....
+      </div>
+
+      <div class="footer-social d-flex justify-content-center align-items-center">
+        <a href="">
+          <img src="./assets/icons/facebook.svg" alt="" class="social-icon">
+        </a>
+        <a href="">
+          <img src="./assets/icons/whatsapp.svg" alt="" class="social-icon">
+        </a>
+        <a href="">
+          <img src="./assets/icons/instagram.svg" alt="" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </Footer>
 
 
   </div>
@@ -144,7 +351,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <script src="./assets/js/profile.js"></script>
+  <script src="./assets/js/profile.js"></script>
   <script src="./assets/js/header.js"></script>
 </body>
 

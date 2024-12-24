@@ -1,0 +1,51 @@
+.form-container{
+
+    .custom-select {
+    color: #5F5F5F;
+    padding: 15px 12px 15px 14px;
+    font-size: 21px;
+    box-shadow: none;
+
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url('../icons/arrow-outlined.svg');
+    background-repeat: no-repeat;
+    background-size: 12px 24px;
+
+}
+}
+
+.card-header{
+
+    span {
+        font-size: 28px;
+        font-weight: 500;
+    }
+    
+    .custom-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        outline: none;
+
+        background-color: #323232;
+        padding: 10px 40px 10px 15px;
+
+        background-image: url('../icons/filter-icon.svg');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 24px 24px;
+
+        @include mq(tablet-portrait-up) {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background-position: right 15px center;
+        }
+    }
+}
+
