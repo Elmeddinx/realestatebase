@@ -23,30 +23,37 @@
 
     <!-- header -->
 
-    <Header class="header-container">
-      <div class="container d-flex align-items-center active" id="searchContainer">
+    <Header class="container active" id="searchContainer">
+
+      <div class="header-left d-flex align-items-center">
 
         <div class="logo">Logo</div>
 
-        <div class="input-group mt-auto">
-          <span id="searchToggle" class="input-group-text border-0 bg-transparent search-icon">
-            <i class="bi bi-search"></i>
+        <div class="input-group rounded-pill">
+
+          <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
+            <img src="./assets/icons/search-icon.svg" alt="">
           </span>
+
           <input
             id="searchInput"
-            class="form-control rounded-pill shadow-none border-0 bg-transparent search-input"
+            class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
             type="text"
             placeholder="Axtarış"
           />
-        </div>
 
-        <div class="btn-group ms-auto d-flex">
-          <a href="verification.html" class="btn btn-primary rounded-pill">Giriş</a>
-          <a href="signUp.html" class="btn btn-light rounded-pill">Qeydiyyat</a>
         </div>
 
       </div>
+
+
+      <div class="btn-group">
+        <a href="verification.html" class="btn btn-primary rounded-pill">Giriş</a>
+        <a href="signUp.html" class="btn btn-light rounded-pill">Qeydiyyat</a>
+      </div>
+
     </Header>
+
 
     <!-- navbar -->
 
@@ -1298,6 +1305,7 @@
     </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/js/swiper.js"></script>
+  <script src="./assets/js/header.js"></script>
   <script src="./assets/js/index.js"></script>
 </body>
 

@@ -56,7 +56,7 @@
     color: #000 !important;
     padding: 20px 10px !important;
     display: flex;
-    width: 1000px !important;
+    width: 500px !important;
 }
 
 .tooltip-inner span {
@@ -64,15 +64,7 @@
 }
 
 .tooltip-inner img {
-    margin-right: 10px;
+    margin-right: 10px !important;
     width: 24px;
     height: 24px;
-}
-
-.tooltip-inner::before {
-    background-color: white !important;
-}
-
-.tooltip-arrow::after {
-    background-color: white !important;
 }

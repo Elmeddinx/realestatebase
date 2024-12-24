@@ -17,34 +17,34 @@
 
         <!-- header -->
 
-        <Header class="header-container">
-            <div class="container d-flex align-items-center active" id="searchContainer">
-      
-              <div class="logo">Logo</div>
-      
-              <div class="input-group mt-auto">
-                <span id="searchToggle" class="input-group-text border-0 bg-transparent search-icon">
-                  <i class="bi bi-search"></i>
-                </span>
-                <input
-                  id="searchInput"
-                  class="form-control rounded-pill shadow-none border-0 bg-transparent search-input"
-                  type="text"
-                  placeholder="Axtarış"
-                />
-              </div>
-      
-              <div class="btn-group ms-auto d-flex">
-                <a class="profile" href="">
+        <Header class="container active" id="searchContainer">
+
+            <div class="header-left d-flex align-items-center">
+
+                <div class="logo">Logo</div>
+
+                <div class="input-group rounded-pill">
+
+                    <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
+                        <img src="./assets/icons/search-icon.svg" alt="">
+                    </span>
+
+                    <input id="searchInput"
+                        class="form-control bg-transparent rounded-pill shadow-none border-0 search-input" type="text"
+                        placeholder="Axtarış" />
+
+                </div>
+
+            </div>
+
+
+            <div class="btn-group">
+                <a class="profile" href="profile.html">
                     <img src="./assets/icons/profile-picture.svg" alt="">
                 </a>
             </div>
-      
-            </div>
-          </Header>
 
-
-
+        </Header>
 
         <!-- navbar -->
 
@@ -56,8 +56,8 @@
                     <span class="text-2">+ Yeni elan</span>
                 </a>
 
-                <a href="entrust.html" class="btn col-3 active" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
-                    data-bs-placement="top"
+                <a href="entrust.html" class="btn col-3 active" data-bs-toggle="tooltip"
+                    data-bs-custom-class="custom-tooltip" data-bs-placement="top"
                     title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
                     Həvalə et
                 </a>
@@ -340,11 +340,11 @@
                             <div class="d-flex align-items-center">
                                 <input class="me-2" type="checkbox" id="renovated">
                                 <label class="fw-normal" for="renovated">Təmirli</label>
-                              </div>
-                              <div class="d-flex align-items-center">
+                            </div>
+                            <div class="d-flex align-items-center">
                                 <input class="me-2" type="checkbox" id="notRenovated">
                                 <label class="fw-normal" for="notRenovated">Təmirsiz</label>
-                              </div>
+                            </div>
 
                         </div>
 
@@ -399,6 +399,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
     <script src="./assets/js/images.js"></script>
+    <script src="./assets/js/header.js"></script>
     <script src="./assets/js/entrust.js"></script>
 </body>
 

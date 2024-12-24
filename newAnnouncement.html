@@ -17,30 +17,36 @@
 
         <!-- header -->
 
-        <Header class="header-container">
-            <div class="container d-flex align-items-center active" id="searchContainer">
+        <Header class="container active" id="searchContainer">
+
+            <div class="header-left d-flex align-items-center">
       
               <div class="logo">Logo</div>
       
-              <div class="input-group mt-auto">
-                <span id="searchToggle" class="input-group-text border-0 bg-transparent search-icon">
-                  <i class="bi bi-search"></i>
+              <div class="input-group rounded-pill">
+      
+                <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
+                  <img src="./assets/icons/search-icon.svg" alt="">
                 </span>
+      
                 <input
                   id="searchInput"
-                  class="form-control rounded-pill shadow-none border-0 bg-transparent search-input"
+                  class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
                   type="text"
                   placeholder="Axtarış"
                 />
+      
               </div>
       
-              <div class="btn-group ms-auto d-flex">
-                <a class="profile" href="">
+            </div>
+      
+      
+            <div class="btn-group">
+                <a class="profile" href="profile.html">
                     <img src="./assets/icons/profile-picture.svg" alt="">
                 </a>
             </div>
       
-            </div>
           </Header>
 
         <!-- navbar -->
@@ -386,6 +392,7 @@
         </script>
     <script src="./assets/js/images.js"></script>
     <script src="./assets/js/modals.js"></script>
+    <script src="./assets/js/header.js"></script>
     <script src="./assets/js/newAnnouncement.js"></script>
 </body>
 

@@ -1,19 +1,6 @@
-const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-const selectElements = document.querySelectorAll('.dynamic-select');
 const mediaQuery = window.matchMedia('(min-width: 768px)');
+const selectElements = document.querySelectorAll('.dynamic-select');
 
-
-//tooltip
-const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl);
-});
-
-//select
-document.querySelectorAll('.numeric-input').forEach(input => {
-  input.addEventListener('input', function () {
-    this.value = this.value.replace(/[^0-9]/g, '');
-  });
-});
 
 function updateOptionsVisibility(selectElement) {
     const selectedIndex = selectElement.selectedIndex;
@@ -51,10 +38,3 @@ function handleMediaQueryChange(e) {
 handleMediaQueryChange(mediaQuery);
 
 mediaQuery.addEventListener('change', handleMediaQueryChange);
-
-
-
-
-
-
-
