@@ -1,10 +1,10 @@
 .links-container {
-    margin-top: 89px;
+    margin-top: 20px;
     padding: 10px;
     background-color: #f0f0f0;
     border-radius: 12px;
 
-    @include mq(phone-only) {
+    @include mq(tablet-portrait-up) {
 
         background-color: white;
     }
@@ -26,21 +26,27 @@
     a {
         font-size: 21px;
         background-color: white;
+        font-weight: 500;
+        border-radius: 12px;
 
         @include mq(tablet-portrait-up) {
             font-size: 16px;
+            background-color: #f0f0f0;
+            width: 48%;
         }
 
         @include mq(phone-only) {
-            width: 109px;
             font-size: 12px;
-            background-color: #f0f0f0;
-            font-weight: 500;
         }
 
         @include mq(phone-sm) {
-            width: 90px;
-            font-size: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .search{
+        @include mq(tablet-portrait-up) {
+            display: none;
         }
     }
 

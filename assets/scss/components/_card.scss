@@ -4,17 +4,32 @@
     border-radius: 12px;
     box-sizing: border-box;
 
+    @include mq(tablet-portrait-up) {
+        padding: 10px 10px;
+    }
+
 
     .logo {
         padding: 5px 10px;
         top: 36px;
         left: 27px;
 
+        @include mq(tablet-portrait-up){
+            top: 27px;
+            left: 20px;
+            right: 25;
+        }
+
+        @include mq(phone-only) {
+            top: 25px;
+            left: 20px;
+        }   
+
         span {
             font-size: 14px;
 
-            @include mq(phone-sm) {
-                font-size: 10px;
+            @include mq(phone-only) {
+                font-size: 8px;
             }
         }
     }
@@ -24,9 +39,18 @@
         right: 27px;
         gap: 12px;
 
-        @include mq(phone-sm) {
-            gap: 5px;
+        @include mq(tablet-portrait-up){
+            top: 27px;
+            right: 20px;
+            gap: 3px;
         }
+
+        @include mq(phone-only) {
+            top: 25px;
+            right: 20px;
+            gap: 3px;
+        }
+
 
         .badget {
             display: flex;
@@ -38,13 +62,34 @@
             height: 40px;
             color: white;
 
-            @include mq(phone-sm) {
+            @include mq(tablet-portrait-up){
                 width: 30px;
                 height: 30px;
             }
 
+            @include mq(phone-only) {
+                width: 20px;
+                height: 20px;
+            }
+
             span {
                 font-size: 16px;
+
+                @include mq(tablet-portrait-up){
+                    font-size: 12px;
+                }
+
+                @include mq(phone-only) {
+                    font-size: 8px;
+                    padding: 5px;
+                }
+            }
+
+            img {
+                @include mq(phone-only) {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
 
@@ -66,14 +111,39 @@
         object-fit: cover;
         object-position: center;
         border-radius: 12px;
+
+        @include mq(tablet-portrait-up) {
+            height: 220px;
+        }
+
+        @include mq(phone-only) {
+            height: 200px;
+        }
+
+        @include mq(phone-sm) {
+            height: 120px;
+        }
+
     }
 
     .card-body {
+        padding: 0;
+
         &-price {
             margin-top: 8px;
+
             span {
                 font-size: 28px;
                 font-weight: 600;
+
+                @include mq(tablet-portrait-up) {
+                    font-size: 20px;
+                }
+
+                @include mq(phone-only) {
+                    font-size: 16px;
+                }
+                
             }
 
             img {
@@ -82,18 +152,38 @@
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+
+                @include mq(tablet-portrait-up) {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include mq(phone-only) {
+                    width: 20px;
+                    height: 20px;
+                    padding: 4px;
+                }
             }
         }
 
         &-title {
             margin-top: 12px;
+
+            @include mq(phone-sm) {
+                margin-top: 5px;
+            }
+
             span {
                 font-size: 24px;
                 font-weight: 500;
                 margin-top: 12px;
 
-                @include mq(tablet-portrait-up){
-                    font-size: 21px;
+                @include mq(tablet-portrait-up) {
+                    font-size: 20px;
+                }
+
+                @include mq(phone-only) {
+                    font-size: 14px;
                 }
             }
         }
@@ -101,19 +191,38 @@
         &-location {
             margin-top: 20px;
 
-            .right {
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                margin-top: 12px;
+                align-items: flex-start !important;
+                gap: 8px;
+
+            }
+
+            .left {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 7px;
 
+
                 img {
                     width: 24px;
                     height: 24px;
 
-                    @include mq(phone-only){
-                        width: 21px;
-                        height: 21px;
+                    @include mq(tablet-portrait-up) {
+                        width: 20px;
+                        height: 19px;
+                    }
+
+                    @include mq(phone-only) {
+                        width: 16px;
+                        height: 15px;
+                    }
+
+                    @include mq(phone-sm) {
+                        width: 13px;
+                        height: 12px;
                     }
                 }
 
@@ -121,25 +230,51 @@
                     font-weight: 500;
                     font-size: 21px;
 
-                    @include mq(phone-only ){
-                        font-size: 16px;
+                    @include mq(tablet-portrait-up) {
+                        font-size: 15px;
+                    }
+
+                    @include mq(phone-only) {
+                        font-size: 12px;
+                    }
+
+                    @include mq(phone-sm) {
+                        font-size: 10px;
                     }
                 }
             }
 
-            .left {
+            .right {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 gap: 12px;
 
+                @include mq(tablet-portrait-up){
+                    gap: 9px;
+                }
+
+                @include mq(phone-only) {
+                    gap: 3px;
+                }
+
                 img {
                     width: 18px;
                     height: 18px;
+
+                    @include mq(phone-only) {
+                        width: 12px;
+                        height: 12px;
+                    }
                 }
 
                 .date {
                     font-size: 14px;
+                    font-weight: 500;
+
+                    @include mq(phone-only) {
+                        font-size: 10px;
+                    }
                 }
             }
         }

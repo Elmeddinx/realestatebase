@@ -3,11 +3,11 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
   breakpoints: {
     320: {
-      slidesPerView: 1.2,
+      slidesPerView: 2,
       spaceBetween: 8
     },
     480: {
-      slidesPerView: 1.2,
+      slidesPerView: 2,
     },
     768: {
       slidesPerView: 2,

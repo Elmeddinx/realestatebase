@@ -41,6 +41,9 @@ fileInput.addEventListener("change", function () {
                 imagePreview.querySelector(".turn").addEventListener("click", () => {
                     rotation += 90;
                     imagePreview.querySelector("img").style.transform = `rotate(${rotation}deg)`;
+
+                    const zoomedImage = document.getElementById('zoomedImage');
+                    zoomedImage.style.transform = `rotate(${rotation}deg)`;
                 });
     
                 imagePreview.querySelector(".zoom").addEventListener("click", () => {
