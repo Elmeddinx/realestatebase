@@ -639,6 +639,7 @@ body {
 }
 
 .registration-container {
+  overflow-x: hidden;
   min-height: 100vh;
   gap: 50px;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../icons/background.jpg);
@@ -1403,6 +1404,7 @@ Footer .footer-container-black .footer-social {
 
 .verification-container {
   min-height: 100vh;
+  overflow-x: hidden;
   gap: 50px;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(../icons/background.jpg);
   background-size: cover;
@@ -1528,6 +1530,9 @@ Footer .footer-container-black .footer-social {
   }
 }
 
+.newAnnouncement-container {
+  overflow-x: hidden;
+}
 .newAnnouncement-container .title {
   font-size: 42px;
   font-weight: 600;
@@ -1651,6 +1656,9 @@ Footer .footer-container-black .footer-social {
   color: white;
 }
 
+.entrust-container {
+  overflow-x: hidden;
+}
 .entrust-container .title {
   font-size: 42px;
   font-weight: 600;
@@ -1801,6 +1809,9 @@ Footer .footer-container-black .footer-social {
   }
 }
 
+.announcement-page-container {
+  overflow-x: hidden;
+}
 .announcement-page-container .breadcrumb-container {
   margin-top: 70px;
   margin-bottom: 36px;
@@ -1946,7 +1957,7 @@ Footer .footer-container-black .footer-social {
 .announcement-page-container .announcement-container .announcement-infos {
   background-color: #F0F0F0;
   border-radius: 12px;
-  max-height: 772.5px;
+  min-height: 772.5px;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -2090,6 +2101,8 @@ Footer .footer-container-black .footer-social {
   border-radius: 12px;
   width: 100%;
   gap: 12px;
+  outline: none;
+  border: none;
 }
 .announcement-page-container .announcement-container .announcement-infos .bottom .dial-button-container .dial-button span {
   color: #FFF;
@@ -2252,6 +2265,11 @@ Footer .footer-container-black .footer-social {
 .announcement-page-container .dial-button-mobile-container {
   margin-top: 68px;
   margin-bottom: 47px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+  z-index: 1;
 }
 @media only screen and (min-width: 768px) {
   .announcement-page-container .dial-button-mobile-container {
@@ -2265,6 +2283,7 @@ Footer .footer-container-black .footer-social {
   padding: 15px 50px;
   cursor: pointer;
   background-color: #30BE4A;
+  border: none;
   border-radius: 12px;
   width: 100%;
   gap: 12px;
@@ -2306,6 +2325,9 @@ Footer .footer-container-black .footer-social {
   cursor: pointer;
 }
 
+.profile-page-container {
+  overflow-x: hidden;
+}
 .profile-page-container .profile-page-title {
   margin-top: 70px;
   font-size: 32px;
@@ -2622,7 +2644,6 @@ Footer .footer-container-black .footer-social {
   font-size: 16px;
   font-weight: 500;
   padding: 10px 15px;
-  color: red;
 }
 @media only screen and (max-width: 480px) {
   .profile-page-container .all-announcements .mobile button {
@@ -2687,6 +2708,9 @@ Footer .footer-container-black .footer-social {
   border-radius: 50%;
 }
 
+.edit-profile-page-container {
+  overflow-x: hidden;
+}
 .edit-profile-page-container .edit-profile-page-title {
   margin-top: 70px;
   margin-bottom: 33px;
@@ -2904,4 +2928,10 @@ Footer .footer-container-black .footer-social {
   margin: 0 !important;
   left: 0 !important;
   top: 0 !important;
+}
+.fotorama .fotorama__arr--prev {
+  display: none !important;
+}
+.fotorama .fotorama__arr--next {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

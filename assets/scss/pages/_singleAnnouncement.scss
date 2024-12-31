@@ -1,4 +1,6 @@
 .announcement-page-container {
+    overflow-x: hidden;
+
 
     .breadcrumb-container {
         margin-top: 70px;
@@ -157,7 +159,7 @@
             &-infos {
                 background-color: #F0F0F0;
                 border-radius: 12px;
-                max-height: 772.5px;
+                min-height: 772.5px;
                 overflow-y: scroll;
                 scrollbar-width: none;
 
@@ -293,7 +295,6 @@
                     }
 
                     .dial-button-container {
-
                         @include mq(tablet-portrait-up) {
                             display: none;
                         }
@@ -308,6 +309,8 @@
                             border-radius: 12px;
                             width: 100%;
                             gap: 12px;
+                            outline: none;
+                            border: none;
 
                             span {
                                 color: #FFF;
@@ -497,6 +500,11 @@
     .dial-button-mobile-container {
         margin-top: 68px;
         margin-bottom: 47px;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 0;
+        z-index: 1;
 
         @include mq(tablet-portrait-down) {
             display: none;
@@ -509,9 +517,11 @@
             padding: 15px 50px;
             cursor: pointer;
             background-color: #30BE4A;
+            border: none;
             border-radius: 12px;
             width: 100%;
             gap: 12px;
+
 
             span {
                 color: #FFF;

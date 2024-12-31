@@ -20,7 +20,7 @@
 
 <body>
 
-  <div class="container-fluid announcement-page-container">
+  <div class="container-fluid announcement-page-container position-relative">
 
     <!-- header -->
 
@@ -97,6 +97,10 @@
             <img src="./assets/icons/e5.jpg" alt="Image 3">
             <img src="./assets/icons/e6.jpg" alt="Image 3">
             <img src="./assets/icons/e7.jpg" alt="Image 3">
+            <!-- <div class="overlay-container">
+              <img src="./assets/icons/e7.jpg" alt="Image 3">
+              <div class="overlay">Metin İçeriği</div>
+            </div> -->
             <img src="./assets/icons/e8.jpg" alt="Image 3">
             <img src="./assets/icons/e9.jpg" alt="Image 3">
             <img src="./assets/icons/e10.jpg" alt="Image 3">
@@ -169,16 +173,13 @@
           <div class="bottom d-flex flex-column gap-5">
 
             <div class="dial-button-container">
-              <div class="dial-button numberButton">
+              <button class="dial-button numberButton">
                 <span>Nömrəni göstər</span>
                 <span class="phone-number visible firstPhoneNumber">987****6543</span>
-              </div>
+              </button>
 
               <ul class="number-list numberList">
                 <li class="phone-number">9876543210</li>
-                <li class="phone-number">8765432109</li>
-                <li class="phone-number">7654321098</li>
-                <li class="phone-number">6543210987</li>
               </ul>
             </div>
 
@@ -566,19 +567,10 @@
 
     <!-- mobile dial button -->
 
-    <div class="container">
-      <div class="dial-button-mobile-container">
-        <div class="dial-button numberButton">
-          <span class="phone-number visible firstPhoneNumber">Zəng et</span>
-        </div>
-
-        <ul class="number-list numberList">
-          <li class="phone-number">1234567890</li>
-          <li class="phone-number">0987654321</li>
-          <li class="phone-number">1122334455</li>
-          <li class="phone-number">2233445566</li>
-        </ul>
-      </div>
+    <div class="container dial-button-mobile-container">
+      <button class="dial-button">
+        <span class="">Zəng et</span>
+      </button>
     </div>
 
 
