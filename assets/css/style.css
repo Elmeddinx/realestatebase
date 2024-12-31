@@ -498,8 +498,29 @@ body {
   }
 }
 
+.homepage-container .form-container .custom-select {
+  color: #5F5F5F;
+  padding: 15px 12px 15px 14px;
+  font-size: 21px;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../icons/arrow-outlined.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 24px;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .form-container .custom-select {
+    padding: 5px;
+    font-size: 12px;
+    background-size: 6px 12px;
+  }
+}
+
 .homepage-container {
   padding-bottom: 48px;
+  overflow-x: hidden;
 }
 .homepage-container .mobile-search {
   margin-top: 24px;
@@ -512,7 +533,7 @@ body {
     display: flex !important;
   }
 }
-.homepage-container .mobile-search input {
+.homepage-container .mobile-search div {
   padding: 10px;
   background-color: #F0F0F0;
   outline: none;
@@ -549,12 +570,11 @@ body {
   background-color: #F0F0F0;
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input .input-group input {
-  padding: 10px;
   background-color: #F0F0F0;
   outline: none;
   border: none;
   border-radius: 12px;
-  font-size: 14px;
+  font-size: 12px;
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input .input-group .input-group-text {
   cursor: pointer;
@@ -569,7 +589,6 @@ body {
 }
 .homepage-container .offcanvas-end .offcanvas-body .search-btn .btn {
   font-size: 18px;
-  padding: 10px 30px;
 }
 .homepage-container .form-container {
   margin-top: 60px;
@@ -584,6 +603,11 @@ body {
   font-weight: 500;
   margin-bottom: 7px;
 }
+@media only screen and (max-width: 768px) {
+  .homepage-container .form-container label {
+    font-size: 10px;
+  }
+}
 .homepage-container .form-container input {
   border: 1px solid lightgray;
   margin-bottom: 20px;
@@ -594,7 +618,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .homepage-container .form-container input {
-    font-size: 14px;
+    font-size: 12px !important;
+    padding: 5px !important;
   }
 }
 .homepage-container .vip-announcement-container {
@@ -2856,8 +2881,8 @@ Footer .footer-container-black .footer-social {
   display: none !important;
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame {
-  height: 140px !important;
-  width: 140px !important;
+  height: 135px !important;
+  width: 135px !important;
   border-radius: 12px !important;
   padding: 0 !important;
   margin-right: 12px !important;

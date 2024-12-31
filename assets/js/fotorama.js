@@ -21,20 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Blur efekti için CSS değişkeni
   fotoramaStage.style.setProperty("--blur-background", `url(${fotoramaImages[0].getAttribute("src")})`);
   fotoramaStage.style.backgroundImage = "var(--blur-background)";
 
-  // Fotorama resim değişim olayını dinleme
   const observer = new MutationObserver(() => {
     updateBlurBackground();
   });
 
   observer.observe(document.querySelector(".fotorama"), { attributes: true, subtree: true });
 
-  // İlk blur efekti güncellemesi
   updateBlurBackground();
 });
+
 
 
 
