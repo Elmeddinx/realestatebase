@@ -1,11 +1,11 @@
 .links-container {
-    margin-top: 20px;
+    margin-top: 60px;
     padding: 10px;
     background-color: #f0f0f0;
     border-radius: 12px;
 
     @include mq(tablet-portrait-up) {
-
+        margin-top: 24px;
         background-color: white;
     }
 
@@ -30,16 +30,12 @@
         border-radius: 12px;
 
         @include mq(tablet-portrait-up) {
-            font-size: 16px;
+            font-size: 21px;
             background-color: #f0f0f0;
             width: 48%;
         }
 
         @include mq(phone-only) {
-            font-size: 12px;
-        }
-
-        @include mq(phone-sm) {
             font-size: 14px;
         }
     }
@@ -57,20 +53,3 @@
     }
 }
 
-.tooltip-inner {
-    background-color: white !important;
-    color: #000 !important;
-    padding: 20px 10px !important;
-    display: flex;
-    width: 500px !important;
-}
-
-.tooltip-inner span {
-    text-align: left;
-}
-
-.tooltip-inner img {
-    margin-right: 10px !important;
-    width: 24px;
-    height: 24px;
-}

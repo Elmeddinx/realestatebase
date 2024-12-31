@@ -6,157 +6,260 @@
         font-weight: 600;
         text-transform: capitalize;
 
+        @include mq(tablet-portrait-up){
+            margin-bottom: 50px;
+        }
+
         @include mq(phone-only) {
             font-size: 28px;
         }
     }
 
-        .profile {
-            margin-top: 36px;
-            padding: 30px;
-            justify-content: space-between;
-            border-radius: 12px;
-            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+    .user-infos {
+        margin-top: 36px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        gap: 40px;
 
-            @include mq(tablet-portrait-up){
-                // flex-direction: column;
-                gap: 31px;
+        display: flex;
+        justify-content: space-between;
+
+        @include mq(c) {
+            gap: 10px;
+        }
+
+        @include mq(tablet-portrait-up) {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            padding: 30px 10px;
+        }
+
+
+        .left {
+            display: flex;
+            gap: 14px;
+
+            @include mq(tablet-landscape-up) {
+                gap: 10px;
             }
 
-            .left {
+            @include mq(tablet-portrait-up) {
+                flex-direction: column;
+                align-items: center;
                 gap: 14px;
+                margin-top: 100px;
+            }
 
-                @include mq(tablet-portrait-up){
-                    // flex-direction: column;  
+            .img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+
+                @include mq(c) {
+                    width: 130px;
+                    height: 130px;
                 }
 
-                .img {
+                @include mq(tablet-portrait-up) {
                     width: 150px;
                     height: 150px;
-                    flex-shrink: 0;
+                    position: absolute;
+                    top: -30px;
+                }
 
-                    img {
-                        object-fit: cover;
-                        width: 100%;
-                        height: 100%;
-                    }
+
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .username {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 21px;
+
+                @include mq(tablet-portrait-up) {
+                    align-items: center;
                 }
 
                 .name {
-                    flex-direction: column;
-                    align-items: center;
                     font-size: 32px;
                     font-weight: 600;
                     text-transform: capitalize;
-                    gap: 21px;
 
-                    .correction {
-                        background-color: #E1EFFF;
-                        border-radius: 12px;
-                        border: 0.3px solid #1D74D8;
-
-                        span {
-                            font-size: 14px;
-                            font-weight: 600;
-                            color: #1D74D8;
-                        }
+                    @include mq(c) {
+                        font-size: 24px;
                     }
-                }
-            }
 
-            .right {
-                gap: 21px;
+                    @include mq(tablet-landscape-up) {
+                        font-size: 21px;
+                    }
 
-                @include mq(tablet-portrait-up){
-                    // flex-direction: column;
-                }
-
-                .subscribe {
-                    background-color: #EFF0FF;
-                    color: #1D74D8;
-                    font-weight: 600;
-                    padding: 15px;
-                    border-radius: 12px;
-
-                    @include mq(tablet-portrait-up){
-                        order: 1;
-                        width: 100%;
+                    @include mq(tablet-portrait-up) {
+                        font-size: 32px;
                     }
                 }
 
-                .balance {
-                    background-color: #f2f2f2;
+                .btn-edit {
+                    display: flex;
                     padding: 10px;
+                    align-items: center;
+                    gap: 4px;
                     border-radius: 12px;
-                    gap: 21px;
+                    border: 0.3px solid #1D74D8;
+                    background: #E1EFFF;
+                    font-size: 14px;
+                    text-decoration: none;
+                    width: fit-content;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    color: #1D74D8;
+                    cursor: pointer;
 
-                    @include mq(tablet-portrait-up){
-                        width: 100%;
+                    @include mq(c) {
+                        font-size: 10px;
+                        padding: 5px;
                     }
 
-                    div {
-                        gap: 10px;
-                        align-items: center;
-                        font-size: 18px;
-                        font-weight: 600;
-
-                        @include mq(tablet-portrait-up){
-                            font-size: 14px;
-                        }
+                    @include mq(tablet-portrait-up) {
+                        padding: 10px;
+                        font-size: 14px;
                     }
-
-                    .increas {
-                        background-color: #11AB2D;
-                        color: white;
-                        font-size: 16px;
-                        font-weight: 500;
-                    }
-
                 }
             }
-
 
         }
 
-    // .profile {
-    //     padding: 30px;
-    //     gap: 40px;
-    //     margin-top: 36px;
-    //     border-radius: 12px;
-    //     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-grow: 1;
+            gap: 21px;
 
-    //     .left {
-    //         gap: 14px;
+            @include mq(tablet-portrait-up){
+                flex-direction: column;
+                width: 100%;
+            }
 
-    //         .image {
-    //             width: 150px;
-    //             height: 150px;
-    //             border-radius: 50%;
+            .btn-subscribe {
+                color: #1D74D8;
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+                border: none;
 
-    //             img {
-    //                 width: 100%;
-    //                 height: 100%;
-    //                 object-fit: cover;
-    //                 border-radius: 50%;
-    //             }
-    //         }
+                display: flex;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
 
-    //         .name {
-    //             flex-direction: column;
-    //             align-items: center;
-    //             font-size: 32px;
-    //             font-weight: 600;
-    //             text-transform: capitalize;
-    //             gap: 21px;
-    //         }
+                border-radius: 12px;
+                background: #EFF0FF;
+
+                @include mq(c) {
+                    font-size: 14px;
+                }
+
+                @include mq(tablet-landscape-up) {
+                    flex-direction: column;
+                    gap: 5px;
+                }
+
+                @include mq(tablet-portrait-up) {
+                    gap: 10px;
+                    flex-direction: row;
+                    order: 1;
+                    padding: 20px 50px;
+                    width: 100%;
+                    font-size: 14px;
+
+                }
+            }
+
+            .balance {
+                display: flex;
+                border-radius: 12px;
+                background: #F2F2F2;
+                gap: 21px;
+                padding: 10px;
+
+                @include mq(c) {
+                    flex-direction: column;
+                }
+
+                @include mq(tablet-portrait-up) {
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: space-between;
+                    gap: 15px;
+                }
 
 
+                div {
+                    gap: 10px;
+                    align-items: center;
 
-    //     }
-    // }
+                    @include mq(tablet-landscape-down) {
+                        text-align: center;
+                    }
 
+                    span {
+                        font-size: 18px;
+                        font-weight: 500;
 
-    .my-announcements {
+                        @include mq(c) {
+                            font-size: 16px;
+                        }
+
+                        @include mq(tablet-landscape-up) {
+                            text-align: center;
+                        }
+
+                        @include mq(tablet-portrait-up) {
+                            font-size: 14px;
+                        }
+
+                    }
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+
+                        @include mq(tablet-portrait-up) {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                }
+
+                .btn-increas {
+                    padding: 10px;
+                    border-radius: 8px;
+                    background: #11AB2D;
+                    color: #FFF;
+                    font-size: 16px;
+                    font-weight: 500;
+                    border: none;
+
+                    @include mq(c) {
+                        font-size: 14px;
+                    }
+
+                    
+                }
+            }
+        }
+    }
+
+    .all-announcements {
         margin-top: 60px;
         gap: 21px;
 
@@ -216,6 +319,15 @@
                 font-size: 16px;
                 font-weight: 500;
                 padding: 10px 15px;
+                color: red;
+
+                @include mq(phone-only){
+                    font-size: 12px;
+                }
+
+                @include mq(phone-sm){
+                    font-size: 10px;
+                }
             }
 
             .active {
@@ -228,9 +340,58 @@
 
         .my-announcements-cards {
             margin-top: 40px;
+            margin-bottom: 25px;
 
-            .tab-pane {
-                background-color: green;
+            .btn-desktop{
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: #5f5f5f;
+                    border: 2px dashed #5f5f5f;
+                    background-color: #f3f3f3;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 18px;
+                    text-decoration: none;
+
+                    img {
+                        background-color: #1D74D8;
+                        padding: 20px;
+                        border-radius: 50%;
+                    }
+                }
+
+            }
+
+            .btn-mobile{
+                height: 132px;
+
+                a {
+                    width: 100%;
+                    height: 100%;
+                    color: #5f5f5f;
+                    border: 2px dashed #5f5f5f;
+                    background-color: #f3f3f3;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 18px;
+                    text-decoration: none;
+
+                    img {
+                        background-color: #1D74D8;
+                        padding: 10px;
+                        border-radius: 50%;
+                    }
+                }
+
             }
         }
     }

@@ -5,9 +5,11 @@ Header {
     .logo {
         background-color: #4C4C4C;
         padding: 10px;
+        font-size: 17px;
 
-        @include mq(tablet-portrait-up) {
-            // display: none;
+
+        @include mq(phone-sm) {
+            font-size: 10px;
         }
 
         a {
@@ -16,55 +18,32 @@ Header {
         }
     }
 
-    .search-container {
-        width: 25%;
-        margin-left: 32px;
+    .input-group {
         background-color: #f5f5f5;
-        margin-top: auto;
+        margin-left: 32px;
+        padding-left: 30px;
+        gap: 10px;
 
         @include mq(tablet-portrait-up) {
-            margin-left: auto;
-            padding: 0;
-            width: auto;
-            border-radius: 50%;
+            display: none !important;
         }
 
-        .selection-btn {
-            display: none;
+        input {
+            font-size: 16px;
+            font-weight: 500;
+            color: #5F5F5F;
         }
 
-        .input-group {
-            margin-left: 15px;
-
-            @include mq(tablet-portrait-up) {
-
-                margin: 0;
-                border-radius: 50%;
-
-                input {
-                    display: none;
-                }
-
-                img {}
-            }
-
-            .input-group-text {
-                border-radius: 50% !important;
-                padding: 10px;
-                cursor: pointer;
-            }
+        .input-group-text{
+            cursor: pointer;
         }
+
+
+
     }
 
     .btn-group {
-        gap: 10px;
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-
-        @include mq(tablet-portrait-up) {
-            margin-left: 10px;
-        }
+        gap: 20px;
 
 
         a {
@@ -101,7 +80,6 @@ Header {
         }
 
         .new {
-
             @include mq(tablet-landscape-up) {
                 display: none;
             }
@@ -114,51 +92,26 @@ Header {
 
             }
         }
-    }
 
+        .btn-home{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            padding: 10px;
+            background-color: #e7e7e7;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
 
-}
-
-.active {
-
-    @include mq(tablet-portrait-up) {
-        flex-direction: column;
-        gap: 20px;
-        padding: 0;
-
-        .search-container {
-            width: 100%;
-            gap: 10px;
-            background-color: white;
-
-            .selection-btn {
-                display: block;
-                background-color: #1D74D8;
-                padding: 10px;
-                border-radius: 12px;
+            @include mq(tablet-landscape-up){
+                display: flex;
             }
 
-            .input-group {
-                width: 100%;
-                border-radius: 20px;
-                padding: 0;
-                background-color: #f5f5f5;
-
-
-                .search-input {
-                    border-radius: 12px;
-                    display: inline-block !important;
-                }
+            img {
+                width: 24px;
+                height: 24px;
             }
         }
-
-        .btn-group {
-            order: -1;
-            width: fit-content;
-            margin-left: auto;
-        }
-
-
     }
-
 }

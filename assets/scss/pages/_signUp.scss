@@ -1,24 +1,30 @@
 .registration-container {
     min-height: 100vh;
-    gap: 30px;
+    gap: 50px;
+    background-image:
+        linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%),
+        url(../icons/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    .background {
-        background-image:
-            linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%),
-            url(../icons/background.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        color: white;
-        font-size: 24px;
+    // .background {
+    //     background-image:
+    //         linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%),
+    //         url(../icons/background.jpg);
+    //     background-size: cover;
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     color: white;
+    //     font-size: 24px;
 
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -1;
-    }
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     z-index: -1;
+    // }
 
     .registration-card {
         padding: 50px 40px;
@@ -30,15 +36,15 @@
                 font-size: 32px;
                 font-weight: 600;
 
-                @include mq(tablet-portrait-up){
+                @include mq(tablet-portrait-up) {
                     font-size: 24px;
                 }
 
-                @include mq(phone-only){
+                @include mq(phone-only) {
                     font-size: 20px;
                 }
 
-                @include mq(phone-sm){
+                @include mq(phone-sm) {
                     font-size: 16px;
                 }
             }
@@ -50,11 +56,11 @@
                 font-size: 18px;
                 margin-bottom: 6px;
 
-                @include mq(tablet-portrait-up){
+                @include mq(tablet-portrait-up) {
                     font-size: 14px;
                 }
 
-                @include mq(phone-only){
+                @include mq(phone-only) {
                     font-size: 10px;
                 }
             }
@@ -71,15 +77,15 @@
                     border-left: 1px solid gray !important;
                     padding-left: 10px;
 
-                    @include mq(tablet-portrait-up){
+                    @include mq(tablet-portrait-up) {
                         font-size: 18px;
                     }
 
-                    @include mq(phone-only){
+                    @include mq(phone-only) {
                         font-size: 15px;
                     }
 
-                    @include mq(phone-sm){
+                    @include mq(phone-sm) {
                         font-size: 12px;
                     }
 
@@ -91,15 +97,15 @@
                     font-size: 21px;
                     border: none;
 
-                    @include mq(tablet-portrait-up){
+                    @include mq(tablet-portrait-up) {
                         font-size: 18px;
                     }
 
-                    @include mq(phone-only){
+                    @include mq(phone-only) {
                         font-size: 15px;
                     }
 
-                    @include mq(phone-sm){
+                    @include mq(phone-sm) {
                         font-size: 12px;
                     }
                 }
@@ -107,19 +113,19 @@
             }
         }
 
-        .btn{
+        .btn {
             font-size: 21px;
             border-radius: 12px;
 
-            @include mq(tablet-portrait-up){
+            @include mq(tablet-portrait-up) {
                 font-size: 18px;
             }
 
-            @include mq(phone-only){
+            @include mq(phone-only) {
                 font-size: 15px;
             }
 
-            @include mq(phone-only){
+            @include mq(phone-only) {
                 font-size: 12px;
             }
         }

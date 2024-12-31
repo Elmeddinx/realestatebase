@@ -17,29 +17,19 @@
 
         <!-- header -->
 
-        <Header class="container active" id="searchContainer">
+        <Header class="container d-flex">
 
-            <div class="header-left d-flex align-items-center">
-
-                <a class="logo" href="index.html">Logo</a>
-
-                <div class="input-group rounded-pill">
-
-                    <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
-                        <img src="./assets/icons/search-icon.svg" alt="">
-                    </span>
-
-                    <input id="searchInput"
-                        class="form-control bg-transparent rounded-pill shadow-none border-0 search-input" type="text"
-                        placeholder="Axtarış" />
-
-                </div>
-
+            <div class="logo">
+                <a href="index.html">E-Əmlak</a>
             </div>
 
 
-            <div class="btn-group">
-                <a class="profile" href="profile.html">
+            <div class="btn-group gray d-flex align-items-center ms-auto">
+
+                <a class="btn-home rounded-circle" href="index.html">
+                    <img src="./assets/icons/home-icon.svg" alt="">
+                </a>
+                <a class="btn-profile rounded-circle" href="profile.html">
                     <img src="./assets/icons/profile-picture.svg" alt="">
                 </a>
             </div>
@@ -50,17 +40,18 @@
 
         <div class="container links-container">
             <div class="row justify-content-around align-items-center">
-                <a href="index.html" class="btn col-3">Axtarış</a>
+
+                <a href="index.html" class="btn col-3 search">Axtarış</a>
                 <a href="newAnnouncement.html" class="btn col-5">
                     <span class="text-1">+ Yeni elan yerləşdirin</span>
                     <span class="text-2">+ Yeni elan</span>
                 </a>
-
-                <a href="entrust.html" class="btn col-3 active" data-bs-toggle="tooltip"
-                    data-bs-custom-class="custom-tooltip" data-bs-placement="top"
-                    title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
-                    Həvalə et
-                </a>
+                
+                <a href="entrust.html" class="btn col-3 active" data-bs-toggle="tooltip" data-bs-html="true"
+                data-bs-custom-class="custom-tooltip" data-bs-placement="top"
+                title='<img src="./assets/icons/exclamation-icon.svg" alt="Info"> <span>Həvalə etmək üçün məlumat. lorem ipsum dolor sit amet</span>'>
+                Həvalə et
+              </a>
 
 
             </div>
@@ -118,7 +109,8 @@
                     <div class="row align-items-end">
                         <div class="col-md-4 col-sm-12 mb-4">
                             <div class="input-group">
-                                <input type="text" placeholder="Ad" class="form-control" aria-describedby="basic-addon1">
+                                <input type="text" placeholder="Ad" class="form-control"
+                                    aria-describedby="basic-addon1">
                             </div>
                         </div>
 
@@ -143,7 +135,7 @@
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <select class="custom-select form-select form-select-lg"
+                                    <select id="floor" class="custom-select form-select form-select-lg"
                                         aria-label="Large select example">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -180,14 +172,15 @@
                         <div class="col-md-3 col-sm-12 mb-4 d-flex checkbox">
 
                             <div class="d-flex align-items-center">
-                                <input class="me-2" type="checkbox" name="" id="">
-                                <label class="fw-normal" for="">Təmirli</label>
-                            </div>
-
-                            <div class="d-flex align-items-center">
-                                <input class="me-2" type="checkbox" name="" id="">
-                                <label class="fw-normal" for="">Təmirsiz</label>
-                            </div>
+                                <input class="me-2" type="checkbox" name="repaired" id="repaired-checkbox">
+                                <label class="fw-normal" for="repaired-checkbox">Təmirli</label>
+                              </div>
+                              
+                              <div class="d-flex align-items-center">
+                                <input class="me-2" type="checkbox" name="unrepaired" id="unrepaired-checkbox">
+                                <label class="fw-normal" for="unrepaired-checkbox">Təmirsiz</label>
+                              </div>
+                              
 
                         </div>
 
@@ -200,7 +193,7 @@
                     <div class="container image-upload-container" id="imagePreviewContainer">
 
                         <div class="image-input d-flex align-items-center flex-column large" id="imageAddBox">
-        
+
                             <div>
                                 <label for="file-input" class="add-box">
                                     <img class="img-icon" src="./assets/icons/img-icon.svg" alt="image icon">
@@ -211,19 +204,20 @@
                                 </label>
                                 <input type="file" id="file-input" class="file-input" accept="image/*" multiple>
                             </div>
-        
+
                             <span class="under-text">Yeni şəkil əlavə et</span>
-        
+
                         </div>
-        
+
                         <div class="container upload-hint">*Minimal 4 ədəd şəkil əlavə edilməlidir</div>
-        
+
                     </div>
 
                     <div class="row">
                         <div class="col-md-4 col-sm-12 mb-4">
                             <div class="input-group">
-                                <input type="text" placeholder="Ad" class="form-control" aria-describedby="basic-addon1">
+                                <input type="text" placeholder="Ad" class="form-control"
+                                    aria-describedby="basic-addon1">
                             </div>
                         </div>
 
@@ -293,7 +287,8 @@
 
                         <div class="col-md-4 col-sm-12 mb-4">
                             <div class="input-group">
-                                <input type="text" placeholder="Sahə" class="form-control numeric-input" aria-describedby="basic-addon1">
+                                <input type="text" placeholder="Sahə" class="form-control numeric-input"
+                                    aria-describedby="basic-addon1">
                             </div>
                         </div>
                     </div>
@@ -301,15 +296,16 @@
                     <div class="row align-items-end">
                         <div class="col-md-4 col-sm-12 mb-4">
                             <div class="input-group">
-                                <input type="text" placeholder="Qiymət" class="form-control" aria-describedby="basic-addon1">
+                                <input type="text" placeholder="Qiymət" class="form-control"
+                                    aria-describedby="basic-addon1">
                             </div>
                         </div>
 
                         <div class="col-md-4 col-sm-12 mb-4">
-                            <label for="floor">Mərtəbə</label>
+                            <label for="floor-max">Mərtəbə</label>
                             <div class="row">
                                 <div class="col-6">
-                                    <select id="floor" class="custom-select form-select form-select-lg"
+                                    <select id="floor-max" class="custom-select form-select form-select-lg"
                                         aria-label="Large select example">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -317,7 +313,7 @@
                                     </select>
                                 </div>
                                 <div class="col-6">
-                                    <select class="custom-select form-select form-select-lg"
+                                    <select id="floor-min" class="custom-select form-select form-select-lg"
                                         aria-label="Large select example">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -392,6 +388,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
+    <script src="./assets/js/tooltip.js"></script>
     <script src="./assets/js/images.js"></script>
     <script src="./assets/js/header.js"></script>
     <script src="./assets/js/entrust.js"></script>

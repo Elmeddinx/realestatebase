@@ -3,6 +3,7 @@
 @import "./abstracts/mixins";
 @import "./base/reset";
 @import './swiper/swiper';
+@import './components/tooltip';
 @import './components/images.scss';
 @import './components/modals';
 @import './components/custom_select';
@@ -17,3 +18,6 @@
 @import './pages/entrust';
 @import './pages/singleAnnouncement';
 @import './pages/profile';
+@import './pages/editProfile';
+@import './components/fotorama';
+

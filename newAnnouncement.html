@@ -15,34 +15,18 @@
 
     <div class="container-fluid newAnnouncement-container">
 
-        <!-- header -->
+          <Header class="container d-flex">
 
-        <Header class="container active" id="searchContainer">
-
-            <div class="header-left d-flex align-items-center">
-      
-                <a class="logo" href="index.html">Logo</a>
-      
-              <div class="input-group rounded-pill">
-      
-                <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
-                  <img src="./assets/icons/search-icon.svg" alt="">
-                </span>
-      
-                <input
-                  id="searchInput"
-                  class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
-                  type="text"
-                  placeholder="Axtarış"
-                />
-      
-              </div>
-      
+            <div class="logo">
+              <a href="index.html">E-Əmlak</a>
             </div>
       
       
-            <div class="btn-group">
-                <a class="profile" href="profile.html">
+            <div class="btn-group gray d-flex align-items-center ms-auto">
+                <a class="btn-home rounded-circle" href="index.html">
+                    <img src="./assets/icons/home-icon.svg" alt="">
+                </a>
+                <a class="btn-profile rounded-circle" href="profile.html">
                     <img src="./assets/icons/profile-picture.svg" alt="">
                 </a>
             </div>
@@ -53,17 +37,17 @@
 
         <div class="container links-container">
             <div class="row justify-content-around align-items-center">
-                <a href="index.html" class="btn col-3">Axtarış</a>
+                <a href="index.html" class="btn col-3 search">Axtarış</a>
                 <a href="newAnnouncement.html" class="btn col-5 active">
                     <span class="text-1">+ Yeni elan yerləşdirin</span>
                     <span class="text-2">+ Yeni elan</span>
                 </a>
 
-                <a href="entrust.html" class="btn col-3" data-bs-toggle="tooltip" data-bs-custom-class="custom-tooltip"
-                    data-bs-placement="top"
-                    title="Lorem Ipsum is simply dummy text of the printing and typesetting industry.">
-                    Həvalə et
-                </a>
+                <a href="entrust.html" class="btn col-3" data-bs-toggle="tooltip" data-bs-html="true"
+                data-bs-custom-class="custom-tooltip" data-bs-placement="top"
+                title='<img src="./assets/icons/exclamation-icon.svg" alt="Info"> <span>Həvalə etmək üçün məlumat. lorem ipsum dolor sit amet</span>'>
+                Həvalə et
+              </a>
 
 
             </div>
@@ -130,7 +114,7 @@
 
                 <div class="col-md-4 col-sm-12 mb-4">
                     <select class="custom-select form-select form-select-lg" aria-label="Large select example">
-                        <option selected>Elanin tipi</option>
+                        <option selected>Elanın tipi</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -148,7 +132,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-12 mb-4">
                     <select class="custom-select form-select form-select-lg" aria-label="Large select example">
-                        <option selected>Seher</option>
+                        <option selected>Şəhər</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -166,7 +150,7 @@
 
                 <div class="col-md-4 col-sm-12 mb-4">
                     <select class="custom-select form-select form-select-lg" aria-label="Large select example">
-                        <option selected>Qesebe</option>
+                        <option selected>Qəsəbə</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -183,7 +167,7 @@
 
                 <div class="col-md-4 col-sm-12 mb-4">
                     <select class="custom-select form-select form-select-lg" aria-label="Large select example">
-                        <option selected>Heyet evi</option>
+                        <option selected>Həyət evi</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -192,7 +176,7 @@
 
                 <div class="col-md-4 col-sm-12 mb-4">
                     <select class="custom-select form-select form-select-lg" aria-label="Large select example">
-                        <option selected>Otaq sayi</option>
+                        <option selected>Otaq sayı</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -204,18 +188,18 @@
                 <div class="col-md-4 col-sm-12 mb-4">
                     <label for="">Yerləşdiyi mərtəbə</label>
                     <select class="custom-select form-select form-select-lg" aria-label="Large select example">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
                 </div>
 
                 <div class="col-md-4 col-sm-12 mb-4">
                     <label for="floor">Mərtəbələrin sayı</label>
                     <select class="custom-select form-select form-select-lg" id="floor" aria-label="Large select example">
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
                 </div>
 
@@ -389,6 +373,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
+        <script src="./assets/js/tooltip.js"></script>
     <script src="./assets/js/images.js"></script>
     <script src="./assets/js/modals.js"></script>
     <script src="./assets/js/header.js"></script>

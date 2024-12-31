@@ -23,30 +23,30 @@
 
     <!-- header -->
 
-    <Header class="container active" id="searchContainer">
+    <Header class="container d-flex">
 
-      <div class="header-left d-flex align-items-center">
+      <div class="logo">
+        <a href="index.html">E-Əmlak</a>
+      </div>
 
-        <a class="logo" href="index.html">Logo</a>
+      <div class="input-group d-flex mt-auto w-25 rounded-pill">
 
-        <div class="input-group rounded-pill">
+        <span class="input-group-text bg-transparent border-0 search-icon">
+          <img src="./assets/icons/search-icon.svg" alt="">
+        </span>
 
-          <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
-            <img src="./assets/icons/search-icon.svg" alt="">
-          </span>
-
-          <input id="searchInput" class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
-            type="text" placeholder="Axtarış" />
-
-        </div>
+        <input id="searchInput" class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
+          type="text" placeholder="Axtarış" />
 
       </div>
 
-
-      <div class="btn-group align-items-center">
+      <div class="btn-group gray d-flex align-items-center ms-auto">
+        <a class="btn-home rounded-circle" href="index.html">
+          <img src="./assets/icons/home-icon.svg" alt="">
+        </a>
         <a href="newAnnouncement.html" class="btn btn-primary rounded-pill new">+ Yeni elan</a>
         <a href="entrust.html" class="btn btn-primary rounded-pill entrust">Həvalə et</a>
-        <a class="btn-profile" href="">
+        <a class="btn-profile" href="profile.html">
           <img src="./assets/icons/profile-picture.svg" alt="">
         </a>
       </div>
@@ -61,35 +61,35 @@
 
     <!-- profile -->
 
-    <div class="container d-flex bg-warning profile">
+    <div class="container user-infos">
 
-      <div class="left d-flex bg-danger align-items-center">
+      <div class="left">
 
         <div class="img rounded-circle">
           <img class="rounded-circle" src="./assets/icons/background.jpg" alt="">
         </div>
 
-        <div class="name d-flex">
+        <div class="username">
 
-          <span>Nicat Quliyev</span>
+          <div class="name">Nicat Quliyev</div>
 
-          <a class="btn correction">
+          <a href="editProfile.html" class="btn-edit">
             <img src="./assets/icons/correction-icon.svg" alt="">
-            <span>Profilə düzəliş et</span>
+            <span>Profilə Düzəliş Et</span>
           </a>
 
         </div>
 
       </div>
 
-      <div class="right bg-success d-flex align-items-center">
+      <div class="right">
 
-        <button class="btn subscribe" id="createAnnouncement">
+        <button class="btn-subscribe" id="createAnnouncement">
           <img src="./assets/icons/round-plus-icon.svg" alt="">
           <span>Abonəlik Əldə Et</span>
         </button>
 
-        <div class="balance d-flex">
+        <div class="balance">
 
           <div class="d-flex">
             <img src="./assets/icons/wallet-icon.svg" alt="">
@@ -97,13 +97,42 @@
             <span>0 AZN</span>
           </div>
 
-          <button class="btn increas">Balansı artır</button>
+          <button class="btn-increas" id="increasModal">Balansı artır</button>
 
         </div>
+
       </div>
 
     </div>
 
+    <!-- balance modal -->
+
+    <div class="balance-modal">
+      <div class="modal fade" id="balanceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content rounded-5 position-relative">
+
+            <div class="modal-header">
+              <span>Şəxsi hesabın balansını artır</span>
+            </div>
+
+            <div class="modal-body">
+              <label for="balace">Artırılacaq məbləğ (AZN)</label>
+              <div class="input-group mb-3">
+                <input type="text" maxlength="15" class="form-control numeric-input border-0" aria-label="phone"
+                  aria-describedby="basic-addon1">
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Balansı artır</button>
+            </div>
+
+            <button class="btn close" data-bs-dismiss="modal"><img src="./assets/icons/delete-icon.svg" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <!-- announcement modal -->
@@ -181,9 +210,9 @@
       </div>
     </div>
 
-    <!-- my announcements -->
+    <!-- all announcements -->
 
-    <div class="container my-announcements d-flex flex-column p-0">
+    <div class="container all-announcements d-flex flex-column p-0">
 
       <div class="my-announcement-header card-header d-flex justify-content-between">
         <span>Bütün elanlarım</span>
@@ -302,62 +331,228 @@
 
           <div class="tab-pane fade show active" id="activeAnnouncements">
 
-            <div class="row bg-warning">
+            <div class="row gy-2 gy-lg-4 gy-md-2 gx-2 gx-lg-4 gx-md-2">
 
-              <div class="col-6 col-md-4 col-sm-6">
+              <div class="col-6 col-lg-4">
                 <a class="text-decoration-none text-black position-relative" href="#">
-
                   <div class="card border-0 position-relative">
-
                     <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
-
-                    <div class="card-body d-flex flex-column justify-content-between p-2">
-
+                    <div class="card-body d-flex flex-column justify-content-between">
                       <div class="card-body-price d-flex justify-content-between align-items-center">
-
                         <span>150.000 AZN</span>
-
                         <img src="./assets/icons/Vector.svg" alt="">
-
                       </div>
-
                       <div class="card-body-title">
                         <span>Malibu Residance</span>
                       </div>
-
                       <div class="card-body-location d-flex justify-content-between align-items-center">
-
-                        <div class="right">
+                        <div class="left">
                           <img src="./assets/icons/location.svg" alt="">
                           <span class="city">Bakı. Nəsimi rayonu</span>
                         </div>
-
-                        <div class="left d-flex justify-content-between align-items-center">
+                        <div class="right d-flex justify-content-between align-items-center">
                           <img src="./assets/icons/date-icon.svg" alt="">
                           <span class="date">12.11.2024</span>
                         </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
 
                       </div>
 
                     </div>
 
-                    <div
-                      class="logo bg-white position-absolute rounded-pill d-flex justify-content-center align-content-center">
-                      <span>Bina.az</span>
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="badgets position-absolute d-flex justify-content-between align-items-center">
 
-                      <div class="badget document">
-                        <img src="./assets/icons/document.svg" alt="">
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
                       </div>
 
-                      <div class="badget percent">
-                        <span>%</span>
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
                       </div>
 
-                      <div class="badget vip">
-                        <span>VIP</span>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
                       </div>
 
                     </div>
@@ -366,60 +561,66 @@
                 </a>
               </div>
 
-              <div class="col-6 col-md-4 col-sm-6">
+              <div class="col-6 col-lg-4">
                 <a class="text-decoration-none text-black position-relative" href="#">
-
                   <div class="card border-0 position-relative">
-
                     <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
-
-                    <div class="card-body d-flex flex-column justify-content-between p-2">
-
+                    <div class="card-body d-flex flex-column justify-content-between">
                       <div class="card-body-price d-flex justify-content-between align-items-center">
-
                         <span>150.000 AZN</span>
-
                         <img src="./assets/icons/Vector.svg" alt="">
-
                       </div>
-
                       <div class="card-body-title">
                         <span>Malibu Residance</span>
                       </div>
-
                       <div class="card-body-location d-flex justify-content-between align-items-center">
-
-                        <div class="right">
+                        <div class="left">
                           <img src="./assets/icons/location.svg" alt="">
                           <span class="city">Bakı. Nəsimi rayonu</span>
                         </div>
-
-                        <div class="left d-flex justify-content-between align-items-center">
+                        <div class="right d-flex justify-content-between align-items-center">
                           <img src="./assets/icons/date-icon.svg" alt="">
                           <span class="date">12.11.2024</span>
                         </div>
-
                       </div>
-
                     </div>
 
-                    <div
-                      class="logo bg-white position-absolute rounded-pill d-flex justify-content-center align-content-center">
-                      <span>Bina.az</span>
-                    </div>
 
-                    <div class="badgets position-absolute d-flex justify-content-between align-items-center">
+                    <div class="badgets-container">
 
-                      <div class="badget document">
-                        <img src="./assets/icons/document.svg" alt="">
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
                       </div>
 
-                      <div class="badget percent">
-                        <span>%</span>
-                      </div>
+                      <div class="badgets d-flex justify-content-between align-items-center">
 
-                      <div class="badget vip">
-                        <span>VIP</span>
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
                       </div>
 
                     </div>
@@ -428,65 +629,17 @@
                 </a>
               </div>
 
-              <div class="col-6 col-md-4 col-sm-6">
-                <a class="text-decoration-none text-black position-relative" href="#">
+              <div class="btn-desktop col-4 d-none d-lg-block">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
 
-                  <div class="card border-0 position-relative">
-
-                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
-
-                    <div class="card-body d-flex flex-column justify-content-between p-2">
-
-                      <div class="card-body-price d-flex justify-content-between align-items-center">
-
-                        <span>150.000 AZN</span>
-
-                        <img src="./assets/icons/Vector.svg" alt="">
-
-                      </div>
-
-                      <div class="card-body-title">
-                        <span>Malibu Residance</span>
-                      </div>
-
-                      <div class="card-body-location d-flex justify-content-between align-items-center">
-
-                        <div class="right">
-                          <img src="./assets/icons/location.svg" alt="">
-                          <span class="city">Bakı. Nəsimi rayonu</span>
-                        </div>
-
-                        <div class="left d-flex justify-content-between align-items-center">
-                          <img src="./assets/icons/date-icon.svg" alt="">
-                          <span class="date">12.11.2024</span>
-                        </div>
-
-                      </div>
-
-                    </div>
-
-                    <div
-                      class="logo bg-white position-absolute rounded-pill d-flex justify-content-center align-content-center">
-                      <span>Bina.az</span>
-                    </div>
-
-                    <div class="badgets position-absolute d-flex justify-content-between align-items-center">
-
-                      <div class="badget document">
-                        <img src="./assets/icons/document.svg" alt="">
-                      </div>
-
-                      <div class="badget percent">
-                        <span>%</span>
-                      </div>
-
-                      <div class="badget vip">
-                        <span>VIP</span>
-                      </div>
-
-                    </div>
-
-                  </div>
+              <div class="btn-mobile col-12 d-lg-none order-first">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
                 </a>
               </div>
 
@@ -494,25 +647,953 @@
 
           </div>
 
+
           <div class="tab-pane fade" id="expiredAnnouncement">
+            <div class="row gy-2 gy-lg-4 gy-md-2 gx-2 gx-lg-4 gx-md-2">
 
-            expired
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
 
 
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="btn-desktop col-4 d-none d-lg-block">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
+
+              <div class="btn-mobile col-12 d-lg-none order-first">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
+
+            </div>
           </div>
 
           <div class="tab-pane fade" id="unPublished">
+            <div class="row gy-2 gy-lg-4 gy-md-2 gx-2 gx-lg-4 gx-md-2">
 
-            unpublished
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
 
 
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="btn-desktop col-4 d-none d-lg-block">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
+
+              <div class="btn-mobile col-12 d-lg-none order-first">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
+
+            </div>
           </div>
 
           <div class="tab-pane fade" id="pendingAnnouncements">
+            <div class="row gy-2 gy-lg-4 gy-md-2 gx-2 gx-lg-4 gx-md-2">
 
-            gözləyən elanlar
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
 
 
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-6 col-lg-4">
+                <a class="text-decoration-none text-black position-relative" href="#">
+                  <div class="card border-0 position-relative">
+                    <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="card-body-price d-flex justify-content-between align-items-center">
+                        <span>150.000 AZN</span>
+                        <img src="./assets/icons/Vector.svg" alt="">
+                      </div>
+                      <div class="card-body-title">
+                        <span>Malibu Residance</span>
+                      </div>
+                      <div class="card-body-location d-flex justify-content-between align-items-center">
+                        <div class="left">
+                          <img src="./assets/icons/location.svg" alt="">
+                          <span class="city">Bakı. Nəsimi rayonu</span>
+                        </div>
+                        <div class="right d-flex justify-content-between align-items-center">
+                          <img src="./assets/icons/date-icon.svg" alt="">
+                          <span class="date">12.11.2024</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="badgets-container">
+
+                      <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                        <span>Bina.az</span>
+                      </div>
+
+                      <div class="badgets d-flex justify-content-between align-items-center">
+
+                        <div class="badget document">
+                          <img src="./assets/icons/document.svg" alt="">
+                        </div>
+
+                        <div class="badget percent">
+                          <span>%</span>
+                        </div>
+
+                        <div class="badget vip">
+                          <span>VIP</span>
+                        </div>
+
+                        <div class="custom-dropdown">
+                          <button class="dropdown-toggle"><img src="./assets/icons/spinner-icon.svg" alt=""></button>
+                          <div class="dropdown-menu">
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/edit-icon.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                            <button class="dropdown-item">
+                              <img src="./assets/icons/delete-icon-red-filled.svg" alt="">
+                              <span>Redaktə et</span>
+                            </button>
+                          </div>
+                        </div>
+
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </a>
+              </div>
+
+              <div class="btn-desktop col-4 d-none d-lg-block">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
+
+              <div class="btn-mobile col-12 d-lg-none order-first">
+                <a href="newAnnouncement.html">
+                  <img src="./assets/icons/plus-icon.svg" alt="">
+                  <span>Yeni elan</span>
+                </a>
+              </div>
+
+            </div>
           </div>
 
         </div>
@@ -522,9 +1603,6 @@
     </div>
 
   </div>
-
-
-
 
   <!-- footer -->
 
@@ -558,10 +1636,11 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="./assets/js/profilePageSwiper.js"></script>
-  <script src="./assets/js/profile.js"></script>
+  <script src="./assets/js/swiper/profilePageSwiper.js"></script>
   <script src="./assets/js/modals.js"></script>
+  <script src="./assets/js/select.js"></script>
   <script src="./assets/js/header.js"></script>
+  <script src="./assets/js/profile.js"></script>
 </body>
 
 </html>

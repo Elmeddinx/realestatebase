@@ -14,6 +14,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -23,73 +24,562 @@
 
     <!-- header -->
 
-    <Header class="container active" id="searchContainer">
+    <Header class="container d-flex">
 
-      <div class="header-left d-flex align-items-center">
+      <div class="logo">
+        <a href="index.html">E-Əmlak</a>
+      </div>
 
-        <a class="logo" href="index.html">Logo</a>
+      <div class="input-group d-flex mt-auto w-25 rounded-pill">
 
-        <div class="input-group rounded-pill">
+        <span class="input-group-text bg-transparent border-0 search-icon">
+          <img src="./assets/icons/search-icon.svg" alt="">
+        </span>
 
-          <span id="searchToggle" class="input-group-text bg-transparent border-0 search-icon">
-            <img src="./assets/icons/search-icon.svg" alt="">
-          </span>
-
-          <input
-            id="searchInput"
-            class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
-            type="text"
-            placeholder="Axtarış"
-          />
-
-        </div>
+        <input id="searchInput" class="form-control bg-transparent rounded-pill shadow-none border-0 search-input"
+          type="text" placeholder="Axtarış" />
 
       </div>
 
+      <div class="btn-group d-flex gray align-items-center ms-auto">
 
-      <div class="btn-group">
-        <a href="newAnnouncement.html" class="btn btn-primary rounded-pill new">+ Yeni elan</a>
-        <a href="entrust.html" class="btn btn-primary rounded-pill entrust">Həvalə et</a>
-        <a class="profile" href="">
-            <img src="./assets/icons/profile-picture.svg" alt="">
+        <a class="btn-home rounded-circle" href="index.html">
+          <img src="./assets/icons/home-icon.svg" alt="">
         </a>
+        <a href="newAnnouncement.html" class="btn btn-primary rounded-pill new">+ Yeni elan</a>
+
+        <a href="entrust.html" class="btn btn-primary rounded-pill entrust">Həvalə et</a>
+
+        <a class="btn-profile rounded-circle" href="profile.html">
+          <img src="./assets/icons/profile-picture.svg" alt="">
+        </a>
+
       </div>
 
     </Header>
 
-
     <!-- breadcrump -->
 
     <div class="container breadcrumb-container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Elan</li>
-            </ol>
-          </nav>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Elan</li>
+        </ol>
+      </nav>
     </div>
 
-      <!-- announcement -->
+    <!-- announcement -->
 
-      <div class="container announcement-container d-flex flex-column">
+    <div class="container announcement-container">
 
-        <div class="announcement-title">
-            Satılır 3 otaqlı yeni tikili 97.6 m², Kubinka q.
+      <div class="announcement-title d-flex flex-column">
+
+        <span>Satılır 3 otaqlı yeni tikili 97.6 m², Kubinka q.</span>
+
+        <div class="date-mobile align-items-center">
+          <img src="./assets/icons/date-icon.svg" alt="">
+          <span>12.11.2024</span>
         </div>
 
-        <div class="announcement row">
+      </div>
 
-            <div class="left col-8">
-                left
+      <div class="announcement row position-relative">
+
+        <div class="announcement-pictures col-12 col-xl-8 p-0">
+
+          <div class="fotorama" id="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-width="100%"
+            data-ratio="16/9" data-loop="true">
+            <img src="./assets/icons/e1.jpg" alt="Image 2">
+            <img src="./assets/icons/e2.jpg" alt="Image 3">
+            <img src="./assets/icons/e3.jpg" alt="Image 3">
+            <img src="./assets/icons/e4.jpg" alt="Image 3">
+            <img src="./assets/icons/e5.jpg" alt="Image 3">
+            <img src="./assets/icons/e6.jpg" alt="Image 3">
+            <img src="./assets/icons/e7.jpg" alt="Image 3">
+            <img src="./assets/icons/e8.jpg" alt="Image 3">
+            <img src="./assets/icons/e9.jpg" alt="Image 3">
+            <img src="./assets/icons/e10.jpg" alt="Image 3">
+            <img src="./assets/icons/e6.jpg" alt="Image 3">
+          </div>
+
+          <div class="subscribe-type-mobile d-flex justify-content-between">
+
+            <button class="d-flex flex-column justify-content-center align-items-center">
+              <img src="./assets/icons/arrow-up-green.svg" alt="">
+              <span>İrəli çək</span>
+              <span class="price">5 AZN</span>
+            </button>
+
+            <button class="d-flex flex-column justify-content-center align-items-center">
+              <img src="./assets/icons/vip-announcement-icon.svg" alt="">
+              <span>VIP ET</span>
+              <span class="price">4 AZN</span>
+            </button>
+
+            <button class="d-flex flex-column justify-content-center align-items-center">
+              <img src="./assets/icons/premium-icon.svg" alt="">
+              <span>Premium</span>
+              <span class="price">5 AZN</span>
+            </button>
+
+          </div>
+
+        </div>
+
+        <div class="announcement-infos col p-4 d-flex flex-column justify-content-between">
+
+          <div class="top d-flex flex-column">
+
+            <div class="container ad-views-mobile d-flex">
+              <span>Baxışların sayı: 134</span>
+              <span>Elan nömrəsi: 1344567</span>
             </div>
 
-            <div class="right col-4">
-                right
+            <div class="owner-infos d-flex align-items-center">
+
+              <div class="owner-image rounded-circle">
+                <img class="rounded-circle" src="./assets/icons/example.jpg" alt="">
+              </div>
+
+              <div class="owner-name d-flex flex-column">
+                <span class="name">Ramin Aliyev</span>
+                <span class="status">Mülkiyyətçi</span>
+              </div>
+
             </div>
+
+            <div class="price d-flex flex-column">
+              <span class="total-price">120 290 AZN</span>
+              <span class="sqm-price">3452 AZN/m2</span>
+            </div>
+
+            <div class="repair-status d-flex align-items-center">
+              <img src="./assets/icons/brush-icon.svg" alt="">
+              <span>Təmirli</span>
+            </div>
+
+            <div class="location d-flex align-items-center">
+              <img src="./assets/icons/location-gray.svg" alt="">
+              <span>Bakı. Nəsimi rayonu</span>
+            </div>
+
+          </div>
+
+          <div class="bottom d-flex flex-column gap-5">
+
+            <div class="dial-button-container">
+              <div class="dial-button numberButton">
+                <span>Nömrəni göstər</span>
+                <span class="phone-number visible firstPhoneNumber">987****6543</span>
+              </div>
+
+              <ul class="number-list numberList">
+                <li class="phone-number">9876543210</li>
+                <li class="phone-number">8765432109</li>
+                <li class="phone-number">7654321098</li>
+                <li class="phone-number">6543210987</li>
+              </ul>
+            </div>
+
+            <div class="subscribe-type d-flex justify-content-between">
+
+              <button class="d-flex flex-column justify-content-center align-items-center">
+                <img src="./assets/icons/arrow-up-green.svg" alt="">
+                <span>İrəli çək</span>
+                <span class="price">5 AZN</span>
+              </button>
+
+              <button class="d-flex flex-column justify-content-center align-items-center">
+                <img src="./assets/icons/vip-announcement-icon.svg" alt="">
+                <span>VIP ET</span>
+                <span class="price">4 AZN</span>
+              </button>
+
+              <button class="d-flex flex-column justify-content-center align-items-center">
+                <img src="./assets/icons/premium-icon.svg" alt="">
+                <span>Premium</span>
+                <span class="price">5 AZN</span>
+              </button>
+
+            </div>
+
+            <div class="date-container d-flex justify-content-between">
+              <span>Elanın tarixi</span>
+              <div class="date d-flex align-items-center align-items-center">
+                <img src="./assets/icons/date-icon.svg" alt="">
+                <span>12.11.2024</span>
+              </div>
+            </div>
+
+
+          </div>
 
         </div>
       </div>
 
+    </div>
+
+    <!-- ad views -->
+
+    <div class="container ad-views d-flex">
+      <span>Baxışların sayı: 134</span>
+      <span>Elan nömrəsi: 1344567</span>
+    </div>
+
+    <!-- about -->
+
+    <div class="container d-flex flex-column about-announcement">
+
+      <div class="title">Hakkında məlumat</div>
+
+      <div class="row">
+
+        <div class="column col-12 col-md-4 d-flex flex-column">
+
+          <div class="d-flex a justify-content-between">
+            <span>Tikili tipi</span>
+            <span>Yeni tikili</span>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <span>Sahə</span>
+            <span>234m2</span>
+          </div>
+
+        </div>
+
+        <div class="column col-12 col-md-4 d-flex flex-column">
+
+          <div class="d-flex justify-content-between">
+            <span>Mərtəbə</span>
+            <span>12 mərtəbə</span>
+          </div>
+
+          <div class="d-flex justify-content-between">
+            <span>Otaq sayı</span>
+            <span>6 otaq</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iusto accusamus voluptate magnam dolore vero, illo
+        unde quas id consectetur quo harum voluptatem rerum quos nostrum dolor sunt iste numquam ab ipsum veniam dicta,
+        delectus impedit ea? Libero praesentium et ipsam, dicta provident suscipit vero dolorem velit aut ducimus sunt
+        distinctio quibusdam quidem alias? Dolorum delectus quos officiis soluta fugit neque id maxime eius architecto
+        voluptatibus consectetur molestiae amet sunt aperiam quisquam, eveniet, ipsa hic veniam. Temporibus dicta esse
+        perspiciatis repudiandae eveniet quidem aspernatur possimus, accusamus veritatis minima vitae sit eos omnis
+        quam, inventore commodi libero, similique vero deserunt repellat!
+      </div>
+
+
+    </div>
+
+    <!-- similar announcements -->
+
+    <div class="container similar-announcements">
+
+      <div class="similar-announcements-header card-header d-flex justify-content-between">
+        <span>Bütün elanlarım</span>
+
+        <select class="dynamic-select custom-select text-white fs-5 rounded-pill shadow-none">
+          <option selected>Öncə yenilər</option>
+          <option value="1">Əvvəl köhnələr</option>
+          <option value="2">Ən çox baxılan</option>
+        </select>
+      </div>
+
+      <div class="swiper mySwiper">
+
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <a class="text-decoration-none text-black position-relative" href="#">
+              <div class="card border-0 position-relative">
+                <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="card-body-price d-flex justify-content-between align-items-center">
+                    <span>150.000 AZN</span>
+                    <img src="./assets/icons/Vector.svg" alt="">
+                  </div>
+                  <div class="card-body-title">
+                    <span>Malibu Residance</span>
+                  </div>
+                  <div class="card-body-location d-flex justify-content-between align-items-center">
+                    <div class="left">
+                      <img src="./assets/icons/location.svg" alt="">
+                      <span class="city">Bakı. Nəsimi rayonu</span>
+                    </div>
+                    <div class="right d-flex justify-content-between align-items-center">
+                      <img src="./assets/icons/date-icon.svg" alt="">
+                      <span class="date">12.11.2024</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="badgets-container">
+
+                  <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                    <span>Bina.az</span>
+                  </div>
+
+                  <div class="badgets d-flex justify-content-between align-items-center">
+
+                    <div class="badget document">
+                      <img src="./assets/icons/document.svg" alt="">
+                    </div>
+
+                    <div class="badget percent">
+                      <span>%</span>
+                    </div>
+
+                    <div class="badget vip">
+                      <span>VIP</span>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a class="text-decoration-none text-black position-relative" href="#">
+              <div class="card border-0 position-relative">
+                <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="card-body-price d-flex justify-content-between align-items-center">
+                    <span>150.000 AZN</span>
+                    <img src="./assets/icons/Vector.svg" alt="">
+                  </div>
+                  <div class="card-body-title">
+                    <span>Malibu Residance</span>
+                  </div>
+                  <div class="card-body-location d-flex justify-content-between align-items-center">
+                    <div class="left">
+                      <img src="./assets/icons/location.svg" alt="">
+                      <span class="city">Bakı. Nəsimi rayonu</span>
+                    </div>
+                    <div class="right d-flex justify-content-between align-items-center">
+                      <img src="./assets/icons/date-icon.svg" alt="">
+                      <span class="date">12.11.2024</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="badgets-container">
+
+                  <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                    <span>Bina.az</span>
+                  </div>
+
+                  <div class="badgets d-flex justify-content-between align-items-center">
+
+                    <div class="badget document">
+                      <img src="./assets/icons/document.svg" alt="">
+                    </div>
+
+                    <div class="badget percent">
+                      <span>%</span>
+                    </div>
+
+                    <div class="badget vip">
+                      <span>VIP</span>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a class="text-decoration-none text-black position-relative" href="#">
+              <div class="card border-0 position-relative">
+                <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="card-body-price d-flex justify-content-between align-items-center">
+                    <span>150.000 AZN</span>
+                    <img src="./assets/icons/Vector.svg" alt="">
+                  </div>
+                  <div class="card-body-title">
+                    <span>Malibu Residance</span>
+                  </div>
+                  <div class="card-body-location d-flex justify-content-between align-items-center">
+                    <div class="left">
+                      <img src="./assets/icons/location.svg" alt="">
+                      <span class="city">Bakı. Nəsimi rayonu</span>
+                    </div>
+                    <div class="right d-flex justify-content-between align-items-center">
+                      <img src="./assets/icons/date-icon.svg" alt="">
+                      <span class="date">12.11.2024</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="badgets-container">
+
+                  <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                    <span>Bina.az</span>
+                  </div>
+
+                  <div class="badgets d-flex justify-content-between align-items-center">
+
+                    <div class="badget document">
+                      <img src="./assets/icons/document.svg" alt="">
+                    </div>
+
+                    <div class="badget percent">
+                      <span>%</span>
+                    </div>
+
+                    <div class="badget vip">
+                      <span>VIP</span>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a class="text-decoration-none text-black position-relative" href="#">
+              <div class="card border-0 position-relative">
+                <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="card-body-price d-flex justify-content-between align-items-center">
+                    <span>150.000 AZN</span>
+                    <img src="./assets/icons/Vector.svg" alt="">
+                  </div>
+                  <div class="card-body-title">
+                    <span>Malibu Residance</span>
+                  </div>
+                  <div class="card-body-location d-flex justify-content-between align-items-center">
+                    <div class="left">
+                      <img src="./assets/icons/location.svg" alt="">
+                      <span class="city">Bakı. Nəsimi rayonu</span>
+                    </div>
+                    <div class="right d-flex justify-content-between align-items-center">
+                      <img src="./assets/icons/date-icon.svg" alt="">
+                      <span class="date">12.11.2024</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="badgets-container">
+
+                  <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                    <span>Bina.az</span>
+                  </div>
+
+                  <div class="badgets d-flex justify-content-between align-items-center">
+
+                    <div class="badget document">
+                      <img src="./assets/icons/document.svg" alt="">
+                    </div>
+
+                    <div class="badget percent">
+                      <span>%</span>
+                    </div>
+
+                    <div class="badget vip">
+                      <span>VIP</span>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a class="text-decoration-none text-black position-relative" href="#">
+              <div class="card border-0 position-relative">
+                <img src="./assets/icons/img1.jpg" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="card-body-price d-flex justify-content-between align-items-center">
+                    <span>150.000 AZN</span>
+                    <img src="./assets/icons/Vector.svg" alt="">
+                  </div>
+                  <div class="card-body-title">
+                    <span>Malibu Residance</span>
+                  </div>
+                  <div class="card-body-location d-flex justify-content-between align-items-center">
+                    <div class="left">
+                      <img src="./assets/icons/location.svg" alt="">
+                      <span class="city">Bakı. Nəsimi rayonu</span>
+                    </div>
+                    <div class="right d-flex justify-content-between align-items-center">
+                      <img src="./assets/icons/date-icon.svg" alt="">
+                      <span class="date">12.11.2024</span>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="badgets-container">
+
+                  <div class="logo bg-white rounded-pill d-flex justify-content-center align-content-center">
+                    <span>Bina.az</span>
+                  </div>
+
+                  <div class="badgets d-flex justify-content-between align-items-center">
+
+                    <div class="badget document">
+                      <img src="./assets/icons/document.svg" alt="">
+                    </div>
+
+                    <div class="badget percent">
+                      <span>%</span>
+                    </div>
+
+                    <div class="badget vip">
+                      <span>VIP</span>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+
+      </div>
+    </div>
+
+    <!-- mobile dial button -->
+
+    <div class="container">
+      <div class="dial-button-mobile-container">
+        <div class="dial-button numberButton">
+          <span class="phone-number visible firstPhoneNumber">Zəng et</span>
+        </div>
+
+        <ul class="number-list numberList">
+          <li class="phone-number">1234567890</li>
+          <li class="phone-number">0987654321</li>
+          <li class="phone-number">1122334455</li>
+          <li class="phone-number">2233445566</li>
+        </ul>
+      </div>
+    </div>
 
 
     <!-- footer -->
@@ -115,15 +605,19 @@
     </Footer>
 
 
-  </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+      </script>
+    <script src="./assets/js/select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper/singleAnnouncementSwiper.js"></script>
+    <script src="./assets/js/fotorama.js"></script>
+    <script src="./assets/js/singleAnnouncement.js"></script>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-  <script src="./assets/js/header.js"></script>
 </body>
 
 </html>
