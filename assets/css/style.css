@@ -563,7 +563,7 @@ body {
   transform: translate(-50%);
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 32px;
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input .input-group {
@@ -2864,7 +2864,6 @@ Footer .footer-container-black .footer-social {
   flex-grow: 1 !important;
   position: relative;
   border-radius: 12px !important;
-  background-color: green;
 }
 .fotorama .fotorama__wrap .fotorama__stage::before {
   content: "";
@@ -2918,8 +2917,8 @@ Footer .footer-container-black .footer-social {
 }
 @media only screen and (max-width: 768px) {
   .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame {
-    width: 50px !important;
-    height: 50px !important;
+    width: 80px !important;
+    height: 80px !important;
   }
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame:first-child {

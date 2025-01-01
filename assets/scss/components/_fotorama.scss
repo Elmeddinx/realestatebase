@@ -11,7 +11,6 @@
             flex-grow: 1 !important;
             position: relative;
             border-radius: 12px !important;
-            background-color: green;
 
             &::before {
                 content: "";
@@ -71,8 +70,8 @@
                         margin-right: 12px !important;
 
                         @include mq(tablet-portrait-up){
-                            width: 50px !important;
-                            height: 50px !important;
+                            width: 80px !important;
+                            height: 80px !important;
                         }
 
                         &:first-child {
@@ -136,11 +135,7 @@
 }
 
 
-// .overlay-container {
-//     position: relative;
-//     width: 300px;
-//     height: 200px;
-// }
+
 
 // .overlay-container img {
 //     width: 100%;
