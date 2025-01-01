@@ -37,6 +37,7 @@
                         width: 100% !important;
                         height: 100% !important;
                         object-fit: contain !important;
+                        // object-position: center !important;
                         position: relative;
                         z-index: 2;
                         left: 0 !important;
@@ -75,8 +76,6 @@
 
                         .fotorama__loaded {
                             border-radius: 12px !important;
-
-
 
                             .fotorama__img {
                                 width: 100% !important;
@@ -120,7 +119,6 @@
             .fotorama__nav__shaft{
                 .fotorama__thumb-border{
                     .fotorama__nav__frame{
-                        background-color: green !important;
                         width: 50px !important;
                         height: 50px !important;
                     }
