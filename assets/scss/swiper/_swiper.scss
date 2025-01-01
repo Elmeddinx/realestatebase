@@ -75,6 +75,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .nav-item{
+            width: 90%;
+
+            button{
+                width: 100%;
+                justify-content: center;
+            }
+        }
     }
 }
 

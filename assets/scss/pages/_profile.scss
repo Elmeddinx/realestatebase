@@ -323,11 +323,16 @@
                 padding: 10px 15px;
 
                 @include mq(phone-only){
-                    font-size: 12px;
+                    font-size: 10px;
                 }
 
                 @include mq(phone-sm){
-                    font-size: 10px;
+                    font-size: 8px;
+                }
+
+                img{
+                    width: 18px;
+                    height: 18px;
                 }
             }
 

@@ -1,5 +1,5 @@
 .announcement-page-container {
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
 
     .breadcrumb-container {
@@ -495,17 +495,14 @@
     }
 
     .similar-announcements {
-        margin-top: 90px;
+        margin-top: 20px;
     }
 
     .dial-button-mobile-container {
-        // margin-top: 68px;
-        margin-bottom: 22px;
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%);
-        bottom: 0;
-        z-index: 1;
+        margin-top: 20px;
+        z-index: 999;
+        position: sticky !important;
+        bottom: 20px;
 
         @include mq(tablet-portrait-down) {
             display: none;
@@ -569,5 +566,4 @@
             }
         }
     }
-
 }

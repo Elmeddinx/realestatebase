@@ -78,6 +78,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+.profile-page-container .swiper-slide .nav-item {
+  width: 90%;
+}
+.profile-page-container .swiper-slide .nav-item button {
+  width: 100%;
+  justify-content: center;
+}
 
 .announcement-page-container .swiper {
   padding: 0 28px;
@@ -584,6 +591,10 @@ body {
 .homepage-container .offcanvas-end .offcanvas-body .form-container {
   display: block;
   margin-top: 32px;
+}
+.homepage-container .offcanvas-end .offcanvas-body .form-container input {
+  padding: 10px 12px !important;
+  font-size: 14px !important;
 }
 .homepage-container .offcanvas-end .offcanvas-body label {
   font-size: 18px;
@@ -1814,9 +1825,6 @@ Footer .footer-container-black .footer-social {
   }
 }
 
-.announcement-page-container {
-  overflow-x: hidden;
-}
 .announcement-page-container .breadcrumb-container {
   margin-top: 70px;
   margin-bottom: 36px;
@@ -2267,15 +2275,13 @@ Footer .footer-container-black .footer-social {
   }
 }
 .announcement-page-container .similar-announcements {
-  margin-top: 90px;
+  margin-top: 20px;
 }
 .announcement-page-container .dial-button-mobile-container {
-  margin-bottom: 22px;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%);
-  bottom: 0;
-  z-index: 1;
+  margin-top: 20px;
+  z-index: 999;
+  position: sticky !important;
+  bottom: 20px;
 }
 @media only screen and (min-width: 768px) {
   .announcement-page-container .dial-button-mobile-container {
@@ -2653,13 +2659,17 @@ Footer .footer-container-black .footer-social {
 }
 @media only screen and (max-width: 480px) {
   .profile-page-container .all-announcements .mobile button {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 380px) {
   .profile-page-container .all-announcements .mobile button {
-    font-size: 10px;
+    font-size: 8px;
   }
+}
+.profile-page-container .all-announcements .mobile button img {
+  width: 18px;
+  height: 18px;
 }
 .profile-page-container .all-announcements .mobile .active {
   background-color: #1D74D8;
@@ -2908,6 +2918,7 @@ Footer .footer-container-black .footer-social {
 @media only screen and (max-width: 768px) {
   .fotorama .fotorama__wrap .fotorama__nav-wrap {
     display: none;
+    margin-top: 10px;
   }
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__thumb-border {
@@ -2944,16 +2955,62 @@ Footer .footer-container-black .footer-social {
   left: 0 !important;
   top: 0 !important;
 }
-.fotorama .fotorama__arr--prev {
-  display: none !important;
+
+.fullscreen .fotorama__fullscreen-icon {
+  background: url("../icons/fullscreen-icon.svg") no-repeat center center;
+  font-size: 120px;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
 }
-.fotorama .fotorama__arr--next {
-  display: none !important;
+@media only screen and (max-width: 768px) {
+  .fullscreen .fotorama__fullscreen-icon {
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+  }
 }
-.fotorama--fullscreen .fotorama__nav-wrap {
+.fullscreen .fotorama__nav-wrap {
   display: block !important;
+  margin-top: 10px !important;
 }
-.fotorama--fullscreen .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__thumb-border .fotorama__nav__frame {
+.fullscreen .fotorama__nav-wrap .fotorama__stage .fotorama__img {
+  width: 100% !important;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  -o-object-position: center !important;
+     object-position: center !important;
+  position: relative;
+  z-index: 2;
+  left: 0 !important;
+  top: 0 !important;
+}
+.fullscreen .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__thumb-border .fotorama__nav__frame {
   width: 50px !important;
   height: 50px !important;
+}
+
+.fotorama__fullscreen-icon {
+  background: url("../icons/fullscreen-icon.svg") no-repeat center center;
+  font-size: 120px;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .fotorama__fullscreen-icon {
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.fotorama__arr--prev {
+  display: none !important;
+}
+
+.fotorama__arr--next {
+  display: none !important;
 }/*# sourceMappingURL=style.css.map */

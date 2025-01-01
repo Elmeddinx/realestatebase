@@ -41,4 +41,20 @@ allContainers.forEach((container) => {
 });
 
 
+// scroll event listener
+window.addEventListener('scroll', function() {
+  const dialButtonContainer = document.querySelector('.dial-button-mobile-container');
+  const similarAnnouncements = document.querySelector('.similar-announcements');
+
+  // Similar announcements'ı almak ve onun konumunu kontrol etmek
+  const similarTop = similarAnnouncements.getBoundingClientRect().top;
+
+  if (similarTop <= dialButtonContainer.offsetHeight) {
+      dialButtonContainer.style.position = 'absolute';  // similar-announcements div'ine ulaşıldığında sabitliği kaldır
+  } else {
+      dialButtonContainer.style.position = 'sticky';  // normalde sticky yap
+  }
+});
+
+
  
