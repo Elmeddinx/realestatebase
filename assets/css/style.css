@@ -2890,6 +2890,8 @@ Footer .footer-container-black .footer-social {
   height: 100% !important;
   -o-object-fit: contain !important;
      object-fit: contain !important;
+  -o-object-position: center !important;
+     object-position: center !important;
   position: relative;
   z-index: 2;
   left: 0 !important;
