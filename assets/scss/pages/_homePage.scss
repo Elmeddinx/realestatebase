@@ -55,6 +55,7 @@
 
                 .input-group {
                     background-color: #F0F0F0;
+                    padding: 5px;
 
                     input {
                         background-color: #F0F0F0;
@@ -74,6 +75,10 @@
             .form-container {
                 display: block;
                 margin-top: 32px;
+            }
+
+            label {
+                font-size: 18px;
             }
 
             .search-btn {
@@ -101,7 +106,7 @@
             font-weight: 500;
             margin-bottom: 7px;
 
-            @include mq(tablet-portrait-up){
+            @include mq(tablet-portrait-up) {
                 font-size: 10px;
             }
         }

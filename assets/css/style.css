@@ -494,7 +494,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .offcanvas .custom-select {
-    font-size: 14px;
+    font-size: 14px !important;
+    padding: 15px 12px 15px 14px !important;
   }
 }
 
@@ -568,6 +569,7 @@ body {
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input .input-group {
   background-color: #F0F0F0;
+  padding: 5px;
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input .input-group input {
   background-color: #F0F0F0;
@@ -582,6 +584,9 @@ body {
 .homepage-container .offcanvas-end .offcanvas-body .form-container {
   display: block;
   margin-top: 32px;
+}
+.homepage-container .offcanvas-end .offcanvas-body label {
+  font-size: 18px;
 }
 .homepage-container .offcanvas-end .offcanvas-body .search-btn {
   margin-top: 17px;
