@@ -2864,6 +2864,7 @@ Footer .footer-container-black .footer-social {
   flex-grow: 1 !important;
   position: relative;
   border-radius: 12px !important;
+  background-color: green;
 }
 .fotorama .fotorama__wrap .fotorama__stage::before {
   content: "";
@@ -2895,6 +2896,7 @@ Footer .footer-container-black .footer-social {
   position: relative;
   z-index: 2;
   left: 0 !important;
+  top: 0 !important;
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap {
   margin-top: 30px;
@@ -2913,6 +2915,12 @@ Footer .footer-container-black .footer-social {
   border-radius: 12px !important;
   padding: 0 !important;
   margin-right: 12px !important;
+}
+@media only screen and (max-width: 768px) {
+  .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame {
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame:first-child {
   margin-right: 0 !important;

@@ -11,6 +11,7 @@
             flex-grow: 1 !important;
             position: relative;
             border-radius: 12px !important;
+            background-color: green;
 
             &::before {
                 content: "";
@@ -41,6 +42,7 @@
                         position: relative;
                         z-index: 2;
                         left: 0 !important;
+                        top: 0 !important
                     }
                 }
             }
@@ -67,6 +69,11 @@
                         border-radius: 12px !important;
                         padding: 0 !important;
                         margin-right: 12px !important;
+
+                        @include mq(tablet-portrait-up){
+                            width: 50px !important;
+                            height: 50px !important;
+                        }
 
                         &:first-child {
                             margin-right: 0 !important;
