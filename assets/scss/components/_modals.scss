@@ -31,9 +31,17 @@
                 font-weight: 500;
                 padding: 0 10px;
 
+                @include mq(phone-only){
+                    font-size: 12px;
+                }
+
                 .announcement-code {
                     font-size: 24px;
                     font-weight: 500;
+
+                    @include mq(phone-only){
+                        font-size: 15px;
+                    }
                 }
             }
 
@@ -52,6 +60,11 @@
                         input {
                             width: 24px;
                             height: 24px;
+
+                            @include mq(phone-only){
+                                width: 18px;
+                                height: 18px;
+                            }
                         }
 
                         .badges {
@@ -68,6 +81,14 @@
                             span {
                                 text-align: left;
                                 font-size: 18px;
+
+                                @include mq(phone-only){
+                                    font-size: 12px;
+                                }
+
+                                @include mq(phone-only){
+                                    font-size: 10px;
+                                }
                             }
 
                             .type-vip {
@@ -78,12 +99,20 @@
                                 color: #F76E13;
                             }
                         }
+
+                        img{
+                            @include mq(phone-only){
+                                width: 18px;
+                                height: 18px;
+                            }
+                        }
                     }
                 }
             }
 
             .modal-footer {
                 padding: 0 64px;
+                border: none;
 
                 button {
                     font-size: 18px;

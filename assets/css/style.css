@@ -319,9 +319,19 @@ body {
   font-weight: 500;
   padding: 0 10px;
 }
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-header {
+    font-size: 12px;
+  }
+}
 .announcement-modal .modal-content .modal-header .announcement-code {
   font-size: 24px;
   font-weight: 500;
+}
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-header .announcement-code {
+    font-size: 15px;
+  }
 }
 .announcement-modal .modal-content .modal-body {
   padding: 0;
@@ -339,6 +349,12 @@ body {
   width: 24px;
   height: 24px;
 }
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-body .announcement-types label input {
+    width: 18px;
+    height: 18px;
+  }
+}
 .announcement-modal .modal-content .modal-body .announcement-types label .badges {
   margin-left: 10px;
 }
@@ -352,14 +368,31 @@ body {
   text-align: left;
   font-size: 18px;
 }
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-body .announcement-types label .badges span {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-body .announcement-types label .badges span {
+    font-size: 10px;
+  }
+}
 .announcement-modal .modal-content .modal-body .announcement-types label .badges .type-vip {
   color: #E51B1B;
 }
 .announcement-modal .modal-content .modal-body .announcement-types label .badges .type-premium {
   color: #F76E13;
 }
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-body .announcement-types label img {
+    width: 18px;
+    height: 18px;
+  }
+}
 .announcement-modal .modal-content .modal-footer {
   padding: 0 64px;
+  border: none;
 }
 .announcement-modal .modal-content .modal-footer button {
   font-size: 18px;
@@ -2276,6 +2309,7 @@ Footer .footer-container-black .footer-social {
 }
 .announcement-page-container .similar-announcements {
   margin-top: 20px;
+  margin-bottom: 63px;
 }
 .announcement-page-container .dial-button-mobile-container {
   margin-top: 20px;
