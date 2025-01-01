@@ -1891,8 +1891,8 @@ Footer .footer-container-black .footer-social {
 @media only screen and (max-width: 768px) {
   .announcement-page-container .announcement-container .announcement-pictures .subscribe-type-mobile {
     position: absolute;
-    left: 20px;
-    bottom: 250px;
+    left: 10px;
+    bottom: 10px;
     gap: 4px;
   }
 }
@@ -1966,6 +1966,8 @@ Footer .footer-container-black .footer-social {
     padding: 0 !important;
     border-radius: 0;
     background-color: white;
+    min-height: -moz-fit-content !important;
+    min-height: fit-content !important;
   }
 }
 .announcement-page-container .announcement-container .announcement-infos .top {
@@ -2263,8 +2265,7 @@ Footer .footer-container-black .footer-social {
   margin-top: 90px;
 }
 .announcement-page-container .dial-button-mobile-container {
-  margin-top: 68px;
-  margin-bottom: 47px;
+  margin-bottom: 22px;
   position: fixed;
   left: 50%;
   transform: translate(-50%);
@@ -2278,8 +2279,8 @@ Footer .footer-container-black .footer-social {
 }
 .announcement-page-container .dial-button-mobile-container .dial-button {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 15px 50px;
   cursor: pointer;
   background-color: #30BE4A;
@@ -2934,4 +2935,12 @@ Footer .footer-container-black .footer-social {
 }
 .fotorama .fotorama__arr--next {
   display: none !important;
+}
+.fotorama--fullscreen .fotorama__nav-wrap {
+  display: block !important;
+}
+.fotorama--fullscreen .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__thumb-border .fotorama__nav__frame {
+  background-color: green !important;
+  width: 50px !important;
+  height: 50px !important;
 }/*# sourceMappingURL=style.css.map */

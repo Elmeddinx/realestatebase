@@ -112,6 +112,24 @@
     .fotorama__video-close {}
 }
 
+.fotorama--fullscreen{
+    .fotorama__nav-wrap{
+        display: block !important;
+
+        .fotorama__nav{
+            .fotorama__nav__shaft{
+                .fotorama__thumb-border{
+                    .fotorama__nav__frame{
+                        background-color: green !important;
+                        width: 50px !important;
+                        height: 50px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // .overlay-container {
 //     position: relative;
