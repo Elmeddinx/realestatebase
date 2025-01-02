@@ -337,6 +337,11 @@ body {
   padding: 0;
   padding: 30px 64px;
 }
+@media only screen and (max-width: 480px) {
+  .announcement-modal .modal-content .modal-body {
+    padding: 15px 32px;
+  }
+}
 .announcement-modal .modal-content .modal-body .announcement-types {
   gap: 14px;
 }
@@ -586,6 +591,10 @@ body {
   outline: none;
   border: none;
   border-radius: 12px;
+  display: flex;
+}
+.homepage-container .mobile-search div .input-group-text {
+  padding: 0;
 }
 .homepage-container .mobile-search .selection-btn {
   background-color: #1D74D8;
@@ -626,6 +635,8 @@ body {
 }
 .homepage-container .offcanvas-end .offcanvas-body .canvas-input .input-group .input-group-text {
   cursor: pointer;
+  padding-left: 0;
+  padding-right: 0;
 }
 .homepage-container .offcanvas-end .offcanvas-body .form-container {
   display: block;

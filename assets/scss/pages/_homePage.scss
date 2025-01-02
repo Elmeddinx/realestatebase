@@ -18,6 +18,11 @@
             outline: none;
             border: none;
             border-radius: 12px;
+            display: flex;
+
+            .input-group-text{
+                padding: 0;
+            }
         }
 
         .selection-btn {
@@ -67,6 +72,8 @@
 
                     .input-group-text {
                         cursor: pointer;
+                        padding-left: 0;
+                        padding-right: 0;
                     }
                 }
 

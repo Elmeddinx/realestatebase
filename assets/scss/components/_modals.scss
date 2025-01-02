@@ -49,6 +49,10 @@
                 padding: 0;
                 padding: 30px 64px;
 
+                @include mq(phone-only){
+                    padding: 15px 32px;
+                }
+
                 .announcement-types {
                     gap: 14px;
 
