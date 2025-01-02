@@ -9,72 +9,50 @@ $(function () {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const fotoramaStage = document.querySelector(".fotorama__stage");
-  const fotoramaImages = document.querySelectorAll(".fotorama__img");
+// $(function () {
+//   // Fotorama başlatılıyor
+//   var $fotorama = $('#fotorama').fotorama({
+//     nav: 'thumbs',          // Küçük resim navigasyonu
+//     thumbmargin: 5,         // Küçük resimler arasındaki boşluk
+//     maxheight: 300,         // Fotorama yüksekliği
+//     allowfullscreen: true,  // Fullscreen moduna izin ver
+//   }).data('fotorama');
 
-  function updateBlurBackground() {
-    const activeImage = document.querySelector(".fotorama__stage__frame.fotorama__active .fotorama__img");
-    if (activeImage) {
-      const imageSrc = activeImage.getAttribute("src");
-      fotoramaStage.style.setProperty("--blur-background", `url(${imageSrc})`);
-    }
-  }
+//   // Küçük resim navigasyonunu güncelleyen bir fonksiyon
+//   function updateThumbnails(fullscreenMode) {
+//     const $nav = $('.fotorama__nav'); // Küçük resim navigasyonu
+//     const $frames = $('.fotorama__nav__frame'); // Her bir küçük resim çerçevesi
 
-  fotoramaStage.style.setProperty("--blur-background", `url(${fotoramaImages[0].getAttribute("src")})`);
-  fotoramaStage.style.backgroundImage = "var(--blur-background)";
+//     if (fullscreenMode) {
+//       // Fullscreen modunda tüm küçük resimleri göster ve kaydırmayı aktif et
+//       $frames.show();
+//       $nav.css('overflow', 'visible');
+//     } else {
+//       // Normal modda sadece ilk 6 küçük resmi göster ve kaydırmayı devre dışı bırak
+//       $frames.each(function (index) {
+//         if (index >= 6) {
+//           $(this).hide(); // 6'dan sonrasını gizle
+//         } else {
+//           $(this).show(); // İlk 6 tanesini göster
+//         }
+//       });
+//       $nav.css('overflow', 'hidden'); // Kaydırmayı devre dışı bırak
+//     }
+//   }
 
-  const observer = new MutationObserver(() => {
-    updateBlurBackground();
-  });
+//   // Fullscreen moduna girildiğinde tüm küçük resimleri göster
+//   $('.fotorama').on('fotorama:fullscreenenter', function () {
+//     updateThumbnails(true);
+//   });
 
-  observer.observe(document.querySelector(".fotorama"), { attributes: true, subtree: true });
+//   // Fullscreen modundan çıkıldığında sadece 6 küçük resmi göster
+//   $('.fotorama').on('fotorama:fullscreenexit', function () {
+//     setTimeout(() => updateThumbnails(false), 0); // DOM tamamen güncellendikten sonra çalıştır
+//   });
 
-  updateBlurBackground();
-});
-
-$(function () {
-  var $fotorama = $('#fotorama').fotorama().data('fotorama');
-
-  // Resme tıklama olayını direkt olarak fotorama img elementlerine ekliyoruz
-  $('.fotorama__img').on('click', function () {
-    // Tarayıcı uyumluluğunu sağlamak için fullscreen API kontrolü
-    if (document.documentElement.requestFullscreen) {
-      document.documentElement.requestFullscreen();
-    } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen();
-    } else if (document.documentElement.mozRequestFullScreen) {
-      document.documentElement.mozRequestFullScreen();
-    } else if (document.documentElement.msRequestFullscreen) {
-      document.documentElement.msRequestFullscreen();
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const fotoramaStage = document.querySelector(".fotorama__stage");
-  const fotoramaImages = document.querySelectorAll(".fotorama__img");
-
-  function updateBlurBackground() {
-    const activeImage = document.querySelector(".fotorama__stage__frame.fotorama__active .fotorama__img");
-    if (activeImage) {
-      const imageSrc = activeImage.getAttribute("src");
-      fotoramaStage.style.setProperty("--blur-background", `url(${imageSrc})`);
-    }
-  }
-
-  // İlk başta arka planı ilk resimle ayarladık
-  fotoramaStage.style.setProperty("--blur-background", `url(${fotoramaImages[0].getAttribute("src")})`);
-  fotoramaStage.style.backgroundImage = "var(--blur-background)";
-
-  const observer = new MutationObserver(() => {
-    updateBlurBackground();
-  });
-
-  observer.observe(document.querySelector(".fotorama"), { attributes: true, subtree: true });
-
-  updateBlurBackground();
-});
+//   // Sayfa yüklendiğinde normal mod için küçük resimleri güncelle
+//   updateThumbnails(false);
+// });
 
 
 

@@ -1,6 +1,5 @@
 .fotorama {
-    height: 100% !important;
-    position: relative;
+    height: 100%;
 
     .fotorama__wrap {
         height: 100%;
@@ -9,8 +8,7 @@
 
         .fotorama__stage {
             flex-grow: 1 !important;
-            position: relative;
-            border-radius: 12px !important;
+            border-radius: 12px;
 
             &::before {
                 content: "";
@@ -27,28 +25,25 @@
             }
 
             .fotorama__stage__shaft {
-                height: 100% !important;
-                position: relative;
 
                 .fotorama__stage__frame {
-                    height: 100% !important;
 
                     .fotorama__img {
                         width: 100% !important;
                         height: 100% !important;
                         object-fit: contain !important;
-                        object-position: center !important;
-                        position: relative;
-                        z-index: 2;
+                        object-position: center;
+                        top: 0 !important;
                         left: 0 !important;
-                        top: 0 !important
+                        right: 0 !important;
+                        bottom: 0 !important;
                     }
                 }
             }
         }
 
         .fotorama__nav-wrap {
-            margin-top: 30px;
+            margin-top: 28px;
 
             @include mq(tablet-portrait-up) {
                 display: none;
@@ -56,7 +51,6 @@
             }
 
             .fotorama__nav {
-
                 .fotorama__nav__shaft {
 
                     .fotorama__thumb-border {
@@ -64,50 +58,53 @@
                     }
 
                     .fotorama__nav__frame {
-                        height: 135px !important;
-                        width: 135px !important;
+
+                        height: 140px !important;
+                        width: 140px !important;
                         border-radius: 12px !important;
                         padding: 0 !important;
                         margin-right: 12px !important;
-
-                        @include mq(tablet-portrait-up) {
-                            width: 80px !important;
-                            height: 80px !important;
-                        }
 
                         &:first-child {
                             margin-right: 0 !important;
                         }
 
-                        &:nth-child(7) {}
-
-                        .fotorama__loaded {
+                        .fotorama__img {
+                            width: 100% !important;
+                            height: 100% !important;
+                            object-fit: cover !important;
+                            object-position: center;
                             border-radius: 12px !important;
-
-                            .fotorama__img {
-                                width: 100% !important;
-                                height: 100% !important;
-                                object-fit: cover !important; // Resimlerin çerçeveye sığması için
-                                object-position: center;
-                                border-radius: 12px !important; // Çerçeveyi yuvarlak yapar
-                                margin: 0 !important;
-                                left: 0 !important;
-                                top: 0 !important;
-                            }
+                            margin: 0 !important;
+                            left: 0 !important;
+                            top: 0 !important;
                         }
                     }
                 }
             }
-
         }
+
     }
 
 }
 
+.fotorama__fullscreen-icon {
+    background: url('../icons/fullscreen-icon.svg') no-repeat center center;
+    font-size: 120px;
+    width: 90px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+
+    @include mq(tablet-portrait-up) {
+        font-size: 10px;
+        width: 30px;
+        height: 30px;
+    }
+}
 
 
 .fullscreen {
-
     .fotorama__fullscreen-icon {
         background: url('../icons/fullscreen-icon.svg') no-repeat center center;
         font-size: 120px;
@@ -116,28 +113,17 @@
         background-color: rgba(0, 0, 0, 0.55);
         border-radius: 50%;
 
-        @include mq(tablet-portrait-up){
+        @include mq(tablet-portrait-up) {
             font-size: 10px;
             width: 30px;
             height: 30px;
         }
     }
 
+
     .fotorama__nav-wrap {
         display: block !important;
         margin-top: 10px !important;
-
-        .fotorama__stage {
-            .fotorama__img {
-                width: 100% !important;
-                object-fit: contain !important;
-                object-position: center !important;
-                position: relative;
-                z-index: 2;
-                left: 0 !important;
-                top: 0 !important
-            }
-        }
 
         .fotorama__nav {
             .fotorama__nav__shaft {
@@ -149,21 +135,6 @@
                 }
             }
         }
-    }
-}
-
-.fotorama__fullscreen-icon {
-    background: url('../icons/fullscreen-icon.svg') no-repeat center center;
-    font-size: 120px;
-    width: 90px;
-    height: 90px;
-    background-color: rgba(0, 0, 0, 0.55);
-    border-radius: 50%;
-
-    @include mq(tablet-portrait-up){
-        font-size: 10px;
-        width: 30px;
-        height: 30px;
     }
 }
 

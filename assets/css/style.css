@@ -2901,8 +2901,7 @@ Footer .footer-container-black .footer-social {
 }
 
 .fotorama {
-  height: 100% !important;
-  position: relative;
+  height: 100%;
 }
 .fotorama .fotorama__wrap {
   height: 100%;
@@ -2911,8 +2910,7 @@ Footer .footer-container-black .footer-social {
 }
 .fotorama .fotorama__wrap .fotorama__stage {
   flex-grow: 1 !important;
-  position: relative;
-  border-radius: 12px !important;
+  border-radius: 12px;
 }
 .fotorama .fotorama__wrap .fotorama__stage::before {
   content: "";
@@ -2927,27 +2925,20 @@ Footer .footer-container-black .footer-social {
   z-index: 1;
   transition: background-image 0.3s ease-in-out;
 }
-.fotorama .fotorama__wrap .fotorama__stage .fotorama__stage__shaft {
-  height: 100% !important;
-  position: relative;
-}
-.fotorama .fotorama__wrap .fotorama__stage .fotorama__stage__shaft .fotorama__stage__frame {
-  height: 100% !important;
-}
 .fotorama .fotorama__wrap .fotorama__stage .fotorama__stage__shaft .fotorama__stage__frame .fotorama__img {
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: contain !important;
      object-fit: contain !important;
-  -o-object-position: center !important;
-     object-position: center !important;
-  position: relative;
-  z-index: 2;
-  left: 0 !important;
+  -o-object-position: center;
+     object-position: center;
   top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 @media only screen and (max-width: 768px) {
   .fotorama .fotorama__wrap .fotorama__nav-wrap {
@@ -2959,25 +2950,16 @@ Footer .footer-container-black .footer-social {
   display: none !important;
 }
 .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame {
-  height: 135px !important;
-  width: 135px !important;
+  height: 140px !important;
+  width: 140px !important;
   border-radius: 12px !important;
   padding: 0 !important;
   margin-right: 12px !important;
 }
-@media only screen and (max-width: 768px) {
-  .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame {
-    width: 80px !important;
-    height: 80px !important;
-  }
-}
 .fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame:first-child {
   margin-right: 0 !important;
 }
-.fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame .fotorama__loaded {
-  border-radius: 12px !important;
-}
-.fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame .fotorama__loaded .fotorama__img {
+.fotorama .fotorama__wrap .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__nav__frame .fotorama__img {
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: cover !important;
@@ -2988,6 +2970,22 @@ Footer .footer-container-black .footer-social {
   margin: 0 !important;
   left: 0 !important;
   top: 0 !important;
+}
+
+.fotorama__fullscreen-icon {
+  background: url("../icons/fullscreen-icon.svg") no-repeat center center;
+  font-size: 120px;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .fotorama__fullscreen-icon {
+    font-size: 10px;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .fullscreen .fotorama__fullscreen-icon {
@@ -3009,36 +3007,9 @@ Footer .footer-container-black .footer-social {
   display: block !important;
   margin-top: 10px !important;
 }
-.fullscreen .fotorama__nav-wrap .fotorama__stage .fotorama__img {
-  width: 100% !important;
-  -o-object-fit: contain !important;
-     object-fit: contain !important;
-  -o-object-position: center !important;
-     object-position: center !important;
-  position: relative;
-  z-index: 2;
-  left: 0 !important;
-  top: 0 !important;
-}
 .fullscreen .fotorama__nav-wrap .fotorama__nav .fotorama__nav__shaft .fotorama__thumb-border .fotorama__nav__frame {
   width: 50px !important;
   height: 50px !important;
-}
-
-.fotorama__fullscreen-icon {
-  background: url("../icons/fullscreen-icon.svg") no-repeat center center;
-  font-size: 120px;
-  width: 90px;
-  height: 90px;
-  background-color: rgba(0, 0, 0, 0.55);
-  border-radius: 50%;
-}
-@media only screen and (max-width: 768px) {
-  .fotorama__fullscreen-icon {
-    font-size: 10px;
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .fotorama__arr--prev {
