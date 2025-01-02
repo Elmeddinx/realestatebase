@@ -2293,6 +2293,11 @@ Footer .footer-container-black .footer-social {
 .announcement-page-container .about-announcement .row {
   gap: 150px;
 }
+@media only screen and (max-width: 1024px) {
+  .announcement-page-container .about-announcement .row {
+    gap: 20px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .announcement-page-container .about-announcement .row {
     gap: 22px;
