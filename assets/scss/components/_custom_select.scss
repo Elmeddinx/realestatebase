@@ -77,6 +77,12 @@
 
         }
 
+        @include mq(phone-sm) {
+            font-size: 10px !important;
+            padding: 12px 10px 12px 10px !important;
+
+        }
+
     }
 }
 
