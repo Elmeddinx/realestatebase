@@ -86,13 +86,13 @@
                                 text-align: left;
                                 font-size: 18px;
 
-                                @include mq(phone-only){
+                                @include mq(phone-sm){
                                     font-size: 12px;
                                 }
 
-                                @include mq(phone-only){
-                                    font-size: 10px;
-                                }
+                                // @include mq(phone-only){
+                                //     font-size: 10px;
+                                // }
                             }
 
                             .type-vip {

@@ -124,13 +124,6 @@
                 font-weight: 500;
                 color: #5f5f5f;
 
-                @include mq(tablet-portrait-up) {
-                    font-size: 18px;
-                }
-
-                @include mq(phone-only) {
-                    font-size: 15px;
-                }
             }
 
         }

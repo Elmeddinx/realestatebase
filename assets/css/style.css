@@ -373,14 +373,9 @@ body {
   text-align: left;
   font-size: 18px;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 380px) {
   .announcement-modal .modal-content .modal-body .announcement-types label .badges span {
     font-size: 12px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .announcement-modal .modal-content .modal-body .announcement-types label .badges span {
-    font-size: 10px;
   }
 }
 .announcement-modal .modal-content .modal-body .announcement-types label .badges .type-vip {
@@ -1654,16 +1649,6 @@ Footer .footer-container-black .footer-social {
   font-weight: 500;
   color: #5f5f5f;
 }
-@media only screen and (max-width: 768px) {
-  .newAnnouncement-container .form-container .input-group span {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .newAnnouncement-container .form-container .input-group span {
-    font-size: 15px;
-  }
-}
 .newAnnouncement-container .form-container textarea {
   padding: 15px 24px 170px 14px;
   border-radius: 12px;
@@ -1833,16 +1818,6 @@ Footer .footer-container-black .footer-social {
   border: none;
   font-weight: 500;
   color: #5f5f5f;
-}
-@media only screen and (max-width: 768px) {
-  .entrust-container .form-container .input-group span {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .entrust-container .form-container .input-group span {
-    font-size: 15px;
-  }
 }
 .entrust-container .form-container textarea {
   padding: 15px 24px 120px 14px;
