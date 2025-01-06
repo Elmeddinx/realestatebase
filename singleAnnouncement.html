@@ -69,8 +69,6 @@
       </nav>
     </div>
 
-
-
     <!-- announcement -->
 
     <div class="container announcement-container">
@@ -88,7 +86,7 @@
 
       <div class="announcement row position-relative">
 
-        <div class="announcement-pictures position-relative col-12 col-xl-8 p-0">
+        <div class="announcement-pictures position-relative col-12 col-xxl-8 p-0">
 
           <div class="fotorama" id="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-width="100%"
             data-ratio="16/9" data-loop="true">
@@ -140,7 +138,7 @@
 
         </div>
 
-        <div class="announcement-infos col p-4 d-flex flex-column justify-content-between">
+        <div class="announcement-infos col p-4 d-flex flex-column">
 
           <div class="top d-flex flex-column">
 
@@ -179,9 +177,9 @@
 
           </div>
 
-          <div class="bottom d-flex flex-column gap-5">
+          <div class="bottom h-50 d-flex flex-column gap-5">
 
-            <div class="dial-button-container">
+            <!-- <div class="dial-button-container">
               <button class="dial-button numberButton">
                 <span>Nömrəni göstər</span>
                 <span class="phone-number visible firstPhoneNumber">987****6543</span>
@@ -190,7 +188,28 @@
               <ul class="number-list numberList">
                 <li class="phone-number">9876543210</li>
               </ul>
+            </div> -->
+
+            <div class="dial-button-desktop-container">
+
+              <div id="number-hidden" class="number-hidden flex-column justify-content-center align-items-center">
+                <span class="title">Nömrəni göstər</span>
+                <div class="number">
+                  <img src="./assets/icons/phone-icon.svg" alt="">
+                  <span>+994 (051) *** ** **</span>
+                </div>
+              </div>
+
+              <div id="number-visible" class="number-visible align-items-center">
+                <img src="./assets/icons/phone-icon.svg" alt="">
+                <a href="tel:+994551234567">(055) 123 45 67</a>
+              </div>
+
             </div>
+
+
+
+
 
             <div class="subscribe-type d-flex justify-content-between">
 
@@ -221,8 +240,6 @@
                 <span>12.11.2024</span>
               </div>
             </div>
-
-
           </div>
 
         </div>
