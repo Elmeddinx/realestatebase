@@ -3900,7 +3900,6 @@ Footer .footer-container-black .footer-social {
   border-radius: 50%;
   outline: none;
   border: none;
-  background-color: red;
 }
 .sAnnouncement-page-container .modal-content .fullscreen img {
   padding: 6px;
@@ -3921,6 +3920,14 @@ Footer .footer-container-black .footer-social {
   padding: 0;
   height: 100%;
 }
+.sAnnouncement-page-container .modal-content .gallery .stage .swiper .swiper-button-next {
+  background-color: transparent;
+  color: white;
+}
+.sAnnouncement-page-container .modal-content .gallery .stage .swiper .swiper-button-prev {
+  background-color: transparent;
+  color: white;
+}
 .sAnnouncement-page-container .modal-content .gallery .stage .swiper .swiper-wrapper .swiper-slide {
   width: 100%;
   height: 100%;
@@ -3933,9 +3940,6 @@ Footer .footer-container-black .footer-social {
 }
 .sAnnouncement-page-container .modal-content .gallery .thumbs {
   height: 10%;
-}
-.sAnnouncement-page-container .modal-content .gallery .thumbs .thumbSwiper {
-  height: 100%;
 }
 .sAnnouncement-page-container .modal-content .gallery .thumbs .thumbSwiper .swiper-wrapper {
   padding: 0 5px;

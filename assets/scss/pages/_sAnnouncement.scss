@@ -498,7 +498,6 @@
             border-radius: 50%;
             outline: none;
             border: none;
-            background-color: red;
 
             img {
                 padding: 6px;
@@ -521,6 +520,16 @@
                     padding: 0;
                     height: 100%;
 
+                    .swiper-button-next {
+                        background-color: transparent;
+                        color: white;
+                    }
+            
+                    .swiper-button-prev {
+                        background-color: transparent;
+                        color: white;
+                    }
+
                     .swiper-wrapper {
 
                         .swiper-slide {
@@ -541,7 +550,6 @@
                 height: 10%;
 
                 .thumbSwiper {
-                    height: 100%;
 
                     .swiper-wrapper {
                         padding: 0 5px;
@@ -583,8 +591,6 @@
                             }
                         }
                     }
-
-
                 }
             }
         }
