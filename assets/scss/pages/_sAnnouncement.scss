@@ -5,6 +5,11 @@
         margin-top: 70px;
         margin-bottom: 36px;
 
+        @include mq(tablet-portrait-up) {
+            margin-top: 25px;
+            margin-bottom: 28px;
+        }
+
         .breadcrumb {
             background-color: transparent;
             padding: 0;
@@ -16,13 +21,14 @@
 
                 &:not(:first-child)::before {
                     content: ">";
-                    padding: 0 8px;
-                    color: #6c757d;
+                    color: black;
+                    font-weight: 500;
                 }
 
                 a {
                     color: #686868;
                     text-decoration: none;
+                    font-weight: 500;
                 }
 
                 &.active {
@@ -36,13 +42,16 @@
     .announcement-container {
 
         .announcement-title {
-            margin-bottom: 28px;
             gap: 8px;
 
             span {
                 font-size: 32px;
                 font-weight: 600;
                 text-transform: capitalize;
+
+                @include mq(tablet-portrait-up) {
+                    font-size: 24px;
+                }
             }
 
             .date-mobile {
@@ -67,9 +76,10 @@
             gap: 19.5px;
             padding: 10px;
             display: flex;
-            height: 718px;
 
-
+            @include mq(tablet-portrait-up) {
+                gap: 12px;
+            }
 
             &-pictures {
                 padding: 0;
@@ -87,8 +97,57 @@
                     gap: 28px;
 
                     .stage {
-                        height: 80%;
-                        position: relative;
+                        height: 550px;
+
+                        @include mq(tablet-portrait-up) {
+                            height: 339px;
+                        }
+
+                        .pagination {
+                            z-index: 999;
+                            position: absolute;
+                            display: none;
+                            border-radius: 2px;
+                            background: rgba(0, 0, 0, 0.50);
+                            height: fit-content;
+                            bottom: 10px;
+                            right: 10px;
+                            padding: 5px 10px;
+
+                            div {
+                                width: 100%;
+                                color: white;
+                                font-weight: 500;
+                            }
+
+                            @include mq(tablet-portrait-up) {
+                                display: inline;
+                            }
+                        }
+
+                        .subscribe-type-mobile {
+                            z-index: 999;
+                            bottom: 10px;
+                            left: 10px;
+                            gap: 10px;
+
+                            @include mq(tablet-portrait-down) {
+                                display: none !important;
+                            }
+
+                            button {
+                                padding: 10px;
+                                background-color: white;
+                                border-radius: 12px;
+                                border: none;
+
+                                img {
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+
+                        }
 
                         .fullscreen {
                             background: rgba(0, 0, 0, 0.55);
@@ -107,61 +166,84 @@
                         }
                     }
 
-                    .thumbs {
+                    .thumbs-container {
                         display: flex;
-                        gap: 12px;
-                        height: 100%;
 
-                        .thumbs-img {
-                            width: 18%;
-                            height: 100%;
-                            position: relative;
-
-                            .overlay {
-                                width: 100%;
-                                height: 100%;
-                                top: 0;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                z-index: 999;
-                                color: #FFF;
-                                font-size: 21px;
-                                font-weight: 600;
-                                background-color: rgba(0, 0, 0, 0.6);
-                                border-radius: 12px;
-                            }
-
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: rgba(255, 255, 255, 0.5);
-                                opacity: 1;
-                            }
-
-                            img {
-                                object-fit: cover;
-                                width: 100%;
-                                height: 100%;
-                                border-radius: 12px;
-                            }
+                        @include mq(tablet-portrait-up) {
+                            display: none;
                         }
 
-                        .active {
+                        .mainThumbsSwiper {
 
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
+                            .thumbs {
                                 height: 100%;
-                                background: rgba(255, 255, 255, 0.5);
-                                opacity: 0;
+
+                                .swiper-slide {
+                                    border-radius: 12px;
+                                }
+
+                                &-img {
+                                    border-radius: 12px;
+                                    position: relative;
+                                    height: 140px;
+
+                                    @include mq(special) {
+                                        height: 120px;
+                                    }
+
+                                    @include mq(tablet-landscape-up) {
+                                        height: 100px;
+                                    }
+
+                                    .overlay {
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        z-index: 999;
+                                        color: #FFF;
+                                        font-size: 21px;
+                                        font-weight: 600;
+                                        background-color: rgba(0, 0, 0, 0.6);
+                                        border-radius: 12px;
+                                    }
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(255, 255, 255, 0.5);
+                                        opacity: 1;
+                                    }
+
+                                    img {
+                                        object-fit: cover;
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: 12px;
+                                    }
+                                }
+
+                                .active {
+
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(255, 255, 255, 0.5);
+                                        opacity: 0;
+                                    }
+                                }
+
+
                             }
                         }
                     }
@@ -171,19 +253,27 @@
             &-infos {
                 background-color: #F0F0F0;
                 border-radius: 12px;
-                background-color: green;
 
-                @include mq(c){
+                @include mq(tablet-portrait-up) {
                     padding: 0 !important;
+                    background-color: transparent;
                 }
 
                 .top {
                     gap: 21px;
 
+                    @include mq(tablet-portrait-up) {
+                        gap: 0;
+                    }
+
                     .ad-views-mobile {
                         display: none !important;
                         gap: 12px;
                         padding: 0;
+
+                        @include mq(tablet-portrait-up) {
+                            display: flex !important;
+                        }
 
                         span {
                             color: #323232;
@@ -194,6 +284,10 @@
 
                     .owner-infos {
                         gap: 10px;
+
+                        @include mq(tablet-portrait-up) {
+                            display: none !important;
+                        }
 
                         .owner-image {
                             width: 90px;
@@ -222,11 +316,17 @@
                     }
 
                     .price {
+                        gap: 12px;
 
                         .total-price {
                             font-size: 36px;
                             font-weight: 600;
                             text-transform: capitalize;
+
+                            @include mq(tablet-portrait-up) {
+                                font-size: 28px;
+                                margin-top: 32px;
+                            }
                         }
 
                         .sqm-price {
@@ -234,26 +334,46 @@
                             font-size: 24px;
                             font-weight: 500;
                             text-transform: capitalize;
+
+                            @include mq(tablet-portrait-up) {
+                                font-size: 16px;
+                            }
                         }
                     }
 
                     .repair-status {
                         gap: 10px;
 
+                        @include mq(tablet-portrait-up) {
+                            margin-top: 18px;
+                        }
+
                         span {
                             color: #0B7F20;
                             font-size: 21px;
                             font-weight: 500;
+
+                            @include mq(tablet-portrait-up) {
+                                font-size: 18px;
+                            }
                         }
                     }
 
                     .location {
                         gap: 7px;
 
+                        @include mq(tablet-portrait-up) {
+                            margin-top: 13px;
+                        }
+
                         span {
                             color: #000;
                             font-size: 21px;
                             font-weight: 500;
+
+                            @include mq(tablet-portrait-up) {
+                                font-size: 18px;
+                            }
                         }
                     }
                 }
@@ -261,6 +381,10 @@
                 .bottom {
                     gap: 32px;
                     margin-top: 40px;
+
+                    @include mq(tablet-portrait-up) {
+                        display: none !important;
+                    }
 
                     .dial-button-desktop-container {
                         height: 94px;
@@ -305,6 +429,11 @@
                     }
 
                     .subscribe-type {
+
+                        @include mq(c) {
+                            justify-content: space-around !important;
+                        }
+
                         button {
                             width: 30%;
                             gap: 10px;
@@ -313,6 +442,11 @@
                             border: none;
                             background-color: white;
                             justify-content: space-between !important;
+
+                            @include mq(c) {
+                                width: 20%;
+
+                            }
 
                             span {
                                 font-size: 18px;
@@ -351,6 +485,8 @@
 
     .modal-content {
         background-color: black;
+        max-height: 100vh;
+        min-height: 100vh;
 
         .fullscreen {
             background: rgba(0, 0, 0, 0.55);
@@ -362,6 +498,7 @@
             border-radius: 50%;
             outline: none;
             border: none;
+            background-color: red;
 
             img {
                 padding: 6px;
@@ -370,15 +507,33 @@
 
         .gallery {
             height: 100%;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            padding: 10px 0;
+            gap: 10px;
 
             .stage {
                 height: 85%;
 
-                img {
-                    object-fit: contain !important;
+                .swiper {
+                    padding: 0;
+                    height: 100%;
+
+                    .swiper-wrapper {
+
+                        .swiper-slide {
+                            width: 100%;
+                            height: 100%;
+
+                            img {
+                                object-fit: contain;
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -386,13 +541,20 @@
                 height: 10%;
 
                 .thumbSwiper {
-                    padding: 0 10px;
                     height: 100%;
 
                     .swiper-wrapper {
+                        padding: 0 5px;
 
                         .swiper-slide {
-                            height: 100%;
+
+                            img {
+                                object-fit: cover;
+                                width: 100%;
+                                height: 100%;
+                                display: block;
+
+                            }
 
                             &::after {
                                 content: '';
@@ -403,7 +565,6 @@
                                 height: 100%;
                                 background: rgba(255, 255, 255, 0.5);
                                 opacity: 1;
-                                border-radius: 12px;
                             }
 
                         }
@@ -415,8 +576,8 @@
                                 position: absolute;
                                 top: 0;
                                 left: 0;
-                                width: 100%;
-                                height: 100%;
+                                width: 80px;
+                                height: 80px;
                                 background: rgba(255, 255, 255, 0.5);
                                 opacity: 0;
                             }
@@ -426,31 +587,16 @@
 
                 }
             }
-
-            // .thumbs {
-            //     display: flex;
-            //     gap: 12px;
-            //     background-color: blue;
-            //     align-items: center;
-
-            //     .thumbs-img {
-            //         width: 100px;
-            //         height: 100px;
-
-            //         img {
-            //             object-fit: cover;
-            //             width: 100%;
-            //             height: 100%;
-            //             border-radius: 12px;
-            //         }
-            //     }
-            // }
         }
     }
 
     .ad-views {
         margin-top: 21px;
         gap: 28px;
+
+        @include mq(tablet-portrait-up) {
+            display: none !important;
+        }
 
         span {
             color: #323232;
@@ -463,23 +609,43 @@
         margin-top: 38px;
         gap: 38px;
 
+        @include mq(tablet-portrait-up) {
+            margin-top: 22px;
+            gap: 22px;
+        }
+
 
         .title {
-
             font-size: 28px;
             font-weight: 500;
+
+            @include mq(tablet-portrait-up) {
+                display: none;
+            }
         }
 
         .row {
             gap: 150px;
 
+            @include mq(tablet-portrait-up) {
+                gap: 22px
+            }
+
             .column {
                 gap: 32px;
+
+                @include mq(tablet-portrait-up) {
+                    gap: 22px;
+                }
 
                 span {
                     color: #5F5F5F;
                     font-size: 21px;
                     font-weight: 500;
+
+                    @include mq(tablet-portrait-up) {
+                        font-size: 18px;
+                    }
                 }
 
                 span:nth-of-type(2) {
@@ -493,6 +659,10 @@
             color: #323232;
             font-size: 21px;
             font-weight: 500;
+
+            @include mq(tablet-portrait-up) {
+                font-size: 16px;
+            }
         }
     }
 

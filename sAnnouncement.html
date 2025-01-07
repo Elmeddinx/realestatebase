@@ -87,13 +87,14 @@
 
             <div class="announcement row position-relative">
 
-                <div class="announcement-pictures col-12 col-xl-8 position-relative" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <div class="announcement-pictures col-12 col-xl-8">
 
-                    <div class="gallery">
+                    <div class="gallery position-relative">
 
-                        <div class="stage">
+                        <div class="stage position-relative">
 
-                            <div class="swiper gallerySwiper" id="mainSwiper">
+                            <div class="swiper gallerySwiper" id="mainSwiper" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
@@ -125,60 +126,105 @@
                                 </div>
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
+                                <!-- <div class="swiper-paginations"></div> -->
                             </div>
 
                             <button class="fullscreen" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 <img src="./assets/icons/fullscreen-icon.svg" alt="">
                             </button>
 
-                        </div>
+                            <div class="subscribe-type-mobile d-flex justify-content-between position-absolute">
 
-                        <div class="thumbs">
+                                <button class="d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/icons/arrow-up-green.svg" alt="">
+                                </button>
 
-                            <div class="thumbs-img">
-                                <img src="./assets/icons/e2.jpg" alt="">
+                                <button class="d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/icons/vip-announcement-icon.svg" alt="">
+                                </button>
+
+                                <button class="d-flex flex-column justify-content-center align-items-center">
+                                    <img src="./assets/icons/premium-icon.svg" alt="">
+                                </button>
+
                             </div>
 
-                            <div class="thumbs-img">
-                                <img src="./assets/icons/e3.jpg" alt="">
-                            </div>
-
-                            <div class="thumbs-img">
-                                <img src="./assets/icons/e3.jpg" alt="">
-                            </div>
-
-                            <div class="thumbs-img">
-                                <img src="./assets/icons/e3.jpg" alt="">
-                            </div>
-
-                            <div class="thumbs-img">
-                                <img src="./assets/icons/e3.jpg" alt="">
-                            </div>
-
-                            <div class="thumbs-img position-relative">
-                                <img src="./assets/icons/e3.jpg" alt="">
-                                <div class="overlay position-absolute">+12 şəkil</div>
+                            <div class="pagination">
+                                <div></div>
                             </div>
 
                         </div>
+
+                        <div class="thumbs-container" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="swiper mainThumbsSwiper">
+                                <div class="swiper-wrapper thumbs">
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img active">
+                                            <img src="./assets/icons/e2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img">
+                                            <img src="./assets/icons/e2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img">
+                                            <img src="./assets/icons/e2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img">
+                                            <img src="./assets/icons/e2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img">
+                                            <img src="./assets/icons/e2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img position-relative">
+                                            <img src="./assets/icons/e3.jpg" alt="">
+                                            <div class="overlay position-absolute">+12 şəkil</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img position-relative">
+                                            <img src="./assets/icons/e3.jpg" alt="">
+                                            <div class="overlay position-absolute">+12 şəkil</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img position-relative">
+                                            <img src="./assets/icons/e3.jpg" alt="">
+                                            <div class="overlay position-absolute">+12 şəkil</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img position-relative">
+                                            <img src="./assets/icons/e3.jpg" alt="">
+                                            <div class="overlay position-absolute">+12 şəkil</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img position-relative">
+                                            <img src="./assets/icons/e3.jpg" alt="">
+                                            <div class="overlay position-absolute">+12 şəkil</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="thumbs-img position-relative">
+                                            <img src="./assets/icons/e3.jpg" alt="">
+                                            <div class="overlay position-absolute">+12 şəkil</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-
-                    <!-- <div class="subscribe-type-mobile d-flex justify-content-between">
-
-                        <button class="d-flex flex-column justify-content-center align-items-center">
-                            <img src="./assets/icons/arrow-up-green.svg" alt="">
-                        </button>
-
-                        <button class="d-flex flex-column justify-content-center align-items-center">
-                            <img src="./assets/icons/vip-announcement-icon.svg" alt="">
-                        </button>
-
-                        <button class="d-flex flex-column justify-content-center align-items-center">
-                            <img src="./assets/icons/premium-icon.svg" alt="">
-                        </button>
-
-                    </div> -->
 
                 </div>
 
@@ -292,34 +338,81 @@
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e4.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e5.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e6.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e7.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e8.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e9.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e10.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="swiper-button-next"></div>
                                 <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
                             </div>
 
                         </div>
@@ -327,101 +420,84 @@
                         <div class="thumbs">
                             <div class="swiper thumbSwiper">
                                 <div class="swiper-wrapper">
+
                                     <div class="swiper-slide active">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e4.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e5.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e6.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e7.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e8.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e9.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e10.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e11.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/emlak1.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
-                                    </div>
+
                                     <div class="swiper-slide">
                                         <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
                                     <div class="swiper-slide">
-                                        <img src="./assets/icons/e3.jpg" alt="">
+                                        <img src="./assets/icons/e2.jpg" alt="">
                                     </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="./assets/icons/e2.jpg" alt="">
+                                    </div>
+
                                 </div>
-                                <div class="swiper-pagination"></div>
                             </div>
 
                             <!-- <div class="thumbs-img">
@@ -459,11 +535,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-        </button> -->
-
+        
         <!-- ad views -->
 
         <div class="container ad-views d-flex">
