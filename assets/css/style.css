@@ -1167,11 +1167,16 @@ body img {
 }
 .card .card-body-title {
   margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 380px) {
   .card .card-body-title {
     margin-top: 5px;
   }
+}
+.card .card-body-title .rent {
+  color: #1D74D8;
 }
 .card .card-body-title span {
   font-size: 24px;
@@ -1301,6 +1306,10 @@ body img {
   .card .card-body-location .right .date {
     font-size: 8px;
   }
+}
+
+.my-announcements-cards .card-body-title {
+  margin-top: 0px;
 }
 
 .links-container {
@@ -2506,6 +2515,7 @@ Footer .footer-container-black .footer-social {
 .sAnnouncement-page-container .announcement-container .announcement-pictures .gallery .stage .pagination {
   z-index: 999;
   position: absolute;
+  display: none;
   border-radius: 2px;
   background: rgba(0, 0, 0, 0.5);
   height: -moz-fit-content;
@@ -2518,6 +2528,11 @@ Footer .footer-container-black .footer-social {
   width: 100%;
   color: white;
   font-weight: 500;
+}
+@media only screen and (max-width: 768px) {
+  .sAnnouncement-page-container .announcement-container .announcement-pictures .gallery .stage .pagination {
+    display: inline;
+  }
 }
 .sAnnouncement-page-container .announcement-container .announcement-pictures .gallery .stage .subscribe-type-mobile {
   z-index: 999;

@@ -8,7 +8,7 @@
         padding: 10px 10px;
     }
 
-    .badgets-container{
+    .badgets-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -18,12 +18,12 @@
         left: 50%;
         transform: translate(-50%);
 
-        @include mq(tablet-portrait-up){
+        @include mq(tablet-portrait-up) {
             top: 30px;
             width: 85%;
         }
 
-        @include mq(phone-sm){
+        @include mq(phone-sm) {
             top: 20px;
             width: 85%;
         }
@@ -33,22 +33,22 @@
             display: flex;
             align-items: center;
 
-            @include mq(phone-sm){
+            @include mq(phone-sm) {
                 padding: 2px 8px;
             }
-    
+
             span {
                 font-size: 14px;
-    
+
                 @include mq(tablet-portrait-up) {
                     font-size: 10px;
                 }
-    
+
                 @include mq(phone-only) {
                     font-size: 8px;
                 }
 
-                @include mq(phone-sm){
+                @include mq(phone-sm) {
                     font-size: 5px;
                 }
             }
@@ -57,19 +57,19 @@
         .badgets {
             gap: 5px;
 
-            @include mq(desktop-down){
+            @include mq(desktop-down) {
                 gap: 12px;
             }
 
-            @include mq(tablet-portrait-up){
+            @include mq(tablet-portrait-up) {
                 gap: 2px;
             }
 
-            @include mq(phone-sm){
+            @include mq(phone-sm) {
                 gap: 3px;
             }
-    
-    
+
+
             .badget {
                 display: flex;
                 justify-content: center;
@@ -79,39 +79,39 @@
                 width: 40px;
                 height: 40px;
                 color: white;
-    
+
                 @include mq(tablet-portrait-up) {
                     width: 30px;
                     height: 30px;
                 }
-    
+
                 @include mq(phone-only) {
                     width: 20px;
                     height: 20px;
                 }
-    
+
                 @include mq(phone-sm) {
                     width: 15px;
                     height: 15px;
                     padding: 3px;
                 }
-    
+
                 span {
                     font-size: 16px;
-    
+
                     @include mq(tablet-portrait-up) {
                         font-size: 10px;
                     }
-    
+
                     @include mq(phone-only) {
                         font-size: 8px;
                     }
 
-                    @include mq(phone-sm){
-                       font-size: 5px;
+                    @include mq(phone-sm) {
+                        font-size: 5px;
                     }
                 }
-    
+
                 img {
                     @include mq(phone-only) {
                         width: 12px;
@@ -120,27 +120,27 @@
 
                     @include mq(phone-sm) {
                         width: 10px;
-                        height: 10  px;
+                        height: 10 px;
                     }
                 }
             }
-    
+
             .document {
                 background-color: #00AA08;
             }
-    
+
             .percent {
                 background-color: #F76E13;
             }
-    
+
             .vip {
                 background-color: #E5A51B;
             }
-    
+
             .custom-dropdown {
                 position: relative;
-                display: inline-block;       
-            
+                display: inline-block;
+
                 .dropdown-toggle {
                     background-color: rgba(255, 255, 255, 0.74);
                     color: white;
@@ -159,47 +159,47 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-            
+
                     @include mq(tablet-portrait-up) {
                         width: 30px;
                         height: 30px;
                     }
-            
+
                     @include mq(phone-only) {
                         width: 20px;
                         height: 20px;
                     }
-    
+
                     @include mq(phone-sm) {
                         width: 15px;
                         height: 15px;
                     }
-            
+
                     img {
                         padding: 5px;
                         border-radius: 50%;
-    
+
                         @include mq(phone-only) {
                             width: 18px;
                             height: 18px;
                         }
-    
+
                         @include mq(phone-sm) {
                             width: 15px;
                             height: 15px;
                         }
                     }
-            
+
                     &::after {
                         content: none;
                     }
                 }
-            
+
                 .dropdown-menu {
                     display: none;
                     position: absolute;
                     top: 100%;
-                    right: 0px; 
+                    right: 0px;
                     background-color: white;
                     border: 1px solid #ccc;
                     border-radius: 5px;
@@ -208,10 +208,10 @@
                     min-width: 150px;
                     margin-top: 5px;
 
-                    @include mq(phone-only){
+                    @include mq(phone-only) {
                         min-width: 100px;
                     }
-            
+
                     .dropdown-item {
                         background-color: #f8f9fa;
                         border: none;
@@ -226,27 +226,27 @@
                         font-size: 14px;
                         font-weight: 500;
 
-                        @include mq(phone-only){
+                        @include mq(phone-only) {
                             font-size: 8px;
 
-                            img{
+                            img {
                                 width: 10px;
                                 height: 10px;
                             }
                         }
-            
+
                         &:hover {
                             background-color: #e9ecef;
                         }
                     }
                 }
-            
+
                 &.active .dropdown-menu {
                     display: block;
                 }
             }
-              
-    
+
+
         }
     }
 
@@ -322,9 +322,15 @@
 
         &-title {
             margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
 
             @include mq(phone-sm) {
                 margin-top: 5px;
+            }
+
+            .rent {
+                color: #1D74D8;
             }
 
             span {
@@ -392,7 +398,7 @@
                     font-weight: 500;
                     font-size: 21px;
 
-                    @include mq(desktop-up){
+                    @include mq(desktop-up) {
                         font-size: 18px;
                     }
 
@@ -455,4 +461,16 @@
         }
     }
 
+}
+
+
+.my-announcements-cards{
+
+    .card-body{
+
+        &-title{
+            margin-top: 0px;
+        }
+
+    }
 }

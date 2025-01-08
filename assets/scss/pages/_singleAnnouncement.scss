@@ -106,7 +106,7 @@
                         .pagination {
                             z-index: 999;
                             position: absolute;
-                            // display: none;
+                            display: none;
                             border-radius: 2px;
                             background: rgba(0, 0, 0, 0.50);
                             height: fit-content;
@@ -121,7 +121,7 @@
                             }
 
                             @include mq(tablet-portrait-up) {
-                                // display: inline;
+                                display: inline;
                             }
                         }
 
