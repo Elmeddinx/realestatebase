@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     modalSwiper = new Swiper("#modalSwiper", {
         slidesPerView: 1,
-        loop: false,
+        loop: true,
         navigation: {
             nextEl: "#modalSwiper .swiper-button-next",
             prevEl: "#modalSwiper .swiper-button-prev",
@@ -153,5 +153,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     updateMainThumbsActiveClass(mainSwiper.realIndex);
     updateModalThumbsActiveClass(modalSwiper.activeIndex);
+
+
+    modalThumbsSlides.forEach((slide, index) => {
+        slide.addEventListener("mouseenter", function () {
+            const slidesPerView = Math.floor(modalThumbsSwiper.params.slidesPerView);
+            const offsetIndex = Math.max(0, index - Math.floor(slidesPerView / 2));
+            modalThumbsSwiper.slideTo(offsetIndex, 300);
+        });
+    });
+
+    modalSwiper.on("slideChange", function () {
+        const activeIndex = modalSwiper.realIndex;
+        const slidesPerView = Math.floor(modalThumbsSwiper.params.slidesPerView);
+        const offsetIndex = Math.max(0, activeIndex - Math.floor(slidesPerView / 2));
+
+        modalThumbsSwiper.slideTo(offsetIndex, 300);
+    });
 
 });
