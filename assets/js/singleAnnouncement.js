@@ -1,67 +1,157 @@
-const allContainers = document.querySelectorAll('.dial-button-mobile-container, .dial-button-container');
-
-// allContainers.forEach((container) => {
-//   const numberButton = container.querySelector('.numberButton');
-//   const numberList = container.querySelector('.numberList');
-//   const phoneNumbers = numberList.querySelectorAll('li');
-//   const firstPhoneNumber = container.querySelector('.firstPhoneNumber');
-
-//   let isNumberListVisible = false;
-
-//   numberButton.addEventListener('click', function () {
-//     if (isNumberListVisible) {
-//       phoneNumbers.forEach((phone) => {
-//         phone.style.display = 'none';
-//       });
-//       numberButton.classList.remove('hidden');
-//     } else {
-//       phoneNumbers.forEach((phone) => {
-//         phone.style.display = 'block';
-//       });
-//       numberButton.classList.add('hidden');
-//     }
-//     isNumberListVisible = !isNumberListVisible;
-//   });
-
-//   phoneNumbers.forEach((phone) => {
-//     phone.addEventListener('click', function () {
-//       alert('Aranıyor: ' + phone.textContent);
-//     });
-//   });
-
-//   if (firstPhoneNumber) {
-//     firstPhoneNumber.classList.add('starred');
-//   }
-
-//   if (container.classList.contains('dial-button-mobile-container')) {
-//     console.log('Bu bir mobil bileşen.');
-//   } else if (container.classList.contains('dial-button-container')) {
-//     console.log('Bu bir normal bileşen.');
-//   }
-// });
-
-
-// scroll event listener
-// window.addEventListener('scroll', function() {
-//   const dialButtonContainer = document.querySelector('.dial-button-mobile-container');
-//   const similarAnnouncements = document.querySelector('.similar-announcements');
-
-//   // Similar announcements'ı almak ve onun konumunu kontrol etmek
-//   const similarTop = similarAnnouncements.getBoundingClientRect().top;
-
-//   if (similarTop <= dialButtonContainer.offsetHeight) {
-//       dialButtonContainer.style.position = 'absolute';  // similar-announcements div'ine ulaşıldığında sabitliği kaldır
-//   } else {
-//       dialButtonContainer.style.position = 'sticky';  // normalde sticky yap
-//   }
-// });
-
-
-
 const visibleNumber = document.getElementById('number-visible');
 const hiddenNumber = document.getElementById('number-hidden');
+const mainThumbsItems = document.querySelectorAll('.thumbs-img');
+const modalThumbsSlides = document.querySelectorAll(".thumbSwiper .swiper-slide");
+const modalElement = document.getElementById("exampleModal");
 
-hiddenNumber.addEventListener('click', ()=>{
-  hiddenNumber.style.display = 'none'
-  visibleNumber.style.display = 'flex'
-})
+let mainSwiper;
+let modalSwiper;
+let modalThumbsSwiper;
+let mainThumbsSwiper;
+
+function updateMainThumbsActiveClass(activeIndex) {
+    mainThumbsItems.forEach(thumb => thumb.classList.remove("active"));
+    if (mainThumbsItems[activeIndex]) {
+        mainThumbsItems[activeIndex].classList.add("active");
+    }
+}
+
+function updateModalThumbsActiveClass(activeIndex) {
+    modalThumbsSlides.forEach(slide => slide.classList.remove("active"));
+    if (modalThumbsSlides[activeIndex]) {
+        modalThumbsSlides[activeIndex].classList.add("active");
+    }
+}
+
+if (hiddenNumber) {
+    hiddenNumber.addEventListener('click', () => {
+        hiddenNumber.style.display = 'none';
+        if (visibleNumber) {
+            visibleNumber.style.display = 'flex';
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bootstrapModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+
+    mainSwiper = new Swiper("#mainSwiper", {
+        slidesPerView: 1,
+        loop: false,
+        preventClicksPropagation: false,
+        navigation: {
+            nextEl: "#mainSwiper .swiper-button-next",
+            prevEl: "#mainSwiper .swiper-button-prev",
+        },
+        pagination: {
+            el: ".pagination div",
+            type: "fraction",
+        },
+        on: {
+            slideChange: function () {
+                if (modalSwiper) {
+                    modalSwiper.slideTo(this.realIndex);
+                }
+                updateMainThumbsActiveClass(this.realIndex);
+            },
+            click: function (swiper, e) {
+                const clickedIndex = swiper.realIndex;
+                modalSwiper.slideTo(clickedIndex);
+                updateModalThumbsActiveClass(clickedIndex);
+                bootstrapModal.show();
+            },
+        },
+    });
+
+    modalSwiper = new Swiper("#modalSwiper", {
+        slidesPerView: 1,
+        loop: false,
+        navigation: {
+            nextEl: "#modalSwiper .swiper-button-next",
+            prevEl: "#modalSwiper .swiper-button-prev",
+        },
+        pagination: {
+            el: "#modalSwiper .swiper-pagination",
+            clickable: true,
+        },
+        on: {
+            slideChange: function () {
+                updateModalThumbsActiveClass(this.activeIndex);
+            },
+        },
+    });
+
+    modalThumbsSwiper = new Swiper(".thumbSwiper", {
+        spaceBetween: 5,
+        slidesPerView: 3,
+        loop: true,
+        breakpoints: {
+            360: {
+                slidesPerView: 4,
+            },
+            480: {
+                slidesPerView: 6,
+            },
+            768: {
+                slidesPerView: 7,
+            },
+            1024: {
+                slidesPerView: 8,
+            },
+            1200: {
+                slidesPerView: 10,
+            },
+            1400: {
+                slidesPerView: 12,
+            }
+        },
+        freeMode: true,
+        pagination: {
+        },
+    });
+
+    mainThumbsSwiper = new Swiper(".mainThumbsSwiper", {
+        slidesPerView: 6,
+        spaceBetween: 12,
+        freeMode: true,
+        loop: false,
+        allowTouchMove: false,
+    });
+
+    modalThumbsSlides.forEach((slide, index) => {
+        slide.addEventListener("mouseenter", function () {
+            modalSwiper.slideTo(index);
+            updateModalThumbsActiveClass(index);
+        });
+    });
+
+    modalElement?.addEventListener("shown.bs.modal", function () {
+        if (modalSwiper && mainSwiper) {
+            modalSwiper.slideTo(mainSwiper.realIndex);
+            modalSwiper.update();
+            updateModalThumbsActiveClass(mainSwiper.realIndex);
+        }
+    });
+
+    mainSwiper.on("slideChange", function () {
+        const currentIndex = mainSwiper.realIndex;
+        updateMainThumbsActiveClass(currentIndex);
+    });
+
+    mainThumbsItems.forEach((thumb, index) => {
+        thumb.addEventListener("mouseenter", function () {
+            mainSwiper.slideTo(index);
+        });
+    });
+
+    modalSwiper.on("slideChange", function () {
+        const currentIndex = modalSwiper.activeIndex;
+        updateModalThumbsActiveClass(currentIndex);
+    });
+
+    updateMainThumbsActiveClass(mainSwiper.realIndex);
+    updateModalThumbsActiveClass(modalSwiper.activeIndex);
+
+});
