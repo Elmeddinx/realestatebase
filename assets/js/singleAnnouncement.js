@@ -3,6 +3,7 @@ const hiddenNumber = document.getElementById('number-hidden');
 const mainThumbsItems = document.querySelectorAll('.thumbs-img');
 const modalThumbsSlides = document.querySelectorAll(".thumbSwiper .swiper-slide");
 const modalElement = document.getElementById("exampleModal");
+const overlay = document.getElementsByClassName('overlay');
 
 let mainSwiper;
 let modalSwiper;
@@ -118,6 +119,16 @@ document.addEventListener("DOMContentLoaded", function () {
         freeMode: true,
         loop: false,
         allowTouchMove: false,
+
+        on: {
+            init: function () {
+                if (this.slides.length >= 6) {
+                    [...overlay].forEach(el => {
+                        el.style.display = 'flex';
+                    });
+                }
+            }
+        }
     });
 
     modalThumbsSlides.forEach((slide, index) => {

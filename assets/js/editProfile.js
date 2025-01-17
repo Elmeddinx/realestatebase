@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         input.type = 'password';
         toggleIcon.src = './assets/icons/eye-off-icon.svg';
-        toggleIcon.alt = 'Şifreyi göster';
+        toggleIcon.alt = 'Şifrəni göstər';
 
         toggleSpan.style.cursor = 'pointer';
 
@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
             if (input.type === 'password') {
                 input.type = 'text';
                 toggleIcon.src = './assets/icons/eye-on-icon.png';
-                toggleIcon.alt = 'Şifreyi gizle';
+                toggleIcon.alt = 'Şifrəni gizlə';
             } else {
                 input.type = 'password';
                 toggleIcon.src = './assets/icons/eye-off-icon.svg';
-                toggleIcon.alt = 'Şifreyi göster';
+                toggleIcon.alt = 'Şifrəni göstər';
             }
         });
     });

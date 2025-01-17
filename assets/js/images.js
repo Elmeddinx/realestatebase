@@ -1,7 +1,7 @@
 const fileInput = document.getElementById("file-input");
 const imagePreviewContainer = document.getElementById("imagePreviewContainer");
 const imageAddBox = document.getElementById("imageAddBox");
-const uploadHint = document.querySelector(".upload-hint"); // upload-hint elementini seçiyoruz
+const uploadHint = document.querySelector(".upload-hint");
 
 let uploadedImages = [];
 
