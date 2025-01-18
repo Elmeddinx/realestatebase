@@ -428,8 +428,8 @@ body img {
   background-color: transparent;
 }
 .announcement-modal .modal-content .close img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .balance-modal .modal-content {
@@ -1052,7 +1052,7 @@ body img {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 999;
   min-width: 150px;
   margin-top: 5px;
 }
@@ -1066,7 +1066,6 @@ body img {
   border: none;
   width: 100%;
   text-align: left;
-  border-radius: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;

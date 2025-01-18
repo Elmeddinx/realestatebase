@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Burada .dropdown-item'ları seçip event ekleyin
+//     document.querySelectorAll('.dropdown-menu .dropdown-item')
+//       .forEach(item => {
+//         item.addEventListener('click', (e) => {
+//           e.stopPropagation();
+//         });
+//       });
+//   });
+  
+  
+
 // input
 
 document.querySelectorAll('.numeric-input').forEach(input => {
