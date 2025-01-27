@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
@@ -587,6 +588,52 @@ body img {
     background-size: 6px 12px;
   }
 }
+.homepage-container .form-container .select2-container.select2-container--default {
+  width: 100% !important;
+  margin-bottom: 16px;
+}
+.homepage-container .form-container .select2-container.select2-container--default textarea {
+  display: none;
+}
+.homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple {
+  font-size: 21px;
+  border: 1px solid lightgray !important;
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple {
+    font-size: 14px !important;
+  }
+}
+.homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple::before {
+  content: "Nişangah";
+  color: #5F5F5F;
+}
+.homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple::after {
+  content: "";
+  background-image: url("../icons/arrow-outlined.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 24px;
+  height: 24px;
+}
+@media only screen and (max-width: 768px) {
+  .homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple::after {
+    width: 12px;
+    height: 12px;
+  }
+}
+.homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  display: none !important;
+}
 
 .homepage-container {
   padding-bottom: 48px;
@@ -705,6 +752,10 @@ body img {
     font-size: 12px !important;
     padding: 5px !important;
   }
+}
+.homepage-container .form-container .btn {
+  padding: 15px 12px 14px 15px;
+  font-size: 21px;
 }
 .homepage-container .vip-announcement-container {
   margin-top: 20px;
