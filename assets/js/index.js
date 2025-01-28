@@ -5,37 +5,32 @@ document.querySelectorAll('.numeric-input').forEach(input => {
   });
 });
 
+// multiple select
+
+
 
 $(document).ready(function() {
   $('.js-example-basic-multiple').select2({
+    closeOnSelect: false,
     templateResult: function (data) {
       if (data.loading) return data.text;
       if (!data.element) return data.text;
-  
-      const $element = $(data.element);
-      const isSelected = $element.prop('selected');
-  
-      const $label = $('<span>').text(data.text);
 
-      if (isSelected) {
-        $label.css({
-          display: 'inline-block',
-          width: '100%',
-          position: 'relative'
-        });
-        
-        const $tick = $('<span>').text('◉').css({
-          float: 'right',
-          color: 'black'
-        });
+      return data.text;
+    },
+    templateSelection: function () {
+      return "";
+    }
+  });
 
-        $label.append($tick);
-      }
-      
-      return $label;
+  $(document).on('click', function (e) {
+    if (!$(e.target).closest('.select2-container').length) {
+      $('.js-example-basic-multiple').select2('close');
     }
   });
 });
+
+
 
 
 

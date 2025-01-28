@@ -631,7 +631,7 @@ body img {
     height: 12px;
   }
 }
-.homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple .select2-selection__choice {
+.homepage-container .form-container .select2-container.select2-container--default .select2-selection--multiple .select2-selection__rendered {
   display: none !important;
 }
 
